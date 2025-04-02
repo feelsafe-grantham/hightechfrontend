@@ -3,6 +3,10 @@ import OneProduct from "../../components/Products/OneProduct";
 import { ContactData } from "../../utils/Data";
 import styles from "./Home.module.css"
 import { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
+import TestimonialCard from "../../components/common/TestimonialCard";
 const HomeView = () => {
     const chips = [
         "Zebra Blinds",
@@ -74,13 +78,34 @@ const HomeView = () => {
                 <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
                 </p>
             </div>
-            <div className={`${styles.testimonialSection}`}>
+            {/* <div className={`${styles.testimonialSection}`}>
                 <h2 className={`${styles.sectionHeading}`}>Testimonials</h2>
                 <p className={`${styles.sectionDescription}`}>Lorem ipsum </p>
                 <div className={`${styles.testimonialContainer}`}>
+                    <Swiper slidesPerView={2} pagination={true} modules={[Pagination]} className="mySwiper">
+                        <SwiperSlide className={`${styles.testimonialCard}`}>
+                            <TestimonialCard />
+                        </SwiperSlide>
+                        <SwiperSlide className={`${styles.testimonialCard}`}>
+                            <TestimonialCard />
+                        </SwiperSlide>
+                        <SwiperSlide className={`${styles.testimonialCard}`}>
+                            <TestimonialCard />
+                        </SwiperSlide>
+                        <SwiperSlide className={`${styles.testimonialCard}`}>
+                            <TestimonialCard />
+                        </SwiperSlide>
+                        <SwiperSlide className={`${styles.testimonialCard}`}>
+                            <TestimonialCard />
+                        </SwiperSlide>
+                        <SwiperSlide className={`${styles.testimonialCard}`}>
+                            <TestimonialCard />
+                        </SwiperSlide>
 
+                    </Swiper>
                 </div>
-            </div>
+            </div> */}
+
         </div>
     );
 }

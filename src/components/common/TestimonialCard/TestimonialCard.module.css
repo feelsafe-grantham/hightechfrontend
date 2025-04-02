@@ -1,0 +1,24 @@
+.testimonialCard {
+  width: 300px;
+  height: 200px;
+  display: grid;
+  gap: 10px;
+  padding: 10px 0px;
+}
+.userImage {
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+}
+.userName {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-heading);
+}
+.userText {
+  font-size: 16px;
+  line-height: 1em;
+  text-align: center;
+  color: var(--primary-text);
+}
