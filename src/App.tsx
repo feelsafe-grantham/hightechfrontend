@@ -3,6 +3,7 @@ import Header from './components/common/Header';
 import Topstrip from './components/common/Topstrip'
 import { Route, Routes } from 'react-router-dom';
 import HomeView from './views/Home';
+import Footer from './components/common/Footer';
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomeView />}></Route>
       </Routes>
+      <Footer />
     </>
   )
 }
