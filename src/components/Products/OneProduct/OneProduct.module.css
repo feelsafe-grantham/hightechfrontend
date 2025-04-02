@@ -1,0 +1,47 @@
+.productCard {
+  padding: 5px;
+  display: grid;
+  gap: 10px;
+}
+.productImage {
+  width: 350px;
+  margin: auto;
+  aspect-ratio: 1/1.2;
+}
+.productName {
+  text-align: center;
+  font-size: 18px;
+  line-height: 0.9em;
+  font-weight: 600;
+}
+.productStars {
+  display: flex;
+  justify-content: center;
+}
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.ctaBtn {
+  padding: 10px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--primary-theme1);
+  border-radius: var(--standard-border-radius2);
+}
+
+.connectBtn {
+  background-color: var(--primary-theme1);
+  color: var(--white-text);
+}
+.connectBtn:hover {
+  color: var(--primary-theme1);
+  background-color: var(--white-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.downloadBtn {
+  color: var(--primary-heading);
+  border: 2px solid var(--primary-text);
+}
