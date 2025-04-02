@@ -1,0 +1,23 @@
+.stripContainer {
+  background-color: var(--primary-theme1);
+  color: var(--white-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+}
+.stripfont {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .stripContainer {
+    gap: 5px;
+    padding: 5px 0px;
+  }
+  .stripfont {
+    font-size: 12px;
+  }
+}
