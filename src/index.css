@@ -10,6 +10,7 @@
   --primary-theme3: #3ac000;
   --standard-border-radius1: 30px;
   --standard-border-radius2: 5px;
+  --max-width-container: 1200px;
 }
 
 * {

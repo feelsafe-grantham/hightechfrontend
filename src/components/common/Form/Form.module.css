@@ -1,0 +1,60 @@
+.form {
+  background: var(--primary-background);
+  color: var(--primary-heading);
+  border-radius: var(--standard-border-radius1);
+  display: grid;
+  padding: 20px 25px;
+}
+
+.inputBox {
+  background: var(--primary-text);
+  background: #f8f8f8;
+  height: 50px;
+  color: var(--primary-heading);
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: var(--standard-border-radius2);
+}
+
+.inputBox[type="text"]:focus,
+.inputBox[type="email"]:focus,
+.inputBox[type="tel"]:focus,
+.inputBox[type="select"],
+.inputBox[type="textarea"]:focus {
+  border: 1px solid var(--primary-theme1);
+  outline: none;
+}
+
+select:focus {
+  border: 1px solid var(--primary-theme1);
+  outline: none;
+}
+
+.textArea {
+  background: var(--primary-text);
+  background: #f8f8f8;
+  color: var(--primary-heading);
+  margin: 10px 0;
+  height: 100px;
+}
+
+.textArea:focus {
+  border: 1px solid var(--primary-theme1);
+  outline: none;
+}
+
+.submitBtn {
+  cursor: pointer;
+  border: 2px solid var(--primary-theme1);
+  font-weight: 600;
+  background: var(--primary-theme1);
+  color: var(--white-text);
+  padding: 5px 10px;
+  border-radius: var(--standard-border-radius2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background: var(--white-text);
+  color: var(--primary-theme1);
+}

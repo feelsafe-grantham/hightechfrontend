@@ -1,0 +1,76 @@
+.homeView {
+  padding-bottom: 50px;
+  display: grid;
+  gap: 10px;
+}
+.coverImageContainer {
+}
+.coverImage {
+  width: 100%;
+  aspect-ratio: 3/1;
+}
+.productImageContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.productImage {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+}
+/* chips start */
+.chipsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.chip {
+  padding: 5px 20px;
+  border: 2px solid var(--primary-theme1);
+  border-radius: var(--standard-border-radius1);
+  background-color: var(--primary-theme1);
+  color: var(--white-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.chip:hover {
+  background-color: var(--white-text);
+  color: var(--primary-theme1);
+}
+.chipActive {
+  background-color: var(--white-text);
+  color: var(--primary-theme1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* chips end */
+
+.headingContainer {
+  margin: 20px auto;
+  max-width: 500px;
+}
+.heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1em;
+  color: var(--primary-theme1);
+}
+.headingSpan {
+  letter-spacing: 1px;
+}
+
+/* heading ends */
+
+.ctaContainer {
+  width: 100%;
+  padding: 20px 0px;
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  background-color: var(--primary-theme1);
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: 1fr;
+}
