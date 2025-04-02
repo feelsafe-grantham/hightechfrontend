@@ -1,0 +1,22 @@
+@import "tailwindcss";
+:root {
+  --primary-background: #ffffff;
+  --primary-text: #707070;
+  --primary-heading: #313131;
+  --primary-theme1: #01559d;
+  --primary-theme2: #d84528;
+  --primary-theme3: #3ac000;
+  --standard-border-radius1: 30px;
+  --standard-border-radius2: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+}
