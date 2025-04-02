@@ -139,3 +139,42 @@
   grid-template-rows: auto;
   gap: 50px 10px;
 }
+/* Product Section ends */
+
+.hotProductsContainer {
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: inset 0px -80px 600px -6px rgba(0, 0, 0, 0.8);
+}
+.hotProductImage {
+  width: 100%;
+  aspect-ratio: 3/1;
+  position: relative;
+  z-index: -1;
+}
+.hotCta {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  color: var(--white-text);
+  font-size: 28px;
+  line-height: 1.2em;
+}
+.hotCtaSpan {
+  font-weight: 600;
+  line-height: 1em;
+  font-size: 48px;
+}
+
+/* hot cta ends */
+.testimonialSection {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.testimonialContainer {
+}

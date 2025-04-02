@@ -67,8 +67,17 @@ const HomeView = () => {
                     <OneProduct />
                     <OneProduct />
                     <OneProduct />
-                    <OneProduct />
-                    <OneProduct />
+                </div>
+            </div>
+            <div className={`${styles.hotProductsContainer}`}>
+                <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
+                <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
+                </p>
+            </div>
+            <div className={`${styles.testimonialSection}`}>
+                <h2 className={`${styles.sectionHeading}`}>Testimonials</h2>
+                <p className={`${styles.sectionDescription}`}>Lorem ipsum </p>
+                <div className={`${styles.testimonialContainer}`}>
 
                 </div>
             </div>
