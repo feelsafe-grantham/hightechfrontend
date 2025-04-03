@@ -1,6 +1,83 @@
-.footerContainer {
+.footerWrapper {
   background: var(--primary-theme1);
   color: var(--white-text);
 }
+.footerContainer {
+  background: var(--primary-theme1);
+  color: var(--white-text);
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+}
 .topBar {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+.row1 {
+  display: grid;
+  gap: 5px;
+}
+.companyName {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+.socialIconContainer {
+  display: flex;
+  gap: 5px;
+}
+.socialIcon {
+  height: 40px;
+}
+.row2 {
+  display: grid;
+  gap: 5px;
+}
+.row3 {
+  display: grid;
+  gap: 5px;
+}
+.contactInfo {
+  margin-top: 5px;
+}
+.contactContainer {
+  display: flex;
+  gap: 5px;
+}
+.colHeading {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+.midBar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px auto;
+}
+.footerChip {
+  padding: 5px 30px;
+  color: var(--white-text);
+  background: var(--primary-theme11);
+  margin-right: 15px;
+  border-radius: var(--standard-border-radius1);
+}
+.bottomBar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--white-text);
+}
+.bottomLink {
+  margin: auto 20px;
+}
+.companyUsername {
+  color: var(--white-text);
+}
+.termsContainer {
+  display: flex;
+  gap: 20px;
 }
