@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomeView from './views/Home';
 import Footer from './components/common/Footer';
 import AboutView from './views/About';
+import ProductView from './views/Products';
 function App() {
 
 
@@ -13,8 +14,9 @@ function App() {
       <Topstrip />
       <Header />
       <Routes>
-        <Route path='/' element={<HomeView />}></Route>
-        <Route path='/about' element={<AboutView />}></Route>
+        <Route path='/' element={<HomeView />} />
+        <Route path='/about' element={<AboutView />} />
+        <Route path='/products' element={<ProductView />} />
       </Routes>
       <Footer />
     </>

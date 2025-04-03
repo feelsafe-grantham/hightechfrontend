@@ -1,0 +1,214 @@
+.aboutVew {
+  padding-bottom: 50px;
+  display: grid;
+  gap: 10px;
+}
+.productDetail {
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.productImageContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.productImage {
+  max-height: 500px;
+}
+.productInfo {
+  display: grid;
+}
+.productName {
+  color: var(--primary-text);
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+}
+.productName::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 20%;
+  height: 3px;
+  background-color: var(--primary-theme1);
+}
+.reviewContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.icon {
+  height: 20px;
+}
+.reviewCount {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.checkContainer {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.checkList::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("/images/tick.png") no-repeat center center;
+  background-size: contain;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.dimenssionContainer {
+  display: flex;
+}
+.dimension {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-text);
+  width: 180px;
+  height: 60px;
+  position: relative;
+}
+.lableSpan {
+  top: 2px;
+  left: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  position: absolute;
+}
+.productDimension {
+  font-size: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-heading);
+}
+.productPrice {
+  font-size: 22px;
+  font-weight: 600;
+}
+.CartBtnContainer {
+  display: flex;
+  gap: 20px;
+}
+.cartButton {
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid var(--primary-text);
+  height: 40px;
+  width: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.cartButton:hover {
+  background-color: var(--primary-theme1);
+  color: var(--white-text);
+}
+.ctaButtonContainer {
+  display: flex;
+  gap: 10px;
+}
+.ctaButton {
+  height: 45px;
+  cursor: pointer;
+  padding: 5px 10px;
+  width: fit-content;
+  font-weight: 600;
+  color: var(--primary-heading);
+  border: 1px solid var(--primary-text);
+  border-radius: var(--standard-border-radius2);
+}
+.btnIcon {
+  height: 40px;
+}
+.contactBtn {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-theme1);
+  color: var(--white-text);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.contactBtn:hover {
+  color: var(--primary-heading);
+  background-color: var(----primary-background);
+}
+.downloadBtn {
+  color: var(--primary-heading);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.downloadBtn:hover {
+  background-color: var(--primary-theme1);
+  color: var(--white-text);
+}
+
+/* product detail End */
+.productsContainer {
+  max-width: var(--max-width-container);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px 10px;
+}
+/*products end  */
+
+.gallerySection {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.sectionHeading {
+  color: var(--primary-heading);
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2em;
+}
+.sectionDescription {
+  text-align: center;
+  color: var(--primary-text);
+  font-size: 16px;
+  line-height: 1em;
+}
+.galleryContainer {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: auto;
+  gap: 50px 10px;
+}
+.hotProductsContainer {
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: inset 0px -80px 600px -6px rgba(0, 0, 0, 0.8);
+  border-radius: var(--standard-border-radius2);
+}
+.hotProductImage {
+  width: 100%;
+  aspect-ratio: 3/1;
+  position: relative;
+  z-index: -1;
+  border-radius: var(--standard-border-radius2);
+}
+.hotCta {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  color: var(--white-text);
+  font-size: 28px;
+  line-height: 1.2em;
+}
+.hotCtaSpan {
+  font-weight: 600;
+  line-height: 1em;
+  font-size: 48px;
+}
