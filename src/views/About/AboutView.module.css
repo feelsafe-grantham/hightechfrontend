@@ -1,0 +1,203 @@
+.aboutView {
+  padding-bottom: 50px;
+  display: grid;
+  gap: 10px;
+}
+
+.headingContainer {
+  margin: 20px auto;
+  max-width: 500px;
+}
+.heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1em;
+  color: var(--primary-theme1);
+}
+.headingSpan {
+  letter-spacing: 1px;
+}
+/* heading ends here */
+
+.ownerSection {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.sectionHeading {
+  /* color: var(--primary-heading); */
+  color: var(--primary-text);
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2em;
+}
+.sectionDescription {
+  text-align: center;
+  color: var(--primary-text);
+  font-size: 16px;
+  line-height: 1em;
+}
+.ownerContainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 10px 20px;
+  grid-template-columns: 0.6fr 0.5fr;
+  /* max-width: 900px; */
+}
+.imageContainer {
+  border-radius: var(--standard-border-radius1);
+}
+.ownerImage {
+  border-radius: var(--standard-border-radius1);
+  width: 100%;
+}
+.offerCtaContainer {
+  border-radius: var(--standard-border-radius1);
+  background: var(--primary-theme1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.segmentText {
+  color: var(--white-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+.companyName {
+  text-align: center;
+  color: var(--white-text);
+  font-size: 2em;
+  font-weight: 600;
+}
+.designation {
+  text-align: center;
+  color: var(--primary-theme2);
+  font-size: 1.5em;
+  line-height: 0.8em;
+}
+.ourWork {
+  color: var(--white-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+.qrImage {
+  height: 200px;
+}
+.signImage {
+  margin-left: auto;
+  width: 200px;
+}
+.ownerPara {
+  margin: 22px auto;
+  font-weight: 500;
+  text-align: center;
+}
+/* owner seciont ends */
+
+.teamSection {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.teamMemberContainer {
+  padding-top: 30px;
+  display: flex;
+  gap: 50px 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: calc(var(--standard-border-radius1) - 10px);
+}
+.memberImageContainer {
+  position: relative;
+  border-radius: calc(var(--standard-border-radius1) - 10px);
+}
+.memberImage {
+  height: 300px;
+  border-radius: calc(var(--standard-border-radius1) - 10px);
+}
+.memberInfo {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f6f7f9;
+  width: 90%;
+  padding: 5px 10px;
+  border-radius: var(--standard-border-radius2);
+}
+.memberName {
+  font-size: 16px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #363636;
+  text-align: center;
+}
+.memberDesignatino {
+  text-align: center;
+  color: #363636;
+  font-size: 11px;
+}
+/* team section done */
+
+.legacySection {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.legacyPara {
+  padding-top: 30px;
+  width: 90%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+}
+/* legacy ends here */
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.col2Grid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  gap: 20px;
+}
+.img1Col2Grid {
+  width: 100%;
+}
+.img2Col2Grid {
+  width: 100%;
+}
+.coverImageContainer {
+}
+.coverImage {
+  width: 100%;
+  aspect-ratio: 3/1;
+}
+.imageGrid {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+.productImage {
+  margin: 0px 20px;
+  height: 300px;
+}

@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import TestimonialCard from "../../components/common/TestimonialCard";
+import CoverImage from "../../components/common/CoverImage";
 const HomeView = () => {
     const chips = [
         "Zebra Blinds",
@@ -23,9 +24,7 @@ const HomeView = () => {
     }
     return (
         <div className={`${styles.homeView}`}>
-            <div className={`${styles.coverImageContainer}`}>
-                <img className={`${styles.coverImage}`} src="/images/home4.png" alt="This is alt for here" />
-            </div>
+            <CoverImage imgUrl="/images/home3.png" />
             <div className={`${styles.productImageContainer}`}>
                 <img className={`${styles.productImage}`} src="/images/home1.png" alt="" />
                 <img className={`${styles.productImage}`} src="/images/home1.png" alt="" />
