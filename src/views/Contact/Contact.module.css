@@ -1,0 +1,67 @@
+.contactView {
+  padding-bottom: 50px;
+  display: grid;
+  gap: 10px;
+}
+.addressContainer {
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.address {
+  width: 500px;
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 30px;
+}
+.ctaText {
+  font-size: 48px;
+  font-weight: 600;
+}
+.ctaText1 {
+  line-height: 40px;
+  color: var(--primary-theme1);
+  font-weight: 800;
+}
+.ctaTex2 {
+  line-height: 40px;
+  font-weight: 800;
+  color: var(--primary-heading);
+}
+.ctaText3 {
+  font-size: 23px;
+}
+.ctaText4 {
+  font-size: 20px;
+}
+.writtenAddress {
+  margin-top: 10px;
+}
+.addressHead {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-theme1);
+}
+.contactInfo {
+  display: flex;
+  gap: 2px;
+  font-weight: 600;
+}
+.formContainer {
+}
+
+/* address ends */
+
+.mapContainer {
+  max-width: var(--max-width-container);
+  margin: auto;
+  border-radius: var(--standard-border-radius1);
+}
+.map {
+  border-radius: var(--standard-border-radius1);
+}
