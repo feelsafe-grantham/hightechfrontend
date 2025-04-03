@@ -40,7 +40,7 @@ const HomeView = () => {
                         onClick={() => handleChipClick(chip)}>{chip}</span>)
                 }
             </div>
-            {/*<MainHeading />
+            <MainHeading />
             <ContactCta />
             <div className={`${styles.productsSection}`}>
                 <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
@@ -58,7 +58,7 @@ const HomeView = () => {
                 <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
                 <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
                 </p>
-            </div> */}
+            </div>
 
 
         </div>
