@@ -6,6 +6,7 @@ import HomeView from './views/Home';
 import Footer from './components/common/Footer';
 import AboutView from './views/About';
 import ProductView from './views/Products';
+import BlogView from './views/Blogs';
 function App() {
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<HomeView />} />
         <Route path='/about' element={<AboutView />} />
         <Route path='/products' element={<ProductView />} />
+        <Route path='/blogs' element={<BlogView />} />
       </Routes>
       <Footer />
     </>
