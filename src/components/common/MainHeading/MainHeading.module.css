@@ -1,0 +1,14 @@
+.headingContainer {
+  margin: 20px auto;
+  max-width: 500px;
+}
+.heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1em;
+  color: var(--primary-theme1);
+}
+.headingSpan {
+  letter-spacing: 1px;
+}

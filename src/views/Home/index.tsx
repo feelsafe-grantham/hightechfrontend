@@ -8,6 +8,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import TestimonialCard from "../../components/common/TestimonialCard";
 import CoverImage from "../../components/common/CoverImage";
+import MainHeading from "../../components/common/MainHeading";
 const HomeView = () => {
     const chips = [
         "Zebra Blinds",
@@ -38,12 +39,7 @@ const HomeView = () => {
                         onClick={() => handleChipClick(chip)}>{chip}</span>)
                 }
             </div>
-            <div className={`${styles.headingContainer}`}>
-                <h2 className={`${styles.heading}`}>
-                    India's No 1 Window <br />
-                    <span className={`${styles.headingSpan}`}>Blinds Manufacturer</span>
-                </h2>
-            </div>
+            <MainHeading />
             <div className={`${styles.ctaContainer}`}>
                 <div className={`${styles.cta}`}>
                     <div className={`${styles.ctaImageContainer}`}>
