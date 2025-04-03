@@ -1,5 +1,5 @@
+import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
-import CoverImage from "../../components/common/CoverImage";
 import MainHeading from "../../components/common/MainHeading";
 import OneProduct from "../../components/Products/OneProduct";
 import styles from "./ProductView.module.css"
@@ -17,7 +17,7 @@ const ProductView = () => {
     }
     return (
         <div className={`${styles.aboutView}`}>
-            <CoverImage imgUrl="/images/home2.png" />
+            <Breadcrum imgUrl="/images/breadcrum1.png" />
             <MainHeading />
             <div className={`${styles.productDetail}`}>
                 <div className={`${styles.productImageContainer}`}>

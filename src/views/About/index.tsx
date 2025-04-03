@@ -1,4 +1,4 @@
-import CoverImage from "../../components/common/CoverImage";
+import Breadcrum from "../../components/common/Breadcrum";
 import styles from "./AboutView.module.css"
 const AboutView = () => {
     const team = [
@@ -46,7 +46,7 @@ const AboutView = () => {
 
     return (
         <div className={`${styles.aboutView}`}>
-            <CoverImage imgUrl="/images/home1.png" />
+            <Breadcrum imgUrl="/images/breadcrum2.png" />
             <div className={`${styles.headingContainer}`}>
                 <h2 className={`${styles.heading}`}>
                     India's No 1 Window <br />
