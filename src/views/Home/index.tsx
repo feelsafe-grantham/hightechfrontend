@@ -26,11 +26,11 @@ const HomeView = () => {
     }
     return (
         <div className={`${styles.homeView}`}>
-            <CoverImage imgUrl="/images/home3.png" />
+            <CoverImage imgUrl="/images/homeCover.png" />
             <div className={`${styles.productImageContainer}`}>
-                <img className={`${styles.productImage}`} src="/images/home1.png" alt="" />
-                <img className={`${styles.productImage}`} src="/images/home1.png" alt="" />
-                <img className={`${styles.productImage}`} src="/images/home1.png" alt="" />
+                <img className={`${styles.productImage}`} src="/images/homeProduct1.png" alt="" />
+                <img className={`${styles.productImage}`} src="/images/homeProduct2.png" alt="" />
+                <img className={`${styles.productImage}`} src="/images/homeProduct3.png" alt="" />
             </div>
             <div className={`${styles.chipsContainer}`}>
                 {chips.map((chip, index) =>
@@ -40,7 +40,7 @@ const HomeView = () => {
                         onClick={() => handleChipClick(chip)}>{chip}</span>)
                 }
             </div>
-            <MainHeading />
+            {/*<MainHeading />
             <ContactCta />
             <div className={`${styles.productsSection}`}>
                 <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
@@ -58,34 +58,8 @@ const HomeView = () => {
                 <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
                 <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
                 </p>
-            </div>
-            {/* <div className={`${styles.testimonialSection}`}>
-                <h2 className={`${styles.sectionHeading}`}>Testimonials</h2>
-                <p className={`${styles.sectionDescription}`}>Lorem ipsum </p>
-                <div className={`${styles.testimonialContainer}`}>
-                    <Swiper slidesPerView={2} pagination={true} modules={[Pagination]} className="mySwiper">
-                        <SwiperSlide className={`${styles.testimonialCard}`}>
-                            <TestimonialCard />
-                        </SwiperSlide>
-                        <SwiperSlide className={`${styles.testimonialCard}`}>
-                            <TestimonialCard />
-                        </SwiperSlide>
-                        <SwiperSlide className={`${styles.testimonialCard}`}>
-                            <TestimonialCard />
-                        </SwiperSlide>
-                        <SwiperSlide className={`${styles.testimonialCard}`}>
-                            <TestimonialCard />
-                        </SwiperSlide>
-                        <SwiperSlide className={`${styles.testimonialCard}`}>
-                            <TestimonialCard />
-                        </SwiperSlide>
-                        <SwiperSlide className={`${styles.testimonialCard}`}>
-                            <TestimonialCard />
-                        </SwiperSlide>
-
-                    </Swiper>
-                </div>
             </div> */}
+
 
         </div>
     );
