@@ -99,18 +99,22 @@ const AboutView = () => {
             </div>
             <div className={`${styles.galleryContainer}`}>
                 <div className={`${styles.col2Grid}`} >
-                    <img className={`${styles.img1Col2Grid}`} src="/images/rect1.png" alt="aman" />
-                    <img className={`${styles.img2Col2Grid}`} src="/images/rect2.5.png" alt="aman" />
+                    <div className={`${styles.coverImageContainer}`}>
+                        <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect1.png" alt="aman" />
+                    </div>
+                    <div className={`${styles.coverImageContainer}`}>
+                        <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect2.5.png" alt="aman" />
+                    </div>
                 </div>
                 <div className={`${styles.coverImageContainer}`}>
-                    <img className={`${styles.coverImage}`} src="/images/home3.png" alt="" />
+                    <img className={`${styles.ctaImage} ${styles.coverImage}`} src="/images/home3.png" alt="" />
                 </div>
-                <div className={`${styles.imageGrid}`}>
-                    {
-                        products.map((image, index) =>
-                            <img key={index} className={`${styles.productImage}`} src={image} />
-                        )}
-                </div>
+            </div>
+            <div className={`${styles.imageGrid}`}>
+                {
+                    products.map((image, index) =>
+                        <img key={index} className={`${styles.productImage}`} src={image} />
+                    )}
             </div>
         </div>
     );
