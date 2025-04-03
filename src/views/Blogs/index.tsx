@@ -18,7 +18,6 @@ const BlogView = () => {
         read_min: "17 min read",
         blog_content: `
   <article>
-  
     <section>
       <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
       <h2>Understanding HTML Structure</h2>
@@ -64,7 +63,6 @@ const BlogView = () => {
                             {parse(blog.blog_content)}
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

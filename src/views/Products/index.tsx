@@ -16,7 +16,7 @@ const ProductView = () => {
         download_link: "",
     }
     return (
-        <div className={`${styles.aboutView}`}>
+        <div className={`${styles.productView}`}>
             <Breadcrum imgUrl="/images/breadcrum1.png" />
             <MainHeading />
             <div className={`${styles.productDetail}`}>

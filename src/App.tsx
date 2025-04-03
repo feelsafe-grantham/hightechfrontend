@@ -8,6 +8,7 @@ import AboutView from './views/About';
 import ProductView from './views/Products';
 import BlogView from './views/Blogs';
 import ContactView from './views/Contact';
+import BlogList from './views/BlogList';
 function App() {
 
 
@@ -19,7 +20,7 @@ function App() {
         <Route path='/' element={<HomeView />} />
         <Route path='/about' element={<AboutView />} />
         <Route path='/products' element={<ProductView />} />
-        <Route path='/blogs' element={<BlogView />} />
+        <Route path='/blogs' element={<BlogList />} />
         <Route path='/contact' element={<ContactView />} />
       </Routes>
       <Footer />
