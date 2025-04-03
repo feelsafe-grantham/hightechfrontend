@@ -9,6 +9,7 @@ import 'swiper/swiper-bundle.css';
 import TestimonialCard from "../../components/common/TestimonialCard";
 import CoverImage from "../../components/common/CoverImage";
 import MainHeading from "../../components/common/MainHeading";
+import ContactCta from "../../components/common/ContactCta";
 const HomeView = () => {
     const chips = [
         "Zebra Blinds",
@@ -40,22 +41,7 @@ const HomeView = () => {
                 }
             </div>
             <MainHeading />
-            <div className={`${styles.ctaContainer}`}>
-                <div className={`${styles.cta}`}>
-                    <div className={`${styles.ctaImageContainer}`}>
-                        <img className={`${styles.ctaImage}`} src="/images/globe.png" alt="" />
-                    </div>
-                    <div className={`${styles.contactContainer}`}>
-                        <div className="flex gap-1">
-                            <a className={`${styles.contactNo}`} href={`tel:${ContactData.phone1}`}>+91-{ContactData.phone1}</a>
-                            |
-                            <a className={`${styles.contactNo}`} href={`tel:${ContactData.phone2}`}>+91-{ContactData.phone2}</a>
-                        </div>
-                        <a className={`${styles.contactNo}`} href={`mailto:${ContactData.email}`}>{ContactData.email}</a>
-                    </div>
-                </div>
-                <Form />
-            </div>
+            <ContactCta />
             <div className={`${styles.productsSection}`}>
                 <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
                 <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consecte consecte</p>
