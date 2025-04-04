@@ -1,4 +1,5 @@
 import Breadcrum from "../../components/common/Breadcrum";
+import MainHeading from "../../components/common/MainHeading";
 import styles from "./AboutView.module.css"
 const AboutView = () => {
     const team = [
@@ -47,12 +48,13 @@ const AboutView = () => {
     return (
         <div className={`${styles.aboutView}`}>
             <Breadcrum imgUrl="/images/breadcrum2.png" />
-            <div className={`${styles.headingContainer}`}>
+            {/* <div className={`${styles.headingContainer}`}>
                 <h2 className={`${styles.heading}`}>
                     India's No 1 Window <br />
                     <span className={`${styles.headingSpan}`}>Blinds Manufacturer</span>
                 </h2>
-            </div>
+            </div> */}
+            <MainHeading />
             <div className={`${styles.ownerSection}`}>
                 <h2 className={`${styles.sectionHeading}`}>About Us</h2>
                 <p className={`${styles.sectionDescription}`}>Lorem ipsum Lorem ipsum dolor sit.</p>
