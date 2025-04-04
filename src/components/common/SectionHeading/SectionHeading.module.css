@@ -1,3 +1,7 @@
+.sectionHeadingContainer {
+  margin-top: 50px;
+  margin: 30px auto;
+}
 .sectionHeading {
   color: var(--primary-heading);
   font-size: 40px;

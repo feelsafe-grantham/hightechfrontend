@@ -1,15 +1,11 @@
-import Form from "../../components/common/Form";
-import OneProduct from "../../components/Products/OneProduct";
-import { ContactData } from "../../utils/Data";
-import styles from "./Home.module.css"
 import { useState } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
-import TestimonialCard from "../../components/common/TestimonialCard";
+import styles from "./Home.module.css"
 import CoverImage from "../../components/common/CoverImage";
 import MainHeading from "../../components/common/MainHeading";
 import ContactCta from "../../components/common/ContactCta";
+import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
+import ProductsContainer from "../../components/common/ProductsContainer";
+import { ProductData } from "../../utils/Data";
 const HomeView = () => {
     const chips = [
         "Zebra Blinds",
@@ -24,6 +20,7 @@ const HomeView = () => {
     const handleChipClick = (chip: string) => {
         setChip(chip);
     }
+
     return (
         <div className={`${styles.homeView}`}>
             <CoverImage imgUrl="/images/homeCover.png" />
@@ -42,25 +39,13 @@ const HomeView = () => {
             </div>
             <MainHeading />
             <ContactCta />
-            <div className={`${styles.productsSection}`}>
-                <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
-                <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consecte consecte</p>
-                <div className={`${styles.productsContainer}`}>
-                    <OneProduct />
-                    <OneProduct />
-                    <OneProduct />
-                    <OneProduct />
-                    <OneProduct />
-                    <OneProduct />
-                </div>
-            </div>
+            <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
+            <ProductsContainer products={ProductData} />
             <div className={`${styles.hotProductsContainer}`}>
                 <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
                 <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
                 </p>
             </div>
-
-
         </div>
     );
 }

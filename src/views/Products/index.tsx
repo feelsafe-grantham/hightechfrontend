@@ -2,7 +2,8 @@ import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
 import MainHeading from "../../components/common/MainHeading";
 import ProductsContainer from "../../components/common/ProductsContainer";
-import { ProductCardType, ProductDetailType } from "../../types/contentTypes";
+import { ProductDetailType } from "../../types/contentTypes";
+import { ProductData } from "../../utils/Data";
 import styles from "./ProductView.module.css"
 const ProductView = () => {
     const product: ProductDetailType = {
@@ -18,71 +19,7 @@ const ProductView = () => {
         download_link: "",
         connect_link: "",
     }
-    const products: ProductCardType[] = [
-        {
-            id: 1,
-            product_image: "/images/product1.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-        {
-            id: 2,
-            product_image: "/images/product2.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-        {
-            id: 3,
-            product_image: "/images/product3.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-        {
-            id: 4,
-            product_image: "/images/product4.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        }, {
-            id: 1,
-            product_image: "/images/product1.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-        {
-            id: 2,
-            product_image: "/images/product2.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-        {
-            id: 3,
-            product_image: "/images/product3.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-        {
-            id: 4,
-            product_image: "/images/product4.png",
-            product_name: "Roller Blinds",
-            product_stars: 3,
-            download_link: "",
-            connect_link: "",
-        },
-    ]
+
     return (
         <div className={`${styles.productView}`}>
             <Breadcrum imgUrl="/images/breadcrum1.png" />
@@ -130,15 +67,7 @@ const ProductView = () => {
                 </div>
             </div>
             <ContactCta />
-            <ProductsContainer products={products} />
-            {/* <div className={`${styles.productsContainer}`}>
-                <OneProduct product={product} />
-                <OneProduct product={product} />
-                <OneProduct product={product} />
-                <OneProduct product={product} />
-                <OneProduct product={product} />
-                <OneProduct product={product} />
-            </div> */}
+            <ProductsContainer products={ProductData} />
             <div className={`${styles.gallerySection}`}>
                 <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
                 <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consecte consecte</p>
