@@ -1,7 +1,9 @@
 import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
+import ImageCta from "../../components/common/ImageCta";
 import MainHeading from "../../components/common/MainHeading";
 import ProductsContainer from "../../components/common/ProductsContainer";
+import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import { ProductDetailType } from "../../types/contentTypes";
 import { ProductData } from "../../utils/Data";
 import styles from "./ProductView.module.css"
@@ -68,26 +70,13 @@ const ProductView = () => {
             </div>
             <ContactCta />
             <ProductsContainer products={ProductData} />
-            <div className={`${styles.gallerySection}`}>
-                <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
-                <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consecte consecte</p>
-                <div className={`${styles.galleryContainer}`}>
-                    <div className={`${styles.hotProductsContainer}`}>
-                        <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
-                        <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
-                        </p>
-                    </div>
-                    <div className={`${styles.hotProductsContainer}`}>
-                        <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
-                        <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
-                        </p>
-                    </div>
-                </div>
-                <div className={`${styles.hotProductsContainer}`}>
-                    <img className={`${styles.hotProductImage}`} src="/images/home1.png" alt="" />
-                    <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
-                    </p>
-                </div>
+            <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
+            <div className={`${styles.galleryContainer}`}>
+                <ImageCta aspectRatio="21" imageUrl="/images/home1.png" text="Our Hot" subText="Products" />
+                <ImageCta aspectRatio="21" imageUrl="/images/home1.png" text="Our Hot" subText="Products" />
+            </div>
+            <div className={`${styles.maxWidthLimit}`}>
+                <ImageCta aspectRatio="31" imageUrl="/images/home1.png" text="Our Hot" subText="Products" />
             </div>
         </div>
     )

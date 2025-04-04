@@ -181,13 +181,22 @@
   font-size: 16px;
   line-height: 1em;
 }
+.maxWidthLimit {
+  max-width: var(--max-width-container);
+  width: 100%;
+  margin: 0px auto;
+}
 .galleryContainer {
+  max-width: var(--max-width-container);
+  width: 100%;
+  margin: 0px auto;
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
   grid-template-rows: auto;
   gap: 50px 10px;
 }
 .hotProductsContainer {
+  max-width: var(--max-width-container);
   width: 100%;
   margin: 20px auto;
   position: relative;

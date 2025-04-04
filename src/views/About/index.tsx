@@ -1,4 +1,5 @@
 import Breadcrum from "../../components/common/Breadcrum";
+import ImageCta from "../../components/common/ImageCta";
 import MainHeading from "../../components/common/MainHeading";
 import styles from "./AboutView.module.css"
 const AboutView = () => {
@@ -101,16 +102,11 @@ const AboutView = () => {
             </div>
             <div className={`${styles.galleryContainer}`}>
                 <div className={`${styles.col2Grid}`} >
-                    <div className={`${styles.coverImageContainer}`}>
-                        <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect1.png" alt="aman" />
-                    </div>
-                    <div className={`${styles.coverImageContainer}`}>
-                        <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect2.5.png" alt="aman" />
-                    </div>
+                    <ImageCta aspectRatio="21" />
+                    <ImageCta aspectRatio="21" />
                 </div>
-                <div className={`${styles.coverImageContainer}`}>
-                    <img className={`${styles.ctaImage} ${styles.coverImage}`} src="/images/home3.png" alt="" />
-                </div>
+                <ImageCta aspectRatio="31" imageUrl="/images/home1.png" />
+
             </div>
             <div className={`${styles.imageGrid}`}>
                 {

@@ -1,5 +1,6 @@
 import BlogCard from "../../components/Blog/BlogCard";
 import ContactCta from "../../components/common/ContactCta";
+import ImageCta from "../../components/common/ImageCta";
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
@@ -28,41 +29,19 @@ const BlogList = () => {
       </div>
       <div className={`${styles.galleryContainer}`}>
         <div className={`${styles.col2Grid}`} >
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect1.png" alt="aman" />
-            <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
-            </p>
-          </div>
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect2.5.png" alt="aman" />
-            <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
-            </p>
-          </div>
+          <ImageCta aspectRatio="21" />
+          <ImageCta aspectRatio="21" />
         </div>
         <div className={`${styles.col3Grid}`}>
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect1.png" alt="aman" />
-          </div>
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect2.5.png" alt="aman" />
-          </div>
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect2.5.png" alt="aman" />
-          </div>
+          <ImageCta aspectRatio="21" />
+          <ImageCta aspectRatio="21" />
+          <ImageCta aspectRatio="21" />
         </div>
         <div className={`${styles.col2GridRev}`} >
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect1.png" alt="aman" />
-          </div>
-          <div className={`${styles.coverImageContainer}`}>
-            <img className={`${styles.ctaImage} ${styles.gridImage} `} src="/images/rect2.5.png" alt="aman" />
-          </div>
+          <ImageCta aspectRatio="21" />
+          <ImageCta aspectRatio="21" />
         </div>
-        <div className={`${styles.coverImageContainer}`}>
-          <img className={`${styles.ctaImage} ${styles.coverImage}`} src="/images/home3.png" alt="" />
-          <p className={`${styles.hotCta}`}>Our Hot<br /> <span className={`${styles.hotCtaSpan}`}>Products</span>
-          </p>
-        </div>
+        <ImageCta aspectRatio="31" />
       </div>
       <div className={`${styles.imageGrid}`}>
         {products.map((image, index) =>

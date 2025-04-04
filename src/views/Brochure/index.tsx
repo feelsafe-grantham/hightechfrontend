@@ -80,9 +80,7 @@ const BrochureView = () => {
             <Breadcrum imgUrl="/images/breadcrum1.png" />
             <MainHeading />
             <ProductsContainer products={products} />
-            <div className={`${styles.headingContainer}`}>
-                <SectionHeading heading="Contact Us" description="Lorem ipsum dolor sit amet consecte consecte" />
-            </div>
+            <SectionHeading heading="Contact Us" description="Lorem ipsum dolor sit amet consecte consecte" />
             <ContactCta />
         </div>
     )
