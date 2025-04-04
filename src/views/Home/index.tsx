@@ -7,14 +7,14 @@ import ProductsContainer from "../../components/common/ProductsContainer";
 import ImageCta from "../../components/common/ImageCta";
 import useHomeView from "./useHomeView";
 const HomeView = () => {
-    const { chips, activeChip, handleChipClick, products } = useHomeView();
+    const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, loading, error } = useHomeView();
     return (
         <div className={`${styles.homeView}`}>
             <CoverImage imgUrl="/images/homeCover.png" />
             <div className={`${styles.productImageContainer}`}>
-                <img className={`${styles.productImage}`} src="/images/homeProduct1.png" alt="" />
-                <img className={`${styles.productImage}`} src="/images/homeProduct2.png" alt="" />
-                <img className={`${styles.productImage}`} src="/images/homeProduct3.png" alt="" />
+                {productsImages.map((image, index) =>
+                    <img key={index} className={`${styles.productImage}`} src={image} alt="" />
+                )}
             </div>
             <div className={`${styles.chipsContainer}`}>
                 {chips.map((chip, index) =>
@@ -29,7 +29,12 @@ const HomeView = () => {
             <ContactCta />
             <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
             <ProductsContainer products={products} />
-            <ImageCta aspectRatio="31" imageUrl="/images/home1.png" text="Our Hot" subText="Products" />
+            <ImageCta
+                aspectRatio={ctaImage.aspectRatio}
+                imageUrl={ctaImage.imageUrl}
+                text={ctaImage.text}
+                subText={ctaImage.subText}
+            />
         </div>
     );
 }

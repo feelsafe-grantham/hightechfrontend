@@ -74,19 +74,19 @@ export const CtaImages: ImageCtaType[] = [
         aspectRatio: "31",
     },
     {
-        imageUrl: "/images/banner2.jpg",
+        imageUrl: "/images/homeProduct1.png",
         text: "Our Hot",
         subText: "Products",
         aspectRatio: "21",
     },
     {
-        imageUrl: "/images/banner2.jpg",
+        imageUrl: "/images/homeProduct2.png",
         text: "Our Hot",
         subText: "Products",
         aspectRatio: "21",
     },
     {
-        imageUrl: "/images/banner2.jpg",
+        imageUrl: "/images/homeProduct3.png",
         text: "Our Hot",
         subText: "Products",
         aspectRatio: "21",

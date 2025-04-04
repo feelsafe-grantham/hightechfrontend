@@ -10,12 +10,14 @@ import BlogView from './views/Blogs';
 import ContactView from './views/Contact';
 import BlogList from './views/BlogList';
 import BrochureView from './views/Brochure';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
     <>
       <Topstrip />
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<HomeView />} />
         <Route path='/about' element={<AboutView />} />
