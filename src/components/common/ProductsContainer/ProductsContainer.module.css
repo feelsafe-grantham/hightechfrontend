@@ -1,0 +1,9 @@
+.productsContainer {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  place-items: center;
+  gap: 20px;
+}

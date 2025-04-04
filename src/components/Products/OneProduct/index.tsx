@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
 import styles from "./OneProduct.module.css"
+import { ProductCardType } from "../../../types/contentTypes";
 const OneProduct = ({ product = {
+    id: 1,
     product_image: "/images/product1.png",
     product_name: "Faux Wood Blinds",
-    stars: 5,
+    product_stars: 5,
     connect_link: "",
     download_link: "",
-} }) => {
+} }: { product: ProductCardType }) => {
 
     const {
+        id,
         product_image,
         product_name,
-        stars,
+        product_stars,
         connect_link,
         download_link } = product;
     return (
@@ -23,7 +26,7 @@ const OneProduct = ({ product = {
             />
             <h4 className={`${styles.productName}`}>{product_name}</h4>
             <div className={`${styles.productStars}`}>
-                {Array(stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
+                {Array(product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
             </div>
             <div className={`${styles.btnContainer}`}>
                 <Link to={connect_link} className={`${styles.ctaBtn} ${styles.connectBtn}`}>Connect Now!</Link>

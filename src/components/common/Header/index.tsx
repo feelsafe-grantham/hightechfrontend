@@ -5,6 +5,7 @@ const Header = () => {
         { label: "Home", url: "/", },
         { label: "About", url: "/about", },
         { label: "Products", url: "/products", },
+        { label: "Brochure", url: "/brochure", },
         { label: "Blogs", url: "/blog", },
         { label: "Contact", url: "/contact", },
     ]

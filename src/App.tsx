@@ -9,6 +9,8 @@ import ProductView from './views/Products';
 import BlogView from './views/Blogs';
 import ContactView from './views/Contact';
 import BlogList from './views/BlogList';
+import BrochureView from './views/Brochure';
+
 function App() {
 
 
@@ -21,6 +23,8 @@ function App() {
         <Route path='/about' element={<AboutView />} />
         <Route path='/products' element={<ProductView />} />
         <Route path='/blog' element={<BlogList />} />
+        <Route path='/brochure' element={<BrochureView />} />
+
         <Route path="/blog/:slug" element={<BlogView />} />
         <Route path='/contact' element={<ContactView />} />
       </Routes>

@@ -1,35 +1,102 @@
 import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
 import MainHeading from "../../components/common/MainHeading";
-import OneProduct from "../../components/Products/OneProduct";
+import ProductsContainer from "../../components/common/ProductsContainer";
+import { ProductCardType, ProductDetailType } from "../../types/contentTypes";
 import styles from "./ProductView.module.css"
 const ProductView = () => {
-    const product = {
-        product_image: "",
+    const product: ProductDetailType = {
+        id: 1,
+        product_image: "/images/product1.png",
         product_name: "Roller Blinds",
-        product_star: 8,
+        product_stars: 8,
         product_review: ["Dealer Verified", "Factory Product", "Quality Approved",],
         product_height: "102cm",
         product_width: "102cm",
         product_price: "1200",
         whatsapp_link: "",
         download_link: "",
+        connect_link: "",
     }
+    const products: ProductCardType[] = [
+        {
+            id: 1,
+            product_image: "/images/product1.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+        {
+            id: 2,
+            product_image: "/images/product2.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+        {
+            id: 3,
+            product_image: "/images/product3.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+        {
+            id: 4,
+            product_image: "/images/product4.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        }, {
+            id: 1,
+            product_image: "/images/product1.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+        {
+            id: 2,
+            product_image: "/images/product2.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+        {
+            id: 3,
+            product_image: "/images/product3.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+        {
+            id: 4,
+            product_image: "/images/product4.png",
+            product_name: "Roller Blinds",
+            product_stars: 3,
+            download_link: "",
+            connect_link: "",
+        },
+    ]
     return (
         <div className={`${styles.productView}`}>
             <Breadcrum imgUrl="/images/breadcrum1.png" />
             <MainHeading />
             <div className={`${styles.productDetail}`}>
                 <div className={`${styles.productImageContainer}`}>
-                    <img className={`${styles.productImage}`} src="/images/product1.png" alt="" />
+                    <img className={`${styles.productImage}`} src={product.product_image} alt={product.product_name} />
                 </div>
                 <div className={`${styles.productInfo}`}>
                     <h3 className={`${styles.productName}`}>{product.product_name}</h3>
                     <div className={`${styles.reviewContainer}`}>
                         <img className={`${styles.icon}`} src="/images/google.png" alt="" />
                         <img className={`${styles.icon}`} src="/images/star.png" alt="" />
-
-                        <p className={`${styles.reviewCount}`}>{product.product_star}/10</p>
+                        <p className={`${styles.reviewCount}`}>{product.product_stars}/10</p>
 
                     </div>
                     <ul className={`${styles.checkContainer}`}>
@@ -63,14 +130,15 @@ const ProductView = () => {
                 </div>
             </div>
             <ContactCta />
-            <div className={`${styles.productsContainer}`}>
-                <OneProduct />
-                <OneProduct />
-                <OneProduct />
-                <OneProduct />
-                <OneProduct />
-                <OneProduct />
-            </div>
+            <ProductsContainer products={products} />
+            {/* <div className={`${styles.productsContainer}`}>
+                <OneProduct product={product} />
+                <OneProduct product={product} />
+                <OneProduct product={product} />
+                <OneProduct product={product} />
+                <OneProduct product={product} />
+                <OneProduct product={product} />
+            </div> */}
             <div className={`${styles.gallerySection}`}>
                 <h2 className={`${styles.sectionHeading}`}>Top Selling Products</h2>
                 <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consecte consecte</p>
