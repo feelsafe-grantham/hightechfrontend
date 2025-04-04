@@ -1,6 +1,7 @@
 import BlogCard from "../../components/Blog/BlogCard";
 import ContactCta from "../../components/common/ContactCta";
 import ImageCta from "../../components/common/ImageCta";
+import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
@@ -24,9 +25,8 @@ const BlogList = () => {
       <div className={`${styles.blogsContainer}`}>
         {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
       </div>
-      <div>
-        <ContactCta />
-      </div>
+      <ContactCta />
+      <SectionHeading heading="See More from Us" description="Lorem ipsum dolor sit amet consecte consecte  sit amet " />
       <div className={`${styles.galleryContainer}`}>
         <div className={`${styles.col2Grid}`} >
           <ImageCta aspectRatio="21" />
