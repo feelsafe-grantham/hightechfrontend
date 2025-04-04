@@ -8,48 +8,5 @@
   margin: 0px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px 50px;
-}
-.blogCardContainer {
-  height: 600px;
-  width: 500px;
-  position: relative;
-  border: 2px solid red;
-  border-radius: var(--standard-border-radius2);
-}
-.blogImage {
-  border-radius: var(--standard-border-radius2);
-}
-/* .blogTitle::before {
-  content: "";
-  position: absolute;
-  background-color: black;
-}
-.blogTitle {
-  position: absolute;
-  bottom: 0;
-  font-size: 23px;
-  color: var(--white-text);
-} */
-.titleContainer {
-  position: absolute;
-  bottom: 0;
-  border: 2px solid red;
-}
-.blogTitle {
-  font-size: 24px;
-  color: var(--white-text);
-  z-index: 99;
-  margin: 0px auto;
-  position: relative;
-}
-
-.blogTitle::before {
-  content: "";
-  position: absolute;
-  bottom: 0; /* Position it at the bottom of the .blogTitle */
-  left: 0;
-  width: 100%; /* Span the full width of the .blogTitle */
-  height: 100%; /* You can adjust the height of the background */
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  gap: 50px 50px;
 }

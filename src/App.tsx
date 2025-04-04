@@ -20,7 +20,8 @@ function App() {
         <Route path='/' element={<HomeView />} />
         <Route path='/about' element={<AboutView />} />
         <Route path='/products' element={<ProductView />} />
-        <Route path='/blogs' element={<BlogList />} />
+        <Route path='/blog' element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogView />} />
         <Route path='/contact' element={<ContactView />} />
       </Routes>
       <Footer />

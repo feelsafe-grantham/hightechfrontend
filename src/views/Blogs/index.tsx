@@ -1,35 +1,19 @@
 import styles from "./BlogView.module.css";
+import { useParams } from "react-router-dom";
 import parse from 'html-react-parser';
+import useBlogView from "./useBlogView";
 const BlogView = () => {
-    const blog = {
-        blog_images: [
-            "/images/product1.png",
-            "/images/product2.png",
-            "/images/product3.png",
-            "/images/product4.png",
-            "/images/product1.png",
-            "/images/product2.png",
-            "/images/product3.png",
-            "/images/product4.png"
-        ],
-        blog_title: "Top window Blinds for Office",
-        author_name: "Nikhil Gussain",
-        author_image: "17 min read",
-        read_min: "17 min read",
-        blog_content: `
-  <article>
-    <section>
-      <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
-      <h2>Understanding HTML Structure</h2>
-      <p>HTML (HyperText Markup Language) is the standard language for creating webpages. It provides the basic structure for web content. An HTML document consists of elements like headings, paragraphs, lists, images, and links.</p>
-      <h3>Why HTML is Important</h3>
-      <p>HTML serves as the foundation for web pages and is essential for creating accessible and well-structured content. Without HTML, websites wouldn't be able to display information properly.</p>
-    </section>
-    <footer>
-      <p>Thank you for reading! Stay tuned for more content.</p>
-    </footer>
-  </article>
-`,
+    const { slug } = useParams<{ slug: string }>();
+    const { blog, loading, error } = useBlogView(slug as string);
+
+    // if (loading) {
+    //     return <div className={`${styles.loading}`}>Loading...</div>;
+    // }
+    if (error) {
+        return <div className={`${styles.error}`}>Error loading blog</div>;
+    }
+    if (!blog) {
+        return <div className={`${styles.error}`}>Blog not found</div>;
     }
     return (
         <div className={`${styles.blogView}`}>
@@ -64,6 +48,7 @@ const BlogView = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     )
