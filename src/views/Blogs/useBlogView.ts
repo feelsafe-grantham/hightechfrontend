@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../utils/Constants/index";
 import { getIdFromSlug } from "../../utils/helper";
-const blogTemp = {
+import { BlogDetailType } from "../../types/contentTypes";
+const blogTemp: BlogDetailType = {
+  id: 1,
   blog_images: [
     "/images/product1.png",
     "/images/product2.png",

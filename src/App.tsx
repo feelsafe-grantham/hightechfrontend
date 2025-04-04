@@ -24,7 +24,6 @@ function App() {
         <Route path='/products' element={<ProductView />} />
         <Route path='/blog' element={<BlogList />} />
         <Route path='/brochure' element={<BrochureView />} />
-
         <Route path="/blog/:slug" element={<BlogView />} />
         <Route path='/contact' element={<ContactView />} />
       </Routes>

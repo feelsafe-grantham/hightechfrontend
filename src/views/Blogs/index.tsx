@@ -32,8 +32,8 @@ const BlogView = () => {
                     </div>
                     <div className={`${styles.blogInfo}`}>
                         <h2 className={`${styles.blogTitle}`}>{blog.blog_title}</h2>
-                        <div className={`${styles.authorInfoContainer}`}>
-                            <img className={`${styles.authorImage}`} src="/images/user.jpg" alt="" />
+                        {/* <div className={`${styles.authorInfoContainer}`}>
+                            <img className={`${styles.authorImage}`} src={blog.author_image} alt={blog.author_name} />
                             <div className={`${styles.authorInfo}`}>
                                 <span className={`${styles.authorName}`}>
                                     {blog.author_name}
@@ -42,7 +42,7 @@ const BlogView = () => {
                                     {blog.read_min}
                                 </span>
                             </div>
-                        </div>
+                        </div> */}
                         <div className={`${styles.blogContent}`}>
                             {parse(blog.blog_content)}
                         </div>

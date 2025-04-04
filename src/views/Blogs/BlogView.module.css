@@ -55,6 +55,7 @@
   font-weight: 600;
 }
 .blogContent {
+  margin: 50px auto;
   text-align: center;
 }
 .blogContent h2 {
