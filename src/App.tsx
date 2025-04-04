@@ -12,8 +12,6 @@ import BlogList from './views/BlogList';
 import BrochureView from './views/Brochure';
 
 function App() {
-
-
   return (
     <>
       <Topstrip />
