@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
 }
 .logoContainer {
 }
@@ -14,10 +13,10 @@
 }
 .headerLinksContainer {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 .headerLink {
-  font-size: 24px;
+  font-size: 28px;
   transition: color 0.3s ease;
 }
 .linkActive {
@@ -53,26 +52,24 @@
     margin-left: 0px;
   }
   .logoheight {
-    height: 90px;
+    height: 140px;
   }
 }
 @media (max-width: 1100px) {
+  .logoheight {
+    height: 90px;
+  }
   .headerContainer {
-    gap: 10px;
+    gap: 0px;
   }
   .headerLinksContainer {
-    gap: 35px;
+    gap: 15px;
   }
   .headerLink {
     font-size: 18px;
     transition: color 0.3s ease;
   }
 }
+/* phone view starts here */
 @media (max-width: 768px) {
-  .logo {
-    margin-left: 0px;
-  }
-  .headerLinksContainer {
-    gap: 15px;
-  }
 }

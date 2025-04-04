@@ -12,12 +12,33 @@
   font-weight: 600;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .stripContainer {
     gap: 5px;
     padding: 5px 0px;
   }
   .stripfont {
     font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .stripContainer {
+    gap: 0px;
+    padding: 5px 0px;
+  }
+  .stripfont {
+    font-size: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .stripContainer {
+    gap: 0px;
+    padding: 5px 0px;
+  }
+  .stripfont {
+    font-size: 10px;
+  }
+  .phone2 {
+    display: none;
   }
 }
