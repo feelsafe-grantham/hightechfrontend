@@ -15,7 +15,7 @@ export interface ProductDetailType {
   product_review: string[];
   product_height: string;
   product_width: string;
-  product_price: string;
+  product_price: number;
   whatsapp_link: string;
   download_link: string;
 }
