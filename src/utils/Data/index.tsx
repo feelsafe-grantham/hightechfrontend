@@ -1,4 +1,4 @@
-import { ProductCardType, } from "../../types/contentTypes"
+import { ImageCtaType, ProductCardType, } from "../../types/contentTypes"
 
 export const ContactData = {
     email: 'order@hightechwindowblinds.in',
@@ -65,3 +65,36 @@ export const ProductData: ProductCardType[] = [
     },
 ]
 
+
+export const CtaImages: ImageCtaType[] = [
+    {
+        imageUrl: "/images/home1.png",
+        text: "Our Hot",
+        subText: "Products",
+        aspectRatio: "31",
+    },
+    {
+        imageUrl: "/images/banner2.jpg",
+        text: "Our Hot",
+        subText: "Products",
+        aspectRatio: "21",
+    },
+    {
+        imageUrl: "/images/banner2.jpg",
+        text: "Our Hot",
+        subText: "Products",
+        aspectRatio: "21",
+    },
+    {
+        imageUrl: "/images/banner2.jpg",
+        text: "Our Hot",
+        subText: "Products",
+        aspectRatio: "21",
+    },
+    {
+        imageUrl: "/images/banner2.jpg",
+        text: "Our Hot",
+        subText: "Products",
+        aspectRatio: "31",
+    },
+]

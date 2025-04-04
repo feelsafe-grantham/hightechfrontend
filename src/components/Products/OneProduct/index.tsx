@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 import styles from "./OneProduct.module.css"
 import { ProductCardType } from "../../../types/contentTypes";
+import { createSlug } from "../../../utils/helper";
 const OneProduct = ({ product = {
     id: 1,
     product_image: "/images/product1.png",
@@ -17,13 +18,17 @@ const OneProduct = ({ product = {
         product_stars,
         connect_link,
         download_link } = product;
+    const slug = createSlug(product_name, id);
     return (
         <div className={`${styles.productCard}`}>
-            <img
-                className={`${styles.productImage}`}
-                src={product_image}
-                alt="aman"
-            />
+            <Link to={`/brochure/${slug}`}>
+                <img
+                    className={`${styles.productImage}`}
+                    src={product_image}
+                    alt={product_name}
+                    loading="lazy"
+                />
+            </Link>
             <h4 className={`${styles.productName}`}>{product_name}</h4>
             <div className={`${styles.productStars}`}>
                 {Array(product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}

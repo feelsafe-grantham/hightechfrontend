@@ -3,11 +3,13 @@
   margin: 20px auto;
   position: relative;
   box-shadow: inset 0px -80px 600px -6px rgba(0, 0, 0, 0.8);
+  border-radius: var(--standard-border-radius2);
 }
 .hotProductImage {
   width: 100%;
   position: relative;
   z-index: -1;
+  border-radius: var(--standard-border-radius2);
 }
 .hotCta {
   position: absolute;

@@ -49,12 +49,6 @@ const AboutView = () => {
     return (
         <div className={`${styles.aboutView}`}>
             <Breadcrum imgUrl="/images/breadcrum2.png" />
-            {/* <div className={`${styles.headingContainer}`}>
-                <h2 className={`${styles.heading}`}>
-                    India's No 1 Window <br />
-                    <span className={`${styles.headingSpan}`}>Blinds Manufacturer</span>
-                </h2>
-            </div> */}
             <MainHeading />
             <div className={`${styles.ownerSection}`}>
                 <h2 className={`${styles.sectionHeading}`}>About Us</h2>

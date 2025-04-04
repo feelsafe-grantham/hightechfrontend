@@ -35,3 +35,11 @@ export interface BlogDetailType {
   author_image: string;
   blog_content: string;
 }
+
+export interface ImageCtaType {
+  imageUrl: string;
+  text: string;
+  subText: string;
+  aspectRatio: "31" | "21" | "1";
+  link?: string;
+}
