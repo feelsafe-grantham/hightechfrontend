@@ -45,3 +45,31 @@
   color: var(--primary-heading);
   border: 2px solid var(--primary-text);
 }
+
+@media (max-width: 800px) {
+  .productCard {
+    width: 100%;
+    max-width: 350px;
+  }
+  .productImage {
+    width: 100%;
+    aspect-ratio: 1/1.2;
+  }
+  .productName {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .productCard {
+    width: 100%;
+    max-width: 300px;
+  }
+  .productImage {
+    width: 100%;
+    aspect-ratio: 1/1.2;
+  }
+  .ctaBtn {
+    font-size: 12px;
+  }
+}

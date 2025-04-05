@@ -43,3 +43,31 @@
   font-weight: 700;
   color: var(--white-text);
 }
+@media (max-width: 900px) {
+  .ctaContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  .ctaImage {
+    height: 300px;
+  }
+  .contactContainer {
+    padding: 10px 0px;
+  }
+  .contactNo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ctaImage {
+    height: 290px;
+  }
+  .contactNo {
+    font-size: 16px;
+  }
+  .ctaContainer {
+    padding: 0px 10px;
+  }
+}

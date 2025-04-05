@@ -7,3 +7,13 @@
   place-items: center;
   gap: 20px;
 }
+@media (max-width: 1200px) {
+  .productsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .productsContainer {
+    grid-template-columns: 1fr;
+  }
+}

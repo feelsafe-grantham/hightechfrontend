@@ -12,3 +12,13 @@
 .headingSpan {
   letter-spacing: 1px;
 }
+
+@media (max-width: 768px) {
+  .headingContainer {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+}

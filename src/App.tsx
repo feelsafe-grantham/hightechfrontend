@@ -19,7 +19,7 @@ function App() {
       <Header />
       <ScrollToTop />
       <Routes>
-        {/* <Route path='/' element={<HomeView />} /> */}
+        <Route path='/' element={<HomeView />} />
         <Route path='/about' element={<AboutView />} />
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path='/blog' element={<BlogList />} />

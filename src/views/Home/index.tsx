@@ -35,6 +35,7 @@ const HomeView = () => {
                 text={ctaImage.text}
                 subText={ctaImage.subText}
             />
+
         </div>
     );
 }

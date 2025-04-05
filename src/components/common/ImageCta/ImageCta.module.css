@@ -34,3 +34,18 @@
 .ratio1 {
   aspect-ratio: 1 / 1;
 }
+
+@media (max-width: 768px) {
+  .hotProductsContainer {
+    margin: 10px auto;
+  }
+  .hotProductImage {
+    aspect-ratio: 2 / 1;
+  }
+  .hotCta {
+    font-size: 12px;
+  }
+  .hotCtaSpan {
+    font-size: 24px;
+  }
+}
