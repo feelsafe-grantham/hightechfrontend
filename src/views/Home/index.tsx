@@ -6,8 +6,9 @@ import SectionHeading from "../../components/common/SectionHeading/SectionHeadin
 import ProductsContainer from "../../components/common/ProductsContainer";
 import ImageCta from "../../components/common/ImageCta";
 import useHomeView from "./useHomeView";
+import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 const HomeView = () => {
-    const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, } = useHomeView();
+    const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, loading } = useHomeView();
     return (
         <div className={`${styles.homeView}`}>
             <CoverImage imgUrl="/images/homeCover.png" />
@@ -28,7 +29,7 @@ const HomeView = () => {
             <MainHeading />
             <ContactCta />
             <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
-            <ProductsContainer products={products} />
+            {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
             <ImageCta
                 aspectRatio={ctaImage.aspectRatio}
                 imageUrl={ctaImage.imageUrl}
