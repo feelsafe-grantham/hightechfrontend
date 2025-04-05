@@ -18,7 +18,6 @@ const BlogView = () => {
     return (
         <div className={`${styles.blogView}`}>
             <div className={`${styles.blogCardContainer}`}>
-
                 <div className={`${styles.blogCard}`}>
                     <div className={`${styles.blogImageContainer}`}>
                         {blog.blog_images.map((image, index) =>
