@@ -82,6 +82,8 @@
   justify-content: flex-start;
   overflow-x: scroll;
   flex-wrap: nowrap;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .productImage {
@@ -93,6 +95,8 @@
   .blogsContainer {
     margin-top: 40px;
     grid-template-columns: 1fr 1fr;
+  }
+  .imageGrid {
   }
 }
 
