@@ -88,3 +88,29 @@
   margin: 0px 20px;
   height: 300px;
 }
+
+@media (max-width: 1200px) {
+  .blogsContainer {
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .blogsContainer {
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
+  .blogListView {
+    padding-bottom: 0px;
+  }
+  .col2Grid,
+  .col2GridRev {
+    grid-template-columns: 1fr;
+    padding: 0px 20px;
+  }
+  .col3Grid {
+    grid-template-columns: 1fr;
+    padding: 0px 20px;
+  }
+}

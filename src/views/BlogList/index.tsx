@@ -43,11 +43,11 @@ const BlogList = () => {
         </div>
         <ImageCta aspectRatio="31" />
       </div>
-      <div className={`${styles.imageGrid}`}>
+      {/*<div className={`${styles.imageGrid}`}>
         {products.map((image, index) =>
           <img key={index} className={`${styles.productImage}`} src={image} />
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
