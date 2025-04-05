@@ -12,14 +12,6 @@
 }
 /* blogs end here */
 
-.galleryContainer {
-  margin: 0px auto;
-  max-width: var(--max-width-container);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .ctaImage {
   width: 100%;
   position: relative;
@@ -40,23 +32,29 @@
   line-height: 1em;
   font-size: 48px;
 }
-
+.galleryContainer {
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+  display: flex;
+  flex-direction: column;
+  gap: 20px 20px;
+}
 .col2Grid {
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
-  gap: 20px;
+  gap: 20px 20px;
 }
 
 .col3Grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 20px 20px;
 }
 
 .col2GridRev {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
-  gap: 20px;
+  gap: 20px 20px;
 }
 
 .gridImage {

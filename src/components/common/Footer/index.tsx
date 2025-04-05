@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className={`${styles.row1}`}>
                         <h3 className={`${styles.colHeading} ${styles.companyName}`}>Hightech Windows Blind</h3>
                         <p className={`${styles.companyDescription}`}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam exercitationem,
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam exercitationem
                         </p>
                         <div className={`${styles.socialIconContainer}`}>
                             <a href={ContactData.instagramlink}>
@@ -36,8 +36,8 @@ const Footer = () => {
                         <h3 className={`${styles.colHeading}`}>Quick Links</h3>
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
-                        <Link to="/products">Products</Link>
-                        <Link to="/blogs">Blogs</Link>
+                        <Link to="/brochure">Brochure</Link>
+                        <Link to="/blog">Blogs</Link>
                         <Link to="/contact">Contact</Link>
                     </div>
                     <div className={`${styles.row3}`}>

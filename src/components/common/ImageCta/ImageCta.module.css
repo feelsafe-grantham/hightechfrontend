@@ -1,6 +1,5 @@
 .hotProductsContainer {
   width: 100%;
-  margin: 20px auto;
   position: relative;
   box-shadow: inset 0px -80px 600px -6px rgba(0, 0, 0, 0.8);
   border-radius: var(--standard-border-radius2);

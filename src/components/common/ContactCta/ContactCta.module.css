@@ -1,8 +1,8 @@
 .ctaContainer {
   width: 100%;
+  margin: 0px auto;
   padding: 20px 30px;
   max-width: var(--max-width-container);
-  margin: 0px auto;
   background-color: var(--primary-theme1);
   border-radius: var(--standard-border-radius1);
   display: grid;
@@ -48,6 +48,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 20px;
+    padding: 20px 10px;
   }
   .ctaImage {
     height: 300px;
@@ -68,6 +69,6 @@
     font-size: 16px;
   }
   .ctaContainer {
-    padding: 0px 10px;
+    padding: 20px 10px;
   }
 }

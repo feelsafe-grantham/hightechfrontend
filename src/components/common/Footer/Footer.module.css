@@ -104,6 +104,9 @@
     padding: 5px 10px;
     margin-right: 5px;
   }
+  .midBar {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 450px) {
