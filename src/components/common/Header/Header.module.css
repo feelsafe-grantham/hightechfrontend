@@ -16,7 +16,7 @@
   gap: 30px;
 }
 .headerLink {
-  font-size: 28px;
+  font-size: 24px;
   transition: color 0.3s ease;
 }
 .linkActive {
@@ -68,7 +68,7 @@
     gap: 15px;
   }
   .headerLink {
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
   }
 }
@@ -106,7 +106,7 @@
   }
 
   .headerLink {
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
     padding: 10px 20px;
     width: 100%;
