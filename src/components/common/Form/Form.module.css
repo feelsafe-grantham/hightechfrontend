@@ -58,3 +58,30 @@ select:focus {
   background: var(--white-text);
   color: var(--primary-theme1);
 }
+
+.thankYouMessage {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--primary-theme3);
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Animation for Fade In */
+.fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -2,50 +2,9 @@ import Breadcrum from "../../components/common/Breadcrum";
 import ImageCta from "../../components/common/ImageCta";
 import MainHeading from "../../components/common/MainHeading";
 import styles from "./AboutView.module.css"
+import useAboutView from "./useAboutView";
 const AboutView = () => {
-    const team = [
-        {
-            name: "Mr Rahul",
-            image: "/images/rahul.png",
-            designation: "Accountant",
-        },
-        {
-            name: "Ms Divya",
-            image: "/images/divya.png",
-            designation: "Operations Executive",
-        },
-        {
-            name: "Ms Pinky",
-            image: "/images/pinky.png",
-            designation: "Sales Represntative",
-        },
-        {
-            name: "Ms Anjali",
-            image: "/images/anjali.png",
-            designation: "Sales Represntative",
-        },
-        {
-            name: "Ms Komal",
-            image: "/images/komal.png",
-            designation: "Sales Head",
-        },
-
-    ]
-    const products = [
-        "/images/product1.png",
-        "/images/product2.png",
-        "/images/product3.png",
-        "/images/product4.png",
-        "/images/product1.png",
-        "/images/product2.png",
-        "/images/product3.png",
-        "/images/product4.png",
-        "/images/product1.png",
-        "/images/product2.png",
-        "/images/product3.png",
-        "/images/product4.png",
-    ]
-
+    const { team, productsImages } = useAboutView();
     return (
         <div className={`${styles.aboutView}`}>
             <Breadcrum imgUrl="/images/breadcrum2.png" />
@@ -102,7 +61,7 @@ const AboutView = () => {
                 <ImageCta aspectRatio="31" imageUrl="/images/home1.png" />
             </div>
             <div className={`${styles.imageGrid}`}>
-                {products.map((image, index) =>
+                {productsImages.map((image, index) =>
                     <img key={index} className={`${styles.productImage}`} src={image} />
                 )}
             </div>

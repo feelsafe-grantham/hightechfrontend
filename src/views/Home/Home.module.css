@@ -3,16 +3,19 @@
   display: grid;
   gap: 10px;
 }
+
 .productImageContainer {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
+
 .productImage {
   width: 100%;
   aspect-ratio: 2/1;
 }
+
 /* chips start */
 .chipsContainer {
   margin: 30px auto;
@@ -41,76 +44,9 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 /* chips end */
-
-/* heding ends */
-
-/* cta ends */
-
-.productsSection {
-  width: 100%;
-  max-width: var(--max-width-container);
-  margin: 20px auto;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-.sectionHeading {
-  color: var(--primary-heading);
-  font-size: 40px;
-  font-weight: 800;
-  text-align: center;
-  line-height: 1.2em;
-}
-.sectionDescription {
-  text-align: center;
-  color: var(--primary-text);
-  font-size: 16px;
-  line-height: 1em;
-}
-.productsContainer {
+.ctaContainer {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 50px 10px;
 }
-
-/* Product Section ends */
-
-.hotProductsContainer {
-  width: 100%;
-  margin: 20px auto;
-  position: relative;
-  box-shadow: inset 0px -80px 600px -6px rgba(0, 0, 0, 0.8);
-}
-.hotProductImage {
-  width: 100%;
-  aspect-ratio: 3/1;
-  position: relative;
-  z-index: -1;
-}
-.hotCta {
-  position: absolute;
-  left: 10%;
-  bottom: 10%;
-  color: var(--white-text);
-  font-size: 28px;
-  line-height: 1.2em;
-}
-.hotCtaSpan {
-  font-weight: 600;
-  line-height: 1em;
-  font-size: 48px;
-}
-
-/* hot cta ends */
-
-.testimonialCard {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-}
-
 @media (max-width: 768px) {
   .productImageContainer {
     grid-template-columns: 1fr 1fr;

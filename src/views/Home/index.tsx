@@ -14,7 +14,7 @@ const HomeView = () => {
             <CoverImage imgUrl="/images/homeCover.png" />
             <div className={`${styles.productImageContainer}`}>
                 {productsImages.map((image, index) =>
-                    <img key={index} className={`${styles.productImage}`} src={image} alt="" />
+                    <img key={index} className={`${styles.productImage}`} src={image} alt="High Tech Window Blinds by Vishal Interior" />
                 )}
             </div>
             <div className={`${styles.chipsContainer}`}>
@@ -30,13 +30,15 @@ const HomeView = () => {
             <ContactCta />
             <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
             {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
-            <ImageCta
-                aspectRatio={ctaImage.aspectRatio}
-                imageUrl={ctaImage.imageUrl}
-                text={ctaImage.text}
-                subText={ctaImage.subText}
-            />
+            <div className={`${styles.ctaContainer}`}>
+                <ImageCta
+                    aspectRatio={ctaImage.aspectRatio}
+                    imageUrl={ctaImage.imageUrl}
+                    text={ctaImage.text}
+                    subText={ctaImage.subText}
+                />
 
+            </div>
         </div>
     );
 }

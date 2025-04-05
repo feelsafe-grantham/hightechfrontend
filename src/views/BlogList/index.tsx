@@ -29,19 +29,19 @@ const BlogList = () => {
       <SectionHeading heading="See More from Us" description="Lorem ipsum dolor sit amet consecte consecte  sit amet " />
       <div className={`${styles.galleryContainer}`}>
         <div className={`${styles.col2Grid}`} >
-          <ImageCta aspectRatio="21" />
-          <ImageCta aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct1.png" aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct3.png" aspectRatio="21" />
         </div>
         <div className={`${styles.col3Grid}`}>
-          <ImageCta aspectRatio="21" />
-          <ImageCta aspectRatio="21" />
-          <ImageCta aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct1.png" aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct2.png" aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct3.png" aspectRatio="21" />
         </div>
         <div className={`${styles.col2GridRev}`} >
-          <ImageCta aspectRatio="21" />
-          <ImageCta aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct2.png" aspectRatio="21" />
+          <ImageCta imageUrl="/images/homeProduct1.png" aspectRatio="21" />
         </div>
-        <ImageCta aspectRatio="31" />
+        <ImageCta imageUrl="/images/homeProduct3.png" aspectRatio="31" />
       </div>
       <div className={`${styles.imageGrid}`}>
         {products.map((image, index) =>

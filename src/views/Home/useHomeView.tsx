@@ -32,7 +32,7 @@ const useHomeView = () => {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await fetch(BASE_URL + "/products");
+            const response = await fetch(BASE_URL + "home/" + "get-porducts/");
             if (!response.ok) {
                 setError(true);
                 return;

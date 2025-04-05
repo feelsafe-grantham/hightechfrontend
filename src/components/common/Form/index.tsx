@@ -6,10 +6,20 @@ const Form = () => {
     const [phone, setPhone] = useState("");
     const [state, setState] = useState("");
     const [message, setMessage] = useState("");
+    const [showThankYou, setShowThankYou] = useState(false);
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log({ name, email, phone, state, message });
+        setShowThankYou(true);
+        resetForm();
     };
+    const resetForm = () => {
+        setName("");
+        setEmail("");
+        setPhone("");
+        setState("");
+        setMessage("");
+    }
     return (
         <form className={`${styles.form}`} onSubmit={handleSubmit}>
             <input
@@ -60,6 +70,11 @@ const Form = () => {
                 onChange={(e) => setMessage(e.target.value)}
             />
             <button className={`${styles.submitBtn}`}>Submit</button>
+            {showThankYou && (
+                <div className={`${styles.thankYouMessage} ${styles.fadeIn}`}>
+                    <p>Thank you for your submission!</p>
+                </div>
+            )}
         </form>
     )
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../utils/Constants/index";
+import { ImageCtaType } from "../../types/contentTypes";
 
 const blogTemp = [
   {
@@ -131,6 +132,7 @@ const blogTemp = [
 const useBlogList = () => {
   const [blogs, setBlogs] = useState(blogTemp);
   const [loading, setLoading] = useState(true);
+  const [ctaImages, setCtaImages] = useState<ImageCtaType[]>([]);
   const [error, setError] = useState<boolean | null>(null);
 
   const fetchData = async () => {
