@@ -16,10 +16,10 @@ function App() {
   return (
     <>
       <Topstrip />
-      {/* <Header /> */}
+      <Header />
       <ScrollToTop />
       <Routes>
-        <Route path='/' element={<HomeView />} />
+        {/* <Route path='/' element={<HomeView />} /> */}
         <Route path='/about' element={<AboutView />} />
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path='/blog' element={<BlogList />} />
@@ -27,7 +27,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogView />} />
         <Route path='/contact' element={<ContactView />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

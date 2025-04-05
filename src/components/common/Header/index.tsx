@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styles from "./Header.module.css"
 import { NavLink } from "react-router-dom"
 const Header = () => {
@@ -8,8 +9,29 @@ const Header = () => {
         { label: "Blogs", url: "/blog", },
         { label: "Contact", url: "/contact", },
     ]
+    const [isOpen, setIsOpen] = useState(false)
+    const toggleMenu = () => setIsOpen(!isOpen)
+    const closeMenu = () => setIsOpen(false)
     return (
         <div className={`${styles.headerContainer}`}>
+            <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
+                {
+                    isOpen ? (
+                        <img
+                            src="/images/close.png"
+                            alt="High Tech Window Blinds by Vishal Interior"
+                            className={`${styles.hamburger} ${styles.logoheight}`}
+                            onClick={closeMenu}
+                        />
+                    ) : (
+                        <img
+                            src="/images/open.png"
+                            alt="High Tech Window Blinds by Vishal Interior"
+                            className={`${styles.hamburger} ${styles.logoheight}`}
+                            onClick={toggleMenu}
+                        />
+                    )}
+            </div>
             <div className={`${styles.logoContainer}`}>
                 <NavLink to="/">
                     <img
@@ -19,11 +41,12 @@ const Header = () => {
                     />
                 </NavLink>
             </div>
-            <div className={`${styles.headerLinksContainer}`}>
+            <div className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
                     <NavLink
                         key={link.label}
                         to={link.url}
+                        onClick={closeMenu}
                         className={({ isActive }) =>
                             isActive ? `${styles.headerLink} ${styles.linkActive}` : styles.headerLink}
                     >

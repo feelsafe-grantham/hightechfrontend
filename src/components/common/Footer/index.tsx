@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
 import { ContactData } from "../../../utils/Data";
 const Footer = () => {
     const chips = [
@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className={`${styles.topBar}`}>
                     <div className={`${styles.row1}`}>
                         <h3 className={`${styles.colHeading} ${styles.companyName}`}>Hightech Windows Blind</h3>
-                        <p>
+                        <p className={`${styles.companyDescription}`}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam exercitationem,
                         </p>
                         <div className={`${styles.socialIconContainer}`}>

@@ -46,7 +46,9 @@
 .offerStrip {
   order: 2;
 }
-
+.hamburgerContainer {
+  display: none;
+}
 @media (max-width: 1300px) {
   .logo {
     margin-left: 0px;
@@ -72,4 +74,59 @@
 }
 /* phone view starts here */
 @media (max-width: 768px) {
+  .hamburgerContainer {
+    display: flex;
+    margin-right: 30px;
+  }
+  .headerContainer {
+    border-bottom: 1px solid var(--primary-text);
+    padding-bottom: 7px;
+    position: relative;
+  }
+  .hamburger {
+    margin-left: 10px;
+    height: 60px;
+  }
+  .headerLinksContainer {
+    z-index: 1;
+    order: 1;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    gap: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .headerLink {
+    font-size: 18px;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-text);
+  }
+
+  .logoContainer {
+    order: 2;
+  }
+  .offerStripContainer {
+    order: 3;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoheight {
+    height: 70px;
+  }
+  .hamburger {
+    margin-left: 5px;
+    height: 50px;
+  }
 }

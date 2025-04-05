@@ -24,6 +24,9 @@
   font-weight: 600;
   line-height: 1.2em;
 }
+.companyDescription {
+  padding-right: 20px;
+}
 .socialIconContainer {
   display: flex;
   gap: 5px;
@@ -80,4 +83,46 @@
 .termsContainer {
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 1210px) {
+  .footerContainer {
+    padding: 0px 20px;
+  }
+  .companyDescription {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 10px;
+  }
+
+  .footerChip {
+    padding: 5px 10px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .topBar {
+    grid-template-columns: 1fr;
+    gap: 30px 10px;
+  }
+  .footerChip {
+    padding: 5px 10px;
+    margin-right: 5px;
+  }
+  .bottomBar {
+    padding: 5px auto;
+  }
+  .bottomLink {
+    margin: 0px;
+    font-size: 12px;
+  }
+  .termsContainer {
+    gap: 10px;
+  }
 }

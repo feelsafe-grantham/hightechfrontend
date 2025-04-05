@@ -10,8 +10,8 @@ const HomeView = () => {
     const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, loading, error } = useHomeView();
     return (
         <div className={`${styles.homeView}`}>
-            {/* <CoverImage imgUrl="/images/homeCover.png" /> */}
-            {/* <div className={`${styles.productImageContainer}`}>
+            <CoverImage imgUrl="/images/homeCover.png" />
+            <div className={`${styles.productImageContainer}`}>
                 {productsImages.map((image, index) =>
                     <img key={index} className={`${styles.productImage}`} src={image} alt="" />
                 )}
@@ -34,7 +34,7 @@ const HomeView = () => {
                 imageUrl={ctaImage.imageUrl}
                 text={ctaImage.text}
                 subText={ctaImage.subText}
-            /> */}
+            />
         </div>
     );
 }
