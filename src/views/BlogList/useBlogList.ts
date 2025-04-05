@@ -152,7 +152,9 @@ const useBlogList = () => {
   };
 
   useEffect(() => {
-    // fetchData();
+    if (false) {
+      fetchData();
+    }
   }, []);
 
   return { blogs, loading, error };

@@ -61,7 +61,9 @@ const useBlogView = (slug: string) => {
   };
 
   useEffect(() => {
-    // fetchData();
+    if (false) {
+      fetchData();
+    }
   }, []);
 
   return { blog, loading, error };

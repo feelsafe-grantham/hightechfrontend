@@ -1,4 +1,4 @@
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./OneProduct.module.css"
 import { ProductCardType } from "../../../types/contentTypes";
 import { createSlug } from "../../../utils/helper";

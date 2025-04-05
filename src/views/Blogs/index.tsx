@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import useBlogView from "./useBlogView";
 const BlogView = () => {
     const { slug } = useParams<{ slug: string }>();
-    const { blog, loading, error } = useBlogView(slug as string);
+    const { blog, error } = useBlogView(slug as string);
 
     // if (loading) {
     //     return <div className={`${styles.loading}`}>Loading...</div>;

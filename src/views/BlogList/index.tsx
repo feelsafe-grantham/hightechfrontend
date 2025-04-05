@@ -5,7 +5,7 @@ import SectionHeading from "../../components/common/SectionHeading/SectionHeadin
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
-  const { blogs, loading, error } = useBlogList();
+  const { blogs, } = useBlogList();
   const products = [
     "/images/product1.png",
     "/images/product2.png",

@@ -7,7 +7,7 @@ import ProductsContainer from "../../components/common/ProductsContainer";
 import ImageCta from "../../components/common/ImageCta";
 import useHomeView from "./useHomeView";
 const HomeView = () => {
-    const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, loading, error } = useHomeView();
+    const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, } = useHomeView();
     return (
         <div className={`${styles.homeView}`}>
             <CoverImage imgUrl="/images/homeCover.png" />

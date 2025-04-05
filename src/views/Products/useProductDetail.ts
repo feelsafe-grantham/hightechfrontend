@@ -5,6 +5,7 @@ import {
   ProductCardType,
   ProductDetailType,
 } from "../../types/contentTypes";
+import { BASE_URL } from "../../utils/Constants/index";
 const useProductDetail = () => {
   const [product, setProduct] = useState<ProductDetailType>({
     id: 1,
@@ -32,7 +33,32 @@ const useProductDetail = () => {
       .slice(0, maxImagesPerRatio[aspectRatio]);
   };
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<boolean | null>(null);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(BASE_URL + "/get-blogs/");
+      if (!response.ok) {
+        throw new Error(`Error fetching blog: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      setProduct(data.product);
+      setRelatedProducts(data.related_products);
+      setCtaImages(data.cta_images);
+    } catch (error) {
+      console.error("this is error: ", error);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (false) {
+      fetchData();
+    }
+  }, []);
 
   return { product, relatedProducts, getLimitedImages, loading, error };
 };
