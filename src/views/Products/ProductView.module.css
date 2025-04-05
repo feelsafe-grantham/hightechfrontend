@@ -78,3 +78,12 @@
   line-height: 1em;
   font-size: 48px;
 }
+
+@media (max-width: 800px) {
+  .galleryContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px 10px;
+    padding: 0px 20px;
+  }
+}

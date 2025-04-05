@@ -45,6 +45,7 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
                 <p className={`${styles.productPrice}`}>{totalPrice}/-</p>
                 <div className={`${styles.CartBtnContainer}`}>
                     <button onClick={incrementQuantity} className={`${styles.cartButton}`}>+</button>
+                    <span className={`${styles.quantity}`}>{quantity}</span>
                     <button onClick={decrementQuantity} className={`${styles.cartButton}`}>-</button>
                 </div>
                 <div className={`${styles.ctaButtonContainer}`}>

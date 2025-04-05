@@ -21,11 +21,11 @@ function App() {
       <Routes>
         <Route path='/' element={<HomeView />} />
         <Route path='/about' element={<AboutView />} />
-        <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path='/blog' element={<BlogList />} />
         <Route path='/brochure' element={<BrochureView />} />
-        <Route path="/blog/:slug" element={<BlogView />} />
         <Route path='/contact' element={<ContactView />} />
+        <Route path='/brochure/:slug' element={<ProductView />} />
+        <Route path="/blog/:slug" element={<BlogView />} />
       </Routes>
       <Footer />
     </>
