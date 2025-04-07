@@ -2,9 +2,10 @@ import styles from "./BlogView.module.css";
 import { useParams } from "react-router-dom";
 import parse from 'html-react-parser';
 import useBlogView from "./useBlogView";
+import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 const BlogView = () => {
     const { slug } = useParams<{ slug: string }>();
-    const { blog, error } = useBlogView(slug as string);
+    const { blog, error, loading } = useBlogView(slug as string);
 
     // if (loading) {
     //     return <div className={`${styles.loading}`}>Loading...</div>;
@@ -17,10 +18,10 @@ const BlogView = () => {
     }
     return (
         <div className={`${styles.blogView}`}>
-            <div className={`${styles.blogCardContainer}`}>
+            {loading ? <ProductContainer /> : <div className={`${styles.blogCardContainer}`}>
                 <div className={`${styles.blogCard}`}>
                     <div className={`${styles.blogImageContainer}`}>
-                        {blog.blog_images.map((image, index) =>
+                        {blog.images.map((image, index) =>
                             <img
                                 key={index}
                                 src={image}
@@ -30,7 +31,7 @@ const BlogView = () => {
                         }
                     </div>
                     <div className={`${styles.blogInfo}`}>
-                        <h2 className={`${styles.blogTitle}`}>{blog.blog_title}</h2>
+                        <h2 className={`${styles.blogTitle}`}>{blog.title}</h2>
                         {/* <div className={`${styles.authorInfoContainer}`}>
                             <img className={`${styles.authorImage}`} src={blog.author_image} alt={blog.author_name} />
                             <div className={`${styles.authorInfo}`}>
@@ -43,12 +44,12 @@ const BlogView = () => {
                             </div>
                         </div> */}
                         <div className={`${styles.blogContent}`}>
-                            {parse(blog.blog_content)}
+                            {parse(blog.content)}
                         </div>
                     </div>
                 </div>
 
-            </div>
+            </div>}
         </div>
     )
 }

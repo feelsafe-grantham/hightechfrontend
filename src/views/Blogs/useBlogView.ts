@@ -4,7 +4,7 @@ import { getIdFromSlug } from "../../utils/helper";
 import { BlogDetailType } from "../../types/contentTypes";
 const blogTemp: BlogDetailType = {
   id: 1,
-  blog_images: [
+  images: [
     "/images/product1.png",
     "/images/product2.png",
     "/images/product3.png",
@@ -14,11 +14,11 @@ const blogTemp: BlogDetailType = {
     "/images/product3.png",
     "/images/product4.png",
   ],
-  blog_title: "Top window Blinds for Office",
+  title: "Top window Blinds for Office",
   author_name: "Nikhil Gussain",
   author_image: "17 min read",
   read_min: "17 min read",
-  blog_content: `
+  content: `
 <article>
 <section>
   <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
@@ -49,8 +49,8 @@ const useBlogView = (slug: string) => {
       if (!response.ok) {
         throw new Error(`Error fetching blog: ${response.statusText}`);
       }
-      const data = await response.json();
-
+      const data = await response.json().then((data) => data.data);
+      console.log("this is data: ", data);
       setBlog(data);
     } catch (error) {
       console.error("this is error: ", error);
@@ -61,9 +61,7 @@ const useBlogView = (slug: string) => {
   };
 
   useEffect(() => {
-    if (false) {
-      fetchData();
-    }
+    fetchData();
   }, []);
 
   return { blog, loading, error };

@@ -31,18 +31,18 @@ export interface ProductDetailType {
 
 export interface BlogCardType {
   id: number;
-  blog_images: string[];
-  blog_title: string;
+  images: string[];
+  title: string;
   read_min: string;
 }
 export interface BlogDetailType {
   id: number;
-  blog_images: string[];
-  blog_title: string;
+  images: string[];
+  title: string;
   read_min: string;
   author_name: string;
   author_image: string;
-  blog_content: string;
+  content: string;
 }
 
 export interface ImageCtaType {
