@@ -15,6 +15,7 @@ const BrochureView = () => {
         <div className={`${styles.brochureView}`}>
             <Breadcrum imgUrl="/images/breadcrum1.png" />
             <MainHeading />
+            {error && <div>Something went wrong</div>}
             {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
             <SectionHeading heading="Contact Us" description="Lorem ipsum dolor sit amet consecte consecte" />
             <ContactCta />

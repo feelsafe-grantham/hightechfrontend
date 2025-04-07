@@ -11,11 +11,10 @@ const BlogList = () => {
 
   return (
     <div className={`${styles.blogListView}`}>
-      {loading ? <ProductContainer /> : <div className={`${styles.blogsContainer}`}>
-        {
-          blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)
-        }
-      </div>}
+      {loading ? <ProductContainer /> :
+        <div className={`${styles.blogsContainer}`}>
+          {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
+        </div>}
       <ContactCta />
       <SectionHeading heading="See More from Us" description="Lorem ipsum dolor sit amet consecte consecte  sit amet " />
       {loading ? <ProductContainer /> : <div className={`${styles.galleryContainer}`}>
