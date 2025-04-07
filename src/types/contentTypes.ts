@@ -17,7 +17,7 @@ export interface ProductCardType {
 }
 export interface ProductDetailType {
   id: number;
-  product_image: string;
+  product_image: string[];
   product_name: string;
   product_stars: number;
   connect_link: string;

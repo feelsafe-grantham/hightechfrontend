@@ -6,10 +6,10 @@ import {
   ProductDetailType,
 } from "../../types/contentTypes";
 import { BASE_URL } from "../../utils/Constants/index";
-const useProductDetail = () => {
+const useProductDetail = (id: number) => {
   const [product, setProduct] = useState<ProductDetailType>({
     id: 1,
-    product_image: "/images/product1.png",
+    product_image: ["/images/product1.png"],
     product_name: "Roller Blinds",
     product_stars: 8,
     product_review: ["Dealer Verified", "Factory Product", "Quality Approved"],
@@ -37,15 +37,16 @@ const useProductDetail = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(BASE_URL + "/get-blogs/");
+      const response = await fetch(BASE_URL + "broucher/" + id);
       if (!response.ok) {
         throw new Error(`Error fetching blog: ${response.statusText}`);
       }
 
-      const data = await response.json();
-      setProduct(data.product);
-      setRelatedProducts(data.related_products);
-      setCtaImages(data.cta_images);
+      const data = await response.json().then((data) => data.data);
+      console.log(data);
+      setProduct(data.selected_product);
+      setRelatedProducts(data.products);
+      setCtaImages(data.ctaImage);
     } catch (error) {
       console.error("this is error: ", error);
       setError(true);
@@ -55,9 +56,7 @@ const useProductDetail = () => {
   };
 
   useEffect(() => {
-    if (false) {
-      fetchData();
-    }
+    fetchData();
   }, []);
 
   return { product, relatedProducts, getLimitedImages, loading, error };

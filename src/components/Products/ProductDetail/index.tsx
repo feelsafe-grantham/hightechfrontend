@@ -16,7 +16,7 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
     return (
         <div className={`${styles.productDetail}`}>
             <div className={`${styles.productImageContainer}`}>
-                <img className={`${styles.productImage}`} src={product.product_image} alt={product.product_name} />
+                <img className={`${styles.productImage}`} src={product.product_image[0]} alt={product.product_name} />
             </div>
             <div className={`${styles.productInfo}`}>
                 <h3 className={`${styles.productName}`}>{product.product_name}</h3>
@@ -27,7 +27,10 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
 
                 </div>
                 <ul className={`${styles.checkContainer}`}>
-                    {product.product_review.map((text) =>
+                    {/* {product.product_review.map((text) =>
+                        <li className={`${styles.checkList}`}>{text}</li>
+                    )} */}
+                    {["Dealer Verified", "Factory Product", "Quality Approved"].map((text) =>
                         <li className={`${styles.checkList}`}>{text}</li>
                     )}
                 </ul>

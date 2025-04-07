@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
 import ImageCta from "../../components/common/ImageCta";
@@ -8,8 +9,11 @@ import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import ProductDetail from "../../components/Products/ProductDetail";
 import styles from "./ProductView.module.css"
 import useProductDetail from "./useProductDetail";
+import { getIdFromSlug } from "../../utils/helper";
 const ProductView = () => {
-    const { product, relatedProducts, getLimitedImages, loading } = useProductDetail();
+    const { slug } = useParams<{ slug: string }>();
+    const id = getIdFromSlug(slug as string)
+    const { product, relatedProducts, getLimitedImages, loading } = useProductDetail(id);
     return (
         <div className={`${styles.productView}`}>
             <Breadcrum imgUrl="/images/breadcrum1.png" />

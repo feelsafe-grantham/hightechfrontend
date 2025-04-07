@@ -17,7 +17,8 @@ const OneProduct = ({ product = {
         product_name,
         product_stars,
         connect_link,
-        download_link } = product;
+        download_link,
+    } = product;
     const slug = createSlug(product_name, id);
     return (
         <div className={`${styles.productCard}`}>

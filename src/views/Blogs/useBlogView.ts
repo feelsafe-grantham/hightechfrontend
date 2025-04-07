@@ -50,7 +50,7 @@ const useBlogView = (slug: string) => {
         throw new Error(`Error fetching blog: ${response.statusText}`);
       }
       const data = await response.json().then((data) => data.data);
-      console.log("this is data: ", data);
+
       setBlog(data);
     } catch (error) {
       console.error("this is error: ", error);
