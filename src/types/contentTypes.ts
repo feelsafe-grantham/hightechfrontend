@@ -1,6 +1,10 @@
+export interface HeroImagesType {
+  image: string;
+  aspectRatio: "11" | "21" | "31";
+}
 export interface ProductCardType {
   id: number;
-  product_image: string;
+  product_image: string[];
   product_name: string;
   product_stars: number;
   connect_link: string;

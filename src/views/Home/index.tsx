@@ -7,16 +7,18 @@ import ProductsContainer from "../../components/common/ProductsContainer";
 import ImageCta from "../../components/common/ImageCta";
 import useHomeView from "./useHomeView";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
+import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
+import HeroImagesShimmer from "../../components/common/Shimmer/HeroImagesShimmer";
 const HomeView = () => {
-    const { chips, activeChip, handleChipClick, productsImages, products, ctaImage, loading } = useHomeView();
+    const { heroImage, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading } = useHomeView();
     return (
         <div className={`${styles.homeView}`}>
-            <CoverImage imgUrl="/images/homeCover.png" />
-            <div className={`${styles.productImageContainer}`}>
-                {productsImages.map((image, index) =>
-                    <img key={index} className={`${styles.productImage}`} src={image} alt="High Tech Window Blinds by Vishal Interior" />
+            {loading ? <CoverImageShimmer /> : <CoverImage imgUrl={heroImage} />}
+            {loading ? <HeroImagesShimmer /> : <div className={`${styles.productImageContainer}`}>
+                {heroImages.map((image, index) =>
+                    <img key={index} className={`${styles.productImage}`} src={image.image} alt="High Tech Window Blinds by Vishal Interior" />
                 )}
-            </div>
+            </div>}
             <div className={`${styles.chipsContainer}`}>
                 {chips.map((chip, index) =>
                     <span
@@ -30,7 +32,7 @@ const HomeView = () => {
             <ContactCta />
             <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
             {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
-            <div className={`${styles.ctaContainer}`}>
+            {loading ? <CoverImageShimmer /> : <div className={`${styles.ctaContainer}`}>
                 <ImageCta
                     aspectRatio={ctaImage.aspectRatio}
                     imageUrl={ctaImage.imageUrl}
@@ -38,7 +40,7 @@ const HomeView = () => {
                     subText={ctaImage.subText}
                 />
 
-            </div>
+            </div>}
         </div>
     );
 }

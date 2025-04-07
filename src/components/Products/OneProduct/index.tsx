@@ -4,7 +4,7 @@ import { ProductCardType } from "../../../types/contentTypes";
 import { createSlug } from "../../../utils/helper";
 const OneProduct = ({ product = {
     id: 1,
-    product_image: "/images/product1.png",
+    product_image: ["/images/product1.png"],
     product_name: "Faux Wood Blinds",
     product_stars: 5,
     connect_link: "",
@@ -24,7 +24,7 @@ const OneProduct = ({ product = {
             <Link to={`/brochure/${slug}`}>
                 <img
                     className={`${styles.productImage}`}
-                    src={product_image}
+                    src={product_image[0]}
                     alt={product_name}
                     loading="lazy"
                 />

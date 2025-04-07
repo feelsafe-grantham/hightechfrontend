@@ -2,8 +2,8 @@ import { ImageCtaType, ProductCardType, } from "../../types/contentTypes"
 
 export const ContactData = {
     email: 'order@hightechwindowblinds.in',
-    phone1: '9999427128',
-    phone2: '9999785551',
+    phone1: '9220377272',
+    phone2: '9990587916',
     instagramlink: "",
     facebooklink: "",
     gmplink: "",
@@ -18,7 +18,7 @@ export const ContactData = {
 export const ProductData: ProductCardType[] = [
     {
         id: 1,
-        product_image: "/images/product1.png",
+        product_image: ["/images/product1.png"],
         product_name: "Roller Blinds",
         product_stars: 3,
         download_link: "",
@@ -26,7 +26,7 @@ export const ProductData: ProductCardType[] = [
     },
     {
         id: 2,
-        product_image: "/images/product2.png",
+        product_image: ["/images/product2.png"],
         product_name: "Roller Blinds",
         product_stars: 3,
         download_link: "",
@@ -34,7 +34,7 @@ export const ProductData: ProductCardType[] = [
     },
     {
         id: 3,
-        product_image: "/images/product3.png",
+        product_image: ["/images/product3.png"],
         product_name: "Roller Blinds",
         product_stars: 3,
         download_link: "",
@@ -42,14 +42,14 @@ export const ProductData: ProductCardType[] = [
     },
     {
         id: 4,
-        product_image: "/images/product4.png",
+        product_image: ["/images/product4.png"],
         product_name: "Roller Blinds",
         product_stars: 3,
         download_link: "",
         connect_link: "",
     }, {
         id: 1,
-        product_image: "/images/product1.png",
+        product_image: ["/images/product1.png"],
         product_name: "Roller Blinds",
         product_stars: 3,
         download_link: "",
@@ -57,7 +57,7 @@ export const ProductData: ProductCardType[] = [
     },
     {
         id: 2,
-        product_image: "/images/product2.png",
+        product_image: ["/images/product2.png"],
         product_name: "Roller Blinds",
         product_stars: 3,
         download_link: "",
