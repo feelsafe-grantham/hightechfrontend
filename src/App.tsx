@@ -11,10 +11,12 @@ import ContactView from './views/Contact';
 import BlogList from './views/BlogList';
 import BrochureView from './views/Brochure';
 import ScrollToTop from './components/common/ScrollToTop';
+import WhatsappIcon from './components/common/Icons/WhatspappIcon';
+import ChatBot from './components/common/Icons/ChatBot';
 
 function App() {
   return (
-    <>
+    <div>
       <Topstrip />
       <Header />
       <ScrollToTop />
@@ -27,9 +29,11 @@ function App() {
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path="/blog/:slug" element={<BlogView />} />
       </Routes>
+      <WhatsappIcon />
+      <ChatBot />
       <Footer />
-    </>
+    </div>
   )
 }
 
-export default App
+export default App;
