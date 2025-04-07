@@ -7,39 +7,39 @@ const Form = () => {
     const [state, setState] = useState("");
     const [message, setMessage] = useState("");
     const [showThankYou, setShowThankYou] = useState(false);
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('phone', phone);
-        formData.append('state', state);
-        formData.append('message', message);
-        try {
-            const response = await fetch('https://formspree.io/f/movepwqv', {
-                method: 'POST',
-                body: formData,
-            });
+    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
+    //     const formData = new FormData();
+    //     formData.append('name', name);
+    //     formData.append('email', email);
+    //     formData.append('phone', phone);
+    //     formData.append('state', state);
+    //     formData.append('message', message);
+    //     try {
+    //         const response = await fetch('https://formspree.io/f/movepwqv', {
+    //             method: 'POST',
+    //             body: formData,
+    //         });
 
-            if (response.ok) {
+    //         if (response.ok) {
 
-                setShowThankYou(true);
-                resetForm();
-            } else {
-                // console.log('Form submission failed');
-            }
+    //             setShowThankYou(true);
+    //             resetForm();
+    //         } else {
+    //             // console.log('Form submission failed');
+    //         }
 
-        } catch (error) {
-            console.error('Error submitting form:', error);
-        }
-    };
-    const resetForm = () => {
-        setName("");
-        setEmail("");
-        setPhone("");
-        setState("");
-        setMessage("");
-    }
+    //     } catch (error) {
+    //         console.error('Error submitting form:', error);
+    //     }
+    // };
+    // const resetForm = () => {
+    //     setName("");
+    //     setEmail("");
+    //     setPhone("");
+    //     setState("");
+    //     setMessage("");
+    // }
     return (
         <form
             action="https://formspree.io/f/movepwqv"
