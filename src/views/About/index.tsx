@@ -1,10 +1,11 @@
 import Breadcrum from "../../components/common/Breadcrum";
 import ImageCta from "../../components/common/ImageCta";
 import MainHeading from "../../components/common/MainHeading";
+import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import styles from "./AboutView.module.css"
 import useAboutView from "./useAboutView";
 const AboutView = () => {
-    const { team, productsImages } = useAboutView();
+    const { loading, team, ctaImages, productsImages } = useAboutView();
     return (
         <div className={`${styles.aboutView}`}>
             <Breadcrum imgUrl="/images/breadcrum2.png" />
@@ -37,13 +38,17 @@ const AboutView = () => {
                 <h2 className={`${styles.sectionHeading}`}>Our Team</h2>
                 <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consectetur ipsum dolor sit.</p>
                 <div className={`${styles.teamMemberContainer}`}>
-                    {team.map((member, index) => <div key={index} className={`${styles.memberImageContainer}`}>
-                        <img className={`${styles.memberImage}`} src={member?.image} alt={member?.name} />
-                        <div className={`${styles.memberInfo}`}>
-                            <p className={`${styles.memberName}`}>{member?.name}</p>
-                            <p className={`${styles.memberDesignatino}`}>{member?.designation}</p>
-                        </div>
-                    </div>)}
+                    {loading ? <ProductContainer /> :
+                        team.map((member, index) =>
+                            <div key={index} className={`${styles.memberImageContainer}`}>
+                                <img className={`${styles.memberImage}`} src={member?.image} alt={member?.name} />
+                                <div className={`${styles.memberInfo}`}>
+                                    <p className={`${styles.memberName}`}>{member?.name}</p>
+                                    <p className={`${styles.memberDesignatino}`}>{member?.designation}</p>
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
             <div className={`${styles.legacySection}`}>
@@ -55,16 +60,16 @@ const AboutView = () => {
             </div>
             <div className={`${styles.galleryContainer}`}>
                 <div className={`${styles.col2Grid}`} >
-                    <ImageCta aspectRatio="21" />
-                    <ImageCta aspectRatio="21" />
+                    <ImageCta imageUrl={ctaImages[0]?.imageUrl} aspectRatio={ctaImages[0]?.aspectRatio} />
+                    <ImageCta imageUrl={ctaImages[2]?.imageUrl} aspectRatio={ctaImages[2]?.aspectRatio} />
                 </div>
-                <ImageCta aspectRatio="31" imageUrl="/images/home1.png" />
+                <ImageCta aspectRatio={ctaImages[1]?.aspectRatio} imageUrl={ctaImages[1]?.imageUrl} />
             </div>
-            <div className={`${styles.imageGrid}`}>
+            {loading ? <ProductContainer /> : <div className={`${styles.imageGrid}`}>
                 {productsImages.map((image, index) =>
                     <img key={index} className={`${styles.productImage}`} src={image} />
                 )}
-            </div>
+            </div>}
         </div>
     );
 }

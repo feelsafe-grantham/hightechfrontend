@@ -55,7 +55,6 @@ const useHomeView = () => {
                 return;
             }
             const data = await response.json().then((data) => data.data);
-            console.log(data)
             setHeroImage(data.heroImage.image);
             setHeroImages(data.heroImages);
             setProducts(data.products);

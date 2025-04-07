@@ -2,6 +2,11 @@ export interface HeroImagesType {
   image: string;
   aspectRatio: "11" | "21" | "31";
 }
+export interface TeamMemberType {
+  name: string;
+  designation: string;
+  image: string;
+}
 export interface ProductCardType {
   id: number;
   product_image: string[];
