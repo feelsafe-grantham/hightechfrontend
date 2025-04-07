@@ -7,11 +7,31 @@ const Form = () => {
     const [state, setState] = useState("");
     const [message, setMessage] = useState("");
     const [showThankYou, setShowThankYou] = useState(false);
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log({ name, email, phone, state, message });
-        setShowThankYou(true);
-        resetForm();
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('state', state);
+        formData.append('message', message);
+        try {
+            const response = await fetch('https://formspree.io/f/movepwqv', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (response.ok) {
+
+                setShowThankYou(true);
+                resetForm();
+            } else {
+                console.log('Form submission failed');
+            }
+
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
     };
     const resetForm = () => {
         setName("");
@@ -21,7 +41,11 @@ const Form = () => {
         setMessage("");
     }
     return (
-        <form className={`${styles.form}`} onSubmit={handleSubmit}>
+        <form
+            action="https://formspree.io/f/movepwqv"
+            method="POST"
+            className={`${styles.form}`} onSubmit={() => setShowThankYou(true)}
+        >
             <input
                 placeholder="Name"
                 className={`${styles.inputBox}`}
@@ -35,6 +59,7 @@ const Form = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required
             />
             <input
                 placeholder="Phone Number"
@@ -42,6 +67,7 @@ const Form = () => {
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                required
             />
             <select
                 className={`${styles.inputBox}`}

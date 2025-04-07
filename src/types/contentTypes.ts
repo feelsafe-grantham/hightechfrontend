@@ -49,6 +49,6 @@ export interface ImageCtaType {
   imageUrl: string;
   text: string;
   subText: string;
-  aspectRatio: "31" | "21" | "1";
+  aspectRatio: "31" | "21" | "11";
   link?: string;
 }

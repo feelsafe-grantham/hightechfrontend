@@ -56,7 +56,7 @@ const useAboutView = () => {
         return;
       }
       const data = await response.json().then((data) => data.data);
-      console.log("data on about page: ", data);
+
       setTeam(data.team);
       setCtaImages(data.ctaImage);
       setProductsImages(data.product_image);

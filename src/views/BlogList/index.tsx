@@ -2,10 +2,13 @@ import BlogCard from "../../components/Blog/BlogCard";
 import ContactCta from "../../components/common/ContactCta";
 import ImageCta from "../../components/common/ImageCta";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
+import ProductContainer from "../../components/common/Shimmer/ProductContainer";
+import { CtaImages } from "../../utils/Data";
+import { getLimitedImages } from "../../utils/helper";
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
-  const { blogs, } = useBlogList();
+  const { productImages, loading, threeRation, twoRation, blogs, } = useBlogList();
   const products = [
     "/images/product1.png",
     "/images/product2.png",
@@ -20,34 +23,38 @@ const BlogList = () => {
     "/images/product3.png",
     "/images/product4.png",
   ]
+
+  console.log("this is two ratio: ", twoRation[0])
+
   return (
     <div className={`${styles.blogListView}`}>
-      <div className={`${styles.blogsContainer}`}>
+      {loading ? <ProductContainer /> : <div className={`${styles.blogsContainer}`}>
         {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
-      </div>
+      </div>}
       <ContactCta />
       <SectionHeading heading="See More from Us" description="Lorem ipsum dolor sit amet consecte consecte  sit amet " />
-      <div className={`${styles.galleryContainer}`}>
+      {loading ? <ProductContainer /> : <div className={`${styles.galleryContainer}`}>
         <div className={`${styles.col2Grid}`} >
-          <ImageCta imageUrl="/images/homeProduct1.png" aspectRatio="21" />
-          <ImageCta imageUrl="/images/homeProduct3.png" aspectRatio="21" />
+          <ImageCta imageUrl={twoRation[0].imageUrl} aspectRatio={twoRation[0].aspectRatio} />
+          <ImageCta imageUrl={threeRation[0].imageUrl} aspectRatio={threeRation[0].aspectRatio} />
         </div>
         <div className={`${styles.col3Grid}`}>
-          <ImageCta imageUrl="/images/homeProduct1.png" aspectRatio="21" />
-          <ImageCta imageUrl="/images/homeProduct2.png" aspectRatio="21" />
-          <ImageCta imageUrl="/images/homeProduct3.png" aspectRatio="21" />
+          <ImageCta imageUrl={twoRation[1].imageUrl} aspectRatio={twoRation[1].aspectRatio} />
+          <ImageCta imageUrl={twoRation[2].imageUrl} aspectRatio={twoRation[2].aspectRatio} />
+          <ImageCta imageUrl={twoRation[3].imageUrl} aspectRatio={twoRation[3].aspectRatio} />
         </div>
         <div className={`${styles.col2GridRev}`} >
-          <ImageCta imageUrl="/images/homeProduct2.png" aspectRatio="21" />
-          <ImageCta imageUrl="/images/homeProduct1.png" aspectRatio="21" />
+          <ImageCta imageUrl={twoRation[4].imageUrl} aspectRatio={twoRation[4].aspectRatio} />
+          <ImageCta imageUrl={threeRation[1].imageUrl} aspectRatio={threeRation[1].aspectRatio} />
+
         </div>
-        <ImageCta imageUrl="/images/homeProduct3.png" aspectRatio="31" />
-      </div>
-      <div className={`${styles.imageGrid}`}>
-        {products.map((image, index) =>
+        <ImageCta imageUrl={threeRation[2].imageUrl} aspectRatio={threeRation[2].aspectRatio} />
+      </div>}
+      {loading ? <ProductContainer /> : <div className={`${styles.imageGrid}`}>
+        {productImages.map((image, index) =>
           <img key={index} className={`${styles.productImage}`} src={image} />
         )}
-      </div>
+      </div>}
     </div>
   );
 }

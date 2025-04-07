@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../utils/Constants/index";
 import { ImageCtaType } from "../../types/contentTypes";
+import { getLimitedImages } from "../../utils/helper";
 
 const blogTemp = [
   {
     id: 1,
-    blog_images: [
+    images: [
       "/images/product1.png",
       "/images/product2.png",
       "/images/product3.png",
@@ -15,11 +16,11 @@ const blogTemp = [
       "/images/product3.png",
       "/images/product4.png",
     ],
-    blog_title: "The Ultimate Guide to Choosing Office Window Blinds",
+    title: "The Ultimate Guide to Choosing Office Window Blinds",
     author_name: "Nikhil Gussain",
     author_image: "17 min read",
     read_min: "17 min read",
-    blog_content: `
+    content: `
 <article>
 <section>
   <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
@@ -36,7 +37,7 @@ const blogTemp = [
   },
   {
     id: 2,
-    blog_images: [
+    images: [
       "/images/product2.png",
       "/images/product1.png",
       "/images/product3.png",
@@ -46,11 +47,11 @@ const blogTemp = [
       "/images/product3.png",
       "/images/product4.png",
     ],
-    blog_title: "Top window Blinds for Office",
+    title: "Top window Blinds for Office",
     author_name: "Nikhil Gussain",
     author_image: "17 min read",
     read_min: "17 min read",
-    blog_content: `
+    content: `
 <article>
 <section>
   <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
@@ -67,7 +68,7 @@ const blogTemp = [
   },
   {
     id: 3,
-    blog_images: [
+    images: [
       "/images/product3.png",
       "/images/product1.png",
       "/images/product2.png",
@@ -77,11 +78,11 @@ const blogTemp = [
       "/images/product3.png",
       "/images/product4.png",
     ],
-    blog_title: "Top 5 Window Blinds for Enhancing Office Productivity",
+    title: "Top 5 Window Blinds for Enhancing Office Productivity",
     author_name: "Nikhil Gussain",
     author_image: "17 min read",
     read_min: "17 min read",
-    blog_content: `
+    content: `
 <article>
 <section>
   <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
@@ -98,7 +99,7 @@ const blogTemp = [
   },
   {
     id: 4,
-    blog_images: [
+    images: [
       "/images/product4.png",
       "/images/product1.png",
       "/images/product2.png",
@@ -108,11 +109,11 @@ const blogTemp = [
       "/images/product3.png",
       "/images/product4.png",
     ],
-    blog_title: "How to Style Your Office with the Perfect Window Blinds",
+    title: "How to Style Your Office with the Perfect Window Blinds",
     author_name: "Nikhil Gussain",
     author_image: "17 min read",
     read_min: "17 min read",
-    blog_content: `
+    content: `
 <article>
 <section>
   <p>Welcome to this blog post! Here we will discuss various topics related to web development, including HTML, CSS, JavaScript, and much more.</p>
@@ -132,19 +133,22 @@ const blogTemp = [
 const useBlogList = () => {
   const [blogs, setBlogs] = useState(blogTemp);
   const [loading, setLoading] = useState(true);
-  const [ctaImages, setCtaImages] = useState<ImageCtaType[]>([]);
   const [error, setError] = useState<boolean | null>(null);
-
+  const [productImages, setProductImages] = useState<string[]>([]);
+  const [twoRation, setTwoRation] = useState<ImageCtaType[]>([]);
+  const [threeRation, setThreeRation] = useState<ImageCtaType[]>([]);
   const fetchData = async () => {
     try {
-      const response = await fetch(BASE_URL + "/get-blogs/");
+      const response = await fetch(BASE_URL + "get-blogs/");
       if (!response.ok) {
         throw new Error(`Error fetching blog: ${response.statusText}`);
       }
-
-      const data = await response.json();
-
-      setBlogs(data);
+      const data = await response.json().then((data) => data.data);
+      console.log(data);
+      setBlogs(data.blog);
+      setProductImages(data.product_image);
+      setTwoRation(getLimitedImages(data.ctaImages, "21"));
+      setThreeRation(getLimitedImages(data.ctaImages, "31"));
     } catch (error) {
       console.error("this is error: ", error);
       setError(true);
@@ -154,11 +158,9 @@ const useBlogList = () => {
   };
 
   useEffect(() => {
-    if (false) {
-      fetchData();
-    }
+    fetchData();
   }, []);
 
-  return { blogs, loading, error };
+  return { blogs, twoRation, threeRation, loading, error, productImages };
 };
 export default useBlogList;
