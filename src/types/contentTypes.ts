@@ -7,6 +7,14 @@ export interface TeamMemberType {
   designation: string;
   image: string;
 }
+
+export interface AlertProps {
+  type: "rating" | "like" | "testimonial" | "subscribed" | "comment";
+  emoji?: string;
+  name: string;
+  segment: string;
+  message: string;
+}
 export interface ProductCardType {
   id: number;
   product_image: string[];

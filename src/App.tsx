@@ -1,4 +1,5 @@
 import './App.css'
+import { useEffect } from 'react';
 import Header from './components/common/Header';
 import Topstrip from './components/common/Topstrip'
 import { Route, Routes } from 'react-router-dom';
@@ -13,8 +14,56 @@ import BrochureView from './views/Brochure';
 import ScrollToTop from './components/common/ScrollToTop';
 import WhatsappIcon from './components/common/Icons/WhatspappIcon';
 import ChatBot from './components/common/Icons/ChatBot';
+import { useSnackbar } from './Operations/Alert';
+import Alerts from './components/common/Alert';
 
+import { AlertProps } from './types/contentTypes';
 function App() {
+  const { showSnackbar } = useSnackbar();
+  const alert: AlertProps[] = [{
+    type: "rating",
+    name: "Alice",
+    emoji: "❤️",
+    segment: "Customer",
+    message: "⭐ Great product, highly recommended! ⭐"
+  },
+  {
+    type: "like",
+    name: "Bob",
+    emoji: "🔥",
+    segment: "Follower",
+    message: "❤️ I liked your recent post. Keep it up! ❤️"
+  },
+  {
+    type: "testimonial",
+    name: "Charlie",
+    segment: "Client",
+    message: "Had an amazing experience with your service! ⭐⭐⭐"
+  },
+  {
+    type: "subscribed",
+    name: "Dana",
+    emoji: "👍",
+    segment: "Subscriber",
+    message: "Thanks for subscribing to our newsletter! 📧"
+  },
+  {
+    type: "comment",
+    name: "Eve",
+    segment: "Viewer",
+    message: "Great content, looking forward to more! 👍"
+  }
+  ]
+  const renderSomething = () => {
+    // review
+    showSnackbar(<Alerts alert={alert[Math.floor(Math.random() * alert.length)]} />, "success");
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      renderSomething();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <Topstrip />
