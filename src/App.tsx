@@ -20,39 +20,40 @@ import Alerts from './components/common/Alert';
 import { AlertProps } from './types/contentTypes';
 function App() {
   const { showSnackbar } = useSnackbar();
-  const alert: AlertProps[] = [{
-    type: "rating",
-    name: "Alice",
-    emoji: "❤️",
-    segment: "Customer",
-    message: "⭐ Great product, highly recommended! ⭐"
-  },
-  {
-    type: "like",
-    name: "Bob",
-    emoji: "🔥",
-    segment: "Follower",
-    message: "❤️ I liked your recent post. Keep it up! ❤️"
-  },
-  {
-    type: "testimonial",
-    name: "Charlie",
-    segment: "Client",
-    message: "Had an amazing experience with your service! ⭐⭐⭐"
-  },
-  {
-    type: "subscribed",
-    name: "Dana",
-    emoji: "👍",
-    segment: "Subscriber",
-    message: "Thanks for subscribing to our newsletter! 📧"
-  },
-  {
-    type: "comment",
-    name: "Eve",
-    segment: "Viewer",
-    message: "Great content, looking forward to more! 👍"
-  }
+  const alert: AlertProps[] = [
+    {
+      "type": "rating",
+      "name": "Aarti",
+      "emoji": "❤️",
+      "segment": "Customer",
+      "message": "⭐ Great product, highly recommended! ⭐"
+    },
+    {
+      "type": "like",
+      "name": "Ravi",
+      "emoji": "🔥",
+      "segment": "Follower",
+      "message": "❤️ Liked your post! Keep it up! ❤️"
+    },
+    {
+      "type": "testimonial",
+      "name": "Priya",
+      "segment": "Client",
+      "message": "Amazing service, will definitely return! ⭐⭐⭐"
+    },
+    {
+      "type": "subscribed",
+      "name": "Vikram",
+      "emoji": "👍",
+      "segment": "Subscriber",
+      "message": "Thanks for the newsletter subscription! 📧"
+    },
+    {
+      "type": "comment",
+      "name": "Neha",
+      "segment": "Viewer",
+      "message": "Great content, looking forward to more! 👍"
+    }
   ]
   const renderSomething = () => {
     // review

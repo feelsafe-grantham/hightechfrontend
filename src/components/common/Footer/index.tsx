@@ -75,6 +75,11 @@ const Footer = () => {
                         <Link to={""}>Privacy Policy</Link>
                     </div>
                 </div>
+                <div className={`${styles.bottomcontainer}`}>
+                    <div className={`${styles.companyUsername} ${styles.bottomLink}
+                    `}>
+                        <span>Build with class</span>{" "}                        <Link className={`${styles.buildByLink}`} target="_blank" to={"https://feelsafemarkone.com"} >@feelsafemarkone</Link></div>
+                </div>
             </div>
         </div>
     )

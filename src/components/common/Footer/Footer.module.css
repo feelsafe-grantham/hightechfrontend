@@ -84,7 +84,13 @@
   display: flex;
   gap: 20px;
 }
-
+.bottomcontainer {
+  text-align: center;
+}
+.buildByLink {
+  font-style: italic;
+  text-decoration: underline;
+}
 @media (max-width: 1210px) {
   .footerContainer {
     padding: 0px 20px;
