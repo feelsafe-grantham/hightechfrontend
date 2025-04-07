@@ -6,7 +6,7 @@ interface ImageCtaProps {
     aspectRatio?: "31" | "21" | "11";
 }
 
-const ImageCta = ({ imageUrl = "/images/home1.png", text = "", subText = '', aspectRatio = "21" }: ImageCtaProps) => {
+const ImageCta = ({ imageUrl = "/imags/home1.png", text = "", subText = '', aspectRatio = "21" }: ImageCtaProps) => {
     const ratioClass = aspectRatio === "21" ? styles.ratio21 : aspectRatio === "11" ? styles.ratio1 : styles.ratio31;
     return (
         <div className={`${styles.hotProductsContainer}`}>

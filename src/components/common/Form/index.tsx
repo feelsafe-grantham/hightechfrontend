@@ -26,7 +26,7 @@ const Form = () => {
                 setShowThankYou(true);
                 resetForm();
             } else {
-                console.log('Form submission failed');
+                // console.log('Form submission failed');
             }
 
         } catch (error) {

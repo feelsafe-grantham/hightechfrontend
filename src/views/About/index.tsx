@@ -5,7 +5,9 @@ import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import styles from "./AboutView.module.css"
 import useAboutView from "./useAboutView";
 const AboutView = () => {
-    const { loading, team, ctaImages, productsImages } = useAboutView();
+    const { loading, team, productsImages, twoRatio,
+        threeRatio, } = useAboutView();
+
     return (
         <div className={`${styles.aboutView}`}>
             <Breadcrum imgUrl="/images/breadcrum2.png" />
@@ -60,10 +62,10 @@ const AboutView = () => {
             </div>
             <div className={`${styles.galleryContainer}`}>
                 <div className={`${styles.col2Grid}`} >
-                    <ImageCta imageUrl={ctaImages[0]?.imageUrl} aspectRatio={ctaImages[0]?.aspectRatio} />
-                    <ImageCta imageUrl={ctaImages[2]?.imageUrl} aspectRatio={ctaImages[2]?.aspectRatio} />
+                    <ImageCta imageUrl={threeRatio[0]?.imageUrl} aspectRatio={threeRatio[0]?.aspectRatio} />
+                    <ImageCta imageUrl={twoRatio[0]?.imageUrl} aspectRatio={twoRatio[0]?.aspectRatio} />
                 </div>
-                <ImageCta aspectRatio={ctaImages[1]?.aspectRatio} imageUrl={ctaImages[1]?.imageUrl} />
+                <ImageCta aspectRatio={threeRatio[1]?.aspectRatio} imageUrl={threeRatio[1]?.imageUrl} />
             </div>
             {loading ? <ProductContainer /> : <div className={`${styles.imageGrid}`}>
                 {productsImages.map((image, index) =>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../../utils/Constants";
 import { ImageCtaType, TeamMemberType } from "../../types/contentTypes";
+import { getLimitedImages } from "../../utils/helper";
 const useAboutView = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -21,32 +22,8 @@ const useAboutView = () => {
     "/images/product4.png",
   ]);
 
-  const [ctaImages, setCtaImages] = useState<ImageCtaType[]>([
-    {
-      aspectRatio: "21",
-      imageUrl: "/images/home1.png",
-      text: "Our Hot",
-      subText: "Products",
-    },
-    {
-      aspectRatio: "21",
-      imageUrl: "/images/homeProduct1.png",
-      text: "Our Hot",
-      subText: "Products",
-    },
-    {
-      aspectRatio: "21",
-      imageUrl: "/images/homeProduct2.png",
-      text: "Our Hot",
-      subText: "Products",
-    },
-    {
-      aspectRatio: "21",
-      imageUrl: "/images/homeProduct3.png",
-      text: "Our Hot",
-      subText: "Products",
-    },
-  ]);
+  const [twoRatio, setTwoRatio] = useState<ImageCtaType[]>([]);
+  const [threeRatio, setThreeRatio] = useState<ImageCtaType[]>([]);
   const fetchData = async () => {
     try {
       setLoading(true);
@@ -58,7 +35,9 @@ const useAboutView = () => {
       const data = await response.json().then((data) => data.data);
 
       setTeam(data.team);
-      setCtaImages(data.ctaImage);
+
+      setTwoRatio(getLimitedImages(data.ctaImage, "21"));
+      setThreeRatio(getLimitedImages(data.ctaImage, "31"));
       setProductsImages(data.product_image);
     } catch (error) {
       setError(true);
@@ -73,8 +52,10 @@ const useAboutView = () => {
 
   return {
     team,
-    ctaImages,
+
     productsImages,
+    twoRatio,
+    threeRatio,
     loading,
     error,
   };

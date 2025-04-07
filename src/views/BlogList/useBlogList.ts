@@ -144,7 +144,7 @@ const useBlogList = () => {
         throw new Error(`Error fetching blog: ${response.statusText}`);
       }
       const data = await response.json().then((data) => data.data);
-      console.log(data);
+
       setBlogs(data.blog);
       setProductImages(data.product_image);
       setTwoRation(getLimitedImages(data.ctaImages, "21"));

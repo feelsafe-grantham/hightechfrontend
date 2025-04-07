@@ -57,7 +57,7 @@ const useProductDetail = (id: number) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [id]);
 
   return { product, relatedProducts, getLimitedImages, loading, error };
 };
