@@ -9,16 +9,20 @@ import useHomeView from "./useHomeView";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 import HeroImagesShimmer from "../../components/common/Shimmer/HeroImagesShimmer";
+import useAutoScroll from "../../utils/helper/useAutoScroll";
 const HomeView = () => {
     const { heroImage, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading } = useHomeView();
+    const imageGridRef = useAutoScroll();
     return (
         <div className={`${styles.homeView}`}>
             {loading ? <CoverImageShimmer /> : <CoverImage imgUrl={heroImage} />}
-            {loading ? <HeroImagesShimmer /> : <div className={`${styles.productImageContainer}`}>
-                {heroImages.map((image, index) =>
-                    <img key={index} className={`${styles.productImage}`} src={image.image} alt="High Tech Window Blinds by Vishal Interior" />
-                )}
-            </div>}
+            {loading ? <HeroImagesShimmer /> :
+                <div ref={imageGridRef} className={`${styles.productImageContainer}`}>
+                    {heroImages.map((image, index) =>
+                        <img key={index} className={`${styles.productImage}`} src={image.image} alt="High Tech Window Blinds by Vishal Interior" />
+                    )}
+                </div>
+            }
             <div className={`${styles.chipsContainer}`}>
                 {chips.map((chip, index) =>
                     <span
