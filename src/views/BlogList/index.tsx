@@ -1,6 +1,8 @@
 import BlogCard from "../../components/Blog/BlogCard";
+import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
 import ImageCta from "../../components/common/ImageCta";
+import MainHeading from "../../components/common/MainHeading";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import useAutoScroll from "../../utils/helper/useAutoScroll";
@@ -12,6 +14,8 @@ const BlogList = () => {
 
   return (
     <div className={`${styles.blogListView}`}>
+      <Breadcrum imgUrl="/images/breadcrum3.png" />
+      <MainHeading />
       {loading ? <ProductContainer /> :
         <div className={`${styles.blogsContainer}`}>
           {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
