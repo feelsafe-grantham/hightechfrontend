@@ -4,10 +4,10 @@ export const ContactData = {
     email: 'order@hightechwindowblinds.in',
     phone1: '9220377272',
     phone2: '9990587916',
-    instagramlink: "",
-    facebooklink: "",
-    gmplink: "",
-    xlink: "",
+    instagramlink: "https://www.instagram.com/hightechwindowsblind.in/",
+    facebooklink: "https://www.facebook.com/hightechwindowblinds.in/",
+    gmplink: "#",
+    xlink: "#",
     youtubelink: "",
 }
 

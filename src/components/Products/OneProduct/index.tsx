@@ -32,7 +32,7 @@ const OneProduct = ({ product = {
             </Link>
             <h4 className={`${styles.productName}`}>{product_name}</h4>
             <div className={`${styles.productStars}`}>
-                {Array(product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
+                <img className={`${styles.googleLogo}`} src="/images/google.png" alt="" /> {Array(product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
             </div>
             <div className={`${styles.btnContainer}`}>
                 <Link to={connect_link} className={`${styles.ctaBtn} ${styles.connectBtn}`}>Connect Now!</Link>

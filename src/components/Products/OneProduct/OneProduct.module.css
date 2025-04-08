@@ -17,6 +17,11 @@
 .productStars {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.googleLogo {
+  width: 20px;
+  height: 20px;
 }
 .btnContainer {
   display: flex;
@@ -64,6 +69,10 @@
   .productCard {
     width: 100%;
     max-width: 300px;
+  }
+  .googleLogo {
+    width: 15px;
+    height: 15px;
   }
   .productImage {
     width: 100%;
