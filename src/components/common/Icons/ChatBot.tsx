@@ -7,7 +7,7 @@ const ChatBot = () => {
     }
     return (
         <div onClick={handleClick} className={`${styles.iconContainer} ${styles.chatIconContainer}`}>
-            <img className={`${styles.icon} ${styles.chatIcon}`} src="/images/chatBot.png" alt="chatbot" />
+            <img className={`${styles.icon} ${styles.chatIcon}`} src="/images/chatBot1.jpeg" alt="chatbot" />
             {/* <p className={`${styles.iconText}`}>Contact <span className={`${styles.iconName}`}>Anjali</span></p> */}
         </div>
     )

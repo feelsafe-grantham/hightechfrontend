@@ -1,5 +1,40 @@
 import { useState } from "react";
 import styles from "./Form.module.css"
+const indStateAndUt = [
+    { name: "Andhra Pradesh", value: "Andhra Pradesh" },
+    { name: "Arunachal Pradesh", value: "Arunachal Pradesh" },
+    { name: "Assam", value: "Assam" },
+    { name: "Bihar", value: "Bihar" },
+    { name: "Chhattisgarh", value: "Chhattisgarh" },
+    { name: "Goa", value: "Goa" },
+    { name: "Gujarat", value: "Gujarat" },
+    { name: "Haryana", value: "Haryana" },
+    { name: "Himachal Pradesh", value: "Himachal Pradesh" },
+    { name: "Jharkhand", value: "Jharkhand" },
+    { name: "Karnataka", value: "Karnataka" },
+    { name: "Kerala", value: "Kerala" },
+    { name: "Madhya Pradesh", value: "Madhya Pradesh" },
+    { name: "Maharashtra", value: "Maharashtra" },
+    { name: "Manipur", value: "Manipur" },
+    { name: "Meghalaya", value: "Meghalaya" },
+    { name: "Mizoram", value: "Mizoram" },
+    { name: "Nagaland", value: "Nagaland" },
+    { name: "Odisha", value: "Odisha" },
+    { name: "Punjab", value: "Punjab" },
+    { name: "Rajasthan", value: "Rajasthan" },
+    { name: "Sikkim", value: "Sikkim" },
+    { name: "Tamil Nadu", value: "Tamil Nadu" },
+    { name: "Telangana", value: "Telangana" },
+    { name: "Tripura", value: "Tripura" },
+    { name: "Uttar Pradesh", value: "Uttar Pradesh" },
+    { name: "Uttarakhand", value: "Uttarakhand" },
+    { name: "West Bengal", value: "West Bengal" },
+    { name: "Chandigarh", value: "Chandigarh" },
+    { name: "Lakshadweep", value: "Lakshadweep" },
+    { name: "Delhi", value: "Delhi" },
+    { name: "Puducherry", value: "Puducherry" },
+    { name: "Ladakh", value: "Ladakh" }
+];
 const Form = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -46,7 +81,10 @@ const Form = () => {
                 onChange={(e) => setState(e.target.value)}
             >
                 <option value="" disabled selected>Select State</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                {indStateAndUt.map((state, index) => (
+                    <option key={index} value={state.value}>{state.name}</option>
+                ))}
+                {/* <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                 <option value="Assam">Assam</option>
                 <option value="Bihar">Bihar</option>
@@ -56,7 +94,7 @@ const Form = () => {
                 <option value="Haryana">Haryana</option>
                 <option value="Himachal Pradesh">Himachal Pradesh</option>
                 <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option>
+                <option value="Jharkhand">Jharkhand</option> */}
             </select>
             <textarea
                 className={`${styles.inputBox} ${styles.textArea}`}

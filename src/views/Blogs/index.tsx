@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import parse from 'html-react-parser';
 import useBlogView from "./useBlogView";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
+import useAutoScroll from "../../utils/helper/useAutoScroll";
 const BlogView = () => {
     const { slug } = useParams<{ slug: string }>();
     const { blog, error, loading } = useBlogView(slug as string);
-
+    const imageGridRef = useAutoScroll();
     // if (loading) {
     //     return <div className={`${styles.loading}`}>Loading...</div>;
     // }
@@ -20,15 +21,15 @@ const BlogView = () => {
         <div className={`${styles.blogView}`}>
             {loading ? <ProductContainer /> : <div className={`${styles.blogCardContainer}`}>
                 <div className={`${styles.blogCard}`}>
-                    <div className={`${styles.blogImageContainer}`}>
+                    <div ref={imageGridRef} className={`${styles.blogImageContainer}`}>
                         {blog.images.map((image, index) =>
                             <img
                                 key={index}
                                 src={image}
                                 alt={image}
                                 className={`${styles.blogImage}`}
-                            />)
-                        }
+                            />
+                        )}
                     </div>
                     <div className={`${styles.blogInfo}`}>
                         <h2 className={`${styles.blogTitle}`}>{blog.title}</h2>

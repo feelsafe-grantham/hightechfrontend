@@ -44,7 +44,8 @@ const HomeView = () => {
                     subText={ctaImage.subText}
                 />
 
-            </div>}
+            </div>
+            }
         </div>
     );
 }

@@ -3,11 +3,12 @@ import ContactCta from "../../components/common/ContactCta";
 import ImageCta from "../../components/common/ImageCta";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
+import useAutoScroll from "../../utils/helper/useAutoScroll";
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
   const { productImages, loading, threeRation, twoRation, blogs, } = useBlogList();
-
+  const imageGridRef = useAutoScroll();
 
   return (
     <div className={`${styles.blogListView}`}>
@@ -34,7 +35,7 @@ const BlogList = () => {
         </div>
         <ImageCta imageUrl={threeRation[2].imageUrl} aspectRatio={threeRation[2].aspectRatio} />
       </div>}
-      {loading ? <ProductContainer /> : <div className={`${styles.imageGrid}`}>
+      {loading ? <ProductContainer /> : <div ref={imageGridRef} className={`${styles.imageGrid}`}>
         {productImages.map((image, index) =>
           <img key={index} className={`${styles.productImage}`} src={image} />
         )}
