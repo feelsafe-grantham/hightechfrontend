@@ -17,7 +17,7 @@ const HomeView = () => {
         <div className={`${styles.homeView}`}>
             {loading ? <CoverImageShimmer /> : <CoverImage imgUrl={heroImage} />}
             {loading ? <HeroImagesShimmer /> :
-                <div ref={imageGridRef} className={`${styles.productImageContainer}`}>
+                <div ref={imageGridRef} className={`${styles.productImageContainer} `}>
                     {heroImages.map((image, index) =>
                         <img key={index} className={`${styles.productImage}`} src={image.image} alt="High Tech Window Blinds by Vishal Interior" />
                     )}

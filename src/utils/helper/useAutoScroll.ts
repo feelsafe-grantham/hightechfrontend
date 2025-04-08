@@ -5,6 +5,9 @@ function useAutoScroll(scrollSpeed = 2, intervalTime = 30) {
   const [scrollingForward, setScrollingForward] = useState(true);
 
   useEffect(() => {
+    if (imageGridRef.current) {
+      imageGridRef.current.classList.add("scrollbar-hidden");
+    }
     const scrollInterval = setInterval(() => {
       if (imageGridRef.current) {
         const scrollWidth = imageGridRef.current.scrollWidth;
