@@ -13,10 +13,10 @@ const MainHeading = (
     return (
 
         <div className={`${styles.headingContainer}`}>
-            <h3 className={`${styles.heading} ${isTheme1 ? styles.theme1 : styles.theme2}`}>
+            <h1 className={`${styles.heading} ${isTheme1 ? styles.theme1 : styles.theme2}`}>
                 {line1} <br />
                 <span className={`${styles.headingSpan}`}>{line2}</span>
-            </h3>
+            </h1>
         </div>
     )
 }

@@ -13,55 +13,58 @@ const Header = () => {
     const toggleMenu = () => setIsOpen(!isOpen)
     const closeMenu = () => setIsOpen(false)
     return (
-        <div className={`${styles.headerContainer}`}>
+        <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
                 {
                     isOpen ? (
                         <img
                             src="/images/close.png"
-                            alt="High Tech Window Blinds by Vishal Interior"
+                            alt="Close menu"
                             className={`${styles.hamburger} ${styles.logoheight}`}
                             onClick={closeMenu}
                         />
                     ) : (
                         <img
                             src="/images/open.png"
-                            alt="High Tech Window Blinds by Vishal Interior"
+                            alt="Open menu"
                             className={`${styles.hamburger} ${styles.logoheight}`}
                             onClick={toggleMenu}
                         />
                     )}
             </div>
             <div className={`${styles.logoContainer}`}>
-                <NavLink to="/">
+                <NavLink to="/" >
                     <img
                         src="/images/logo.png"
-                        alt="High Tech Window Blinds by Vishal Interior"
+                        alt="High Tech Window Blinds logo by Vishal Interior"
                         className={`${styles.logo} ${styles.logoheight}`}
                     />
                 </NavLink>
             </div>
-            <div className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
+            <ul className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
-                    <NavLink
-                        key={link.label}
-                        to={link.url}
-                        onClick={closeMenu}
-                        className={({ isActive }) =>
-                            isActive ? `${styles.headerLink} ${styles.linkActive}` : styles.headerLink}
-                    >
-                        {link.label}
-                    </NavLink>
+                    <li key={link.label} className={`${styles.headerLink}`}>
+                        <NavLink
+                            to={link.url}
+                            onClick={closeMenu}
+                            aria-label={`Navigate to ${link.label}`}
+                            className={({ isActive }) =>
+                                isActive ? ` ${styles.linkActive}` : ""}
+                        >
+                            {link.label}
+                        </NavLink>
+                    </li>
                 ))}
-            </div>
+            </ul>
             <div className={`${styles.offerStripContainer}`}>
                 <img
                     src="/images/offer.png"
                     alt="High Tech Window Blinds by Vishal Interior"
+                    title="Offer by High tech window blinds by Vishal Interior"
                     className={`${styles.offerStrip} ${styles.logoheight}`}
                 />
             </div>
-        </div>
+        </header>
     )
 }
 

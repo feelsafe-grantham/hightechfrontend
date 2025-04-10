@@ -30,7 +30,7 @@ const OneProduct = ({ product = {
                     loading="lazy"
                 />
             </Link>
-            <h4 className={`${styles.productName}`}>{product_name}</h4>
+            <h3 className={`${styles.productName}`}>{product_name}</h3>
             <div className={`${styles.productStars}`}>
                 <img className={`${styles.googleLogo}`} src="/images/google.png" alt="" /> {Array(product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
             </div>

@@ -12,33 +12,45 @@ const Footer = () => {
         "Zebra Widonw Blinds",
     ]
     return (
-        <div className={`${styles.footerWrapper}`}>
+        <footer className={`${styles.footerWrapper}`}>
             <div className={`${styles.footerContainer}`}>
-                <div className={`${styles.topBar}`}>
+                <section className={`${styles.topBar}`}>
                     <div className={`${styles.row1}`}>
                         <h3 className={`${styles.colHeading} ${styles.companyName}`}>Hightech Windows Blind</h3>
                         <p className={`${styles.companyDescription}`}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam exercitationem
                         </p>
                         <div className={`${styles.socialIconContainer}`}>
-                            <a href={ContactData.instagramlink}>
-                                <img className={`${styles.socialIcon}`} src="/images/instagram.png" alt="instagram" />
+                            <a href={ContactData.instagramlink} aria-label="Follow us on Instagram">
+                                <img className={`${styles.socialIcon}`} src="/images/instagram.png" alt="instagram logo" />
                             </a>
-                            <a href={ContactData.xlink}>
-                                <img className={`${styles.socialIcon}`} src="/images/x.png" alt="x" />
+                            <a href={ContactData.xlink} aria-label="Follow us on X">
+                                <img className={`${styles.socialIcon}`} src="/images/x.png" alt="x logo" />
                             </a>
-                            <a href={ContactData.facebooklink}>
-                                <img className={`${styles.socialIcon}`} src="/images/facebook.png" alt="facebook" />
+                            <a href={ContactData.facebooklink} aria-label="Like us on Facebook">
+                                <img className={`${styles.socialIcon}`} src="/images/facebook.png" alt="facebook logo" />
                             </a>
                         </div>
                     </div>
                     <div className={`${styles.row2}`}>
                         <h3 className={`${styles.colHeading}`}>Quick Links</h3>
-                        <Link to="/">Home</Link>
-                        <Link to="/about">About</Link>
-                        <Link to="/brochure">Brochure</Link>
-                        <Link to="/blog">Blogs</Link>
-                        <Link to="/contact">Contact</Link>
+                        <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/brochure">Brochure</Link>
+                            </li>
+                            <li>
+                                <Link to="/blog">Blogs</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact">Contact</Link>
+                            </li>
+                        </ul>
                     </div>
                     <div className={`${styles.row3}`}>
                         <div>
@@ -64,24 +76,25 @@ const Footer = () => {
                         </div>
 
                     </div>
-                </div>
-                <div className={`${styles.midBar}`}>
+                </section>
+                <section className={`${styles.midBar}`}>
                     {chips.map((chip, index) => <span key={index} className={`${styles.footerChip}`}>{chip}</span>)}
-                </div>
-                <div className={`${styles.bottomBar}`}>
+                </section>
+                <section className={`${styles.bottomBar}`}>
                     <span className={`${styles.companyUsername} ${styles.bottomLink}`}>@hightech</span>
                     <div className={`${styles.termsContainer} ${styles.bottomLink}`}>
-                        <Link to={"#"}>Terms of service</Link>
-                        <Link to={""}>Privacy Policy</Link>
+                        <Link to={"#"} title="Read our Terms of Service">Terms of service</Link>
+                        <Link to={"#"} title="Read our Privacy Policy">Privacy Policy</Link>
                     </div>
-                </div>
-                <div className={`${styles.bottomcontainer}`}>
+                </section>
+                <section className={`${styles.bottomcontainer}`}>
                     <div className={`${styles.companyUsername} ${styles.bottomLink}
                     `}>
-                        <span>Build with class</span>{" "}                        <Link className={`${styles.buildByLink}`} target="_blank" to={"https://feelsafemarkone.com"} >@feelsafemarkone</Link></div>
-                </div>
+                        <span>Build with class</span>{" "}
+                        <Link className={`${styles.buildByLink}`} rel="noopener" target="_blank" to={"https://feelsafemarkone.com"} >@feelsafemarkone</Link></div>
+                </section>
             </div>
-        </div>
+        </footer>
     )
 }
 
