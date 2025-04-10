@@ -19,8 +19,8 @@ const BlogList = () => {
       <PageSeo
         title="Window Blinds Blog - Tips & Ideas by High Tech Window Blinds"
         description="Stay updated with window blinds tips and trends from High Tech Window Blinds by Vishal Interior. Expert advice and ideas for every window."
-        url="https://hightechwindowblinds.in/blog/"
-        canonicalUrl="https://hightechwindowblinds.in/blog/"
+        url="https://hightechwindowblinds.in/blog"
+        canonicalUrl="https://hightechwindowblinds.in/blog"
         keywords=""
       />
       <div className={`${styles.blogListView}`}>

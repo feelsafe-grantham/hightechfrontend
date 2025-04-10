@@ -20,8 +20,8 @@ const ProductView = () => {
             <PageSeo
                 title={product.product_name + ` - High Tech Window Blinds by Vishal Interior`}
                 description={`View the ${product.product_name} brochure from High Tech Window Blinds by Vishal Interior and discover stylish, custom blinds for your windows.`}
-                url={`https://hightechwindowblinds.in/${slug}/`}
-                canonicalUrl={`https://hightechwindowblinds.in/${slug}/`}
+                url={`https://hightechwindowblinds.in/${slug}`}
+                canonicalUrl={`https://hightechwindowblinds.in/${slug}`}
                 keywords=""
             />
 

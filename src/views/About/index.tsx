@@ -16,8 +16,8 @@ const AboutView = () => {
             <PageSeo
                 title="About High Tech Window Blinds by Vishal Interior - Delhi Manufacturer"
                 description="Learn about High Tech Window Blinds by Vishal Interior, the leading window blinds manufacturer in Delhi, offering quality and custom solutions."
-                url="https://hightechwindowblinds.in/about/"
-                canonicalUrl="https://hightechwindowblinds.in/about/"
+                url="https://hightechwindowblinds.in/about"
+                canonicalUrl="https://hightechwindowblinds.in/about"
                 keywords=""
             />
             <div className={`${styles.aboutView}`}>

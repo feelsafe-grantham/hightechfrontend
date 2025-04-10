@@ -23,8 +23,8 @@ const BlogView = () => {
             <PageSeo
                 title={`${blog.title} - High Tech`}
                 description={`Read our latest blog on ${blog.title} to learn expert tips on choosing the best window blinds from High Tech Window Blinds by Vishal Interior.`}
-                url={`https://hightechwindowblinds.in/${slug}/`}
-                canonicalUrl={`https://hightechwindowblinds.in/${slug}/`}
+                url={`https://hightechwindowblinds.in/${slug}`}
+                canonicalUrl={`https://hightechwindowblinds.in/${slug}`}
                 keywords=""
             />
             <div className={`${styles.blogView}`}>

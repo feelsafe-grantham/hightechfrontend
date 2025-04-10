@@ -9,8 +9,8 @@ const ContactView = () => {
             <PageSeo
                 title="Contact High Tech Window Blinds by Vishal Interior - Delhi"
                 description="Get in touch with High Tech Window Blinds by Vishal Interior for inquiries, quotes, or custom window blinds in Delhi. We're here to help!"
-                url="https://hightechwindowblinds.in/contact/"
-                canonicalUrl="https://hightechwindowblinds.in/contact/"
+                url="https://hightechwindowblinds.in/contact"
+                canonicalUrl="https://hightechwindowblinds.in/contact"
                 keywords=""
             />
             <div className={`${styles.contactView}`}>

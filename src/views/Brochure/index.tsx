@@ -16,8 +16,8 @@ const BrochureView = () => {
             <PageSeo
                 title="Window Blinds Brochures - High Tech Blinds by Vishal Interior"
                 description="Download brochures from High Tech Window Blinds by Vishal Interior to explore our range of premium window blinds for your space."
-                url="https://hightechwindowblinds.in/brochure/"
-                canonicalUrl="https://hightechwindowblinds.in/brochure/"
+                url="https://hightechwindowblinds.in/brochure"
+                canonicalUrl="https://hightechwindowblinds.in/brochure"
                 keywords=""
             />
             <div className={`${styles.brochureView}`}>
