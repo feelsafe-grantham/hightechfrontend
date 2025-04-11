@@ -5,16 +5,15 @@
 }
 
 .productImageContainer {
-  /* display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px; */
+  max-width: var(--max-width-container);
+  margin: 0px auto;
   gap: 10px;
   display: flex;
   overflow-x: scroll;
 }
 
 .productImage {
+  max-height: 250px;
   width: 100%;
   aspect-ratio: 2/1;
 }
