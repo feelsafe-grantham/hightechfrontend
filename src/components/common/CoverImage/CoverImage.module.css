@@ -1,6 +1,12 @@
-.coverImageContainer {
+.videoContainer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: Oswald;
+  z-index: -1;
+  margin: auto;
 }
-.coverImage {
-  width: 100%;
+.video {
+  margin: auto;
   aspect-ratio: 3/1;
 }

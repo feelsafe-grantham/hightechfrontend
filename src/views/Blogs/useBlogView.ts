@@ -38,6 +38,7 @@ const useBlogView = (slug: string) => {
   const [blog, setBlog] = useState(blogTemp);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<boolean | null>(null);
+
   const blogId = getIdFromSlug(slug);
   if (!blogId) {
     setError(true);

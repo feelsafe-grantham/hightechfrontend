@@ -11,10 +11,12 @@ import styles from "./ProductView.module.css"
 import useProductDetail from "./useProductDetail";
 import { getIdFromSlug } from "../../utils/helper";
 import PageSeo from "../../components/common/PageSeo";
+import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 const ProductView = () => {
     const { slug } = useParams<{ slug: string }>();
     const id = getIdFromSlug(slug as string)
-    const { product, relatedProducts, getLimitedImages, loading } = useProductDetail(id);
+    const { videoUrl,
+        vLoading, product, relatedProducts, getLimitedImages, loading } = useProductDetail(id);
     return (
         <>
             <PageSeo
@@ -26,7 +28,7 @@ const ProductView = () => {
             />
 
             <div className={`${styles.productView}`}>
-                <Breadcrum imgUrl="/images/breadcrum1.png" />
+                {vLoading ? <CoverImageShimmer /> : <Breadcrum videoUrl={videoUrl} fallback="/images/brochureDetailFallback.jpg" />}
                 <MainHeading />
                 <ProductDetail product={product} />
                 <ContactCta />

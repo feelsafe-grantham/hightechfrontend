@@ -7,8 +7,9 @@ import styles from "./AboutView.module.css"
 import useAboutView from "./useAboutView";
 import ProductImages from "../../components/common/ProductImages";
 import PageSeo from "../../components/common/PageSeo";
+import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 const AboutView = () => {
-    const { loading, team, productsImages, twoRatio,
+    const { vLoading, videoUrl, loading, team, productsImages, twoRatio,
         threeRatio, } = useAboutView();
 
     return (
@@ -21,7 +22,7 @@ const AboutView = () => {
                 keywords=""
             />
             <div className={`${styles.aboutView}`}>
-                <Breadcrum imgUrl="/images/breadcrum2.png" />
+                {vLoading ? <CoverImageShimmer /> : <Breadcrum videoUrl={videoUrl} fallback="/images/aboutFallback.jpg" />}
                 <MainHeading />
                 <div className={`${styles.ownerSection}`}>
                     <h2 className={`${styles.sectionHeading}`}>About Us</h2>

@@ -27,6 +27,8 @@ const useProductDetail = (id: number) => {
     "21": 2,
     "31": 1,
   };
+  const [videoUrl, setVideoUrl] = useState("");
+  const [vLoading, setVLoading] = useState(true);
   const getLimitedImages = (aspectRatio: "21" | "31") => {
     return ctaImages
       .filter((image) => image.aspectRatio === aspectRatio)
@@ -54,12 +56,36 @@ const useProductDetail = (id: number) => {
       setLoading(false);
     }
   };
-
+  const fetchVideo = async () => {
+    try {
+      setVLoading(true);
+      const response = await fetch(BASE_URL + "get-hero-video/broucher-detail");
+      if (!response.ok) {
+        setError(true);
+        return;
+      }
+      const data = await response.json().then((data) => data.data);
+      setVideoUrl(data);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setVLoading(false);
+    }
+  };
   useEffect(() => {
     fetchData();
+    fetchVideo();
   }, [id]);
 
-  return { product, relatedProducts, getLimitedImages, loading, error };
+  return {
+    videoUrl,
+    vLoading,
+    product,
+    relatedProducts,
+    getLimitedImages,
+    loading,
+    error,
+  };
 };
 
 export default useProductDetail;

@@ -75,6 +75,8 @@ const useBlogList = () => {
   const [productImages, setProductImages] = useState<string[]>([]);
   const [twoRation, setTwoRation] = useState<ImageCtaType[]>([]);
   const [threeRation, setThreeRation] = useState<ImageCtaType[]>([]);
+  const [videoUrl, setVideoUrl] = useState("");
+  const [vLoading, setVLoading] = useState(true);
   const fetchData = async () => {
     try {
       const response = await fetch(BASE_URL + "get-blogs/");
@@ -94,11 +96,36 @@ const useBlogList = () => {
       setLoading(false);
     }
   };
-
+  const fetchVideo = async () => {
+    try {
+      setVLoading(true);
+      const response = await fetch(BASE_URL + "get-hero-video/blog");
+      if (!response.ok) {
+        setError(true);
+        return;
+      }
+      const data = await response.json().then((data) => data.data);
+      setVideoUrl(data);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setVLoading(false);
+    }
+  };
   useEffect(() => {
     fetchData();
+    fetchVideo();
   }, []);
 
-  return { blogs, twoRation, threeRation, loading, error, productImages };
+  return {
+    vLoading,
+    videoUrl,
+    blogs,
+    twoRation,
+    threeRation,
+    loading,
+    error,
+    productImages,
+  };
 };
 export default useBlogList;

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
 :root {
   --primary-background: #ffffff;
   --primary-background2: #fefefe;
@@ -29,6 +30,7 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
 .montserrat-font {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -36,10 +38,10 @@ body {
   font-style: normal;
 }
 
-/*  */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hidden {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */

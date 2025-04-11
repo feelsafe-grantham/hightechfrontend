@@ -21,7 +21,8 @@ const useAboutView = () => {
     "/images/product3.png",
     "/images/product4.png",
   ]);
-
+  const [videoUrl, setVideoUrl] = useState("");
+  const [vLoading, setVLoading] = useState(true);
   const [twoRatio, setTwoRatio] = useState<ImageCtaType[]>([]);
   const [threeRatio, setThreeRatio] = useState<ImageCtaType[]>([]);
   const fetchData = async () => {
@@ -45,14 +46,31 @@ const useAboutView = () => {
       setLoading(false);
     }
   };
-
+  const fetchVideo = async () => {
+    try {
+      setVLoading(true);
+      const response = await fetch(BASE_URL + "get-hero-video/about");
+      if (!response.ok) {
+        setError(true);
+        return;
+      }
+      const data = await response.json().then((data) => data.data);
+      setVideoUrl(data);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setVLoading(false);
+    }
+  };
   useEffect(() => {
     fetchData();
+    fetchVideo();
   }, []);
 
   return {
+    videoUrl,
+    vLoading,
     team,
-
     productsImages,
     twoRatio,
     threeRatio,

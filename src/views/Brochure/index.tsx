@@ -4,12 +4,13 @@ import MainHeading from "../../components/common/MainHeading";
 import PageSeo from "../../components/common/PageSeo";
 import ProductsContainer from "../../components/common/ProductsContainer";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
+import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import styles from "./Brochure.module.css";
 import useBrochureView from "./useBrochureList";
 
 const BrochureView = () => {
-    const { error, loading, products } = useBrochureView();
+    const { vLoading, videoUrl, error, loading, products } = useBrochureView();
 
     return (
         <>
@@ -21,7 +22,7 @@ const BrochureView = () => {
                 keywords=""
             />
             <div className={`${styles.brochureView}`}>
-                <Breadcrum imgUrl="/images/breadcrum1.png" />
+                {vLoading ? <CoverImageShimmer /> : <Breadcrum videoUrl={videoUrl} fallback="/images/brochureFallback.jpg" />}
                 <MainHeading />
                 {error && <div>Something went wrong</div>}
                 {loading ? <ProductContainer /> : <ProductsContainer products={products} />}

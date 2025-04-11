@@ -5,12 +5,13 @@ import ImageCta from "../../components/common/ImageCta";
 import MainHeading from "../../components/common/MainHeading";
 import PageSeo from "../../components/common/PageSeo";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
+import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import useAutoScroll from "../../utils/helper/useAutoScroll";
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
-  const { productImages, loading, threeRation, twoRation, blogs, } = useBlogList();
+  const { vLoading, videoUrl, productImages, loading, threeRation, twoRation, blogs, } = useBlogList();
   const imageGridRef = useAutoScroll();
 
   return (
@@ -24,7 +25,7 @@ const BlogList = () => {
         keywords=""
       />
       <div className={`${styles.blogListView}`}>
-        <Breadcrum imgUrl="/images/breadcrum3.png" />
+        {vLoading ? <CoverImageShimmer /> : <Breadcrum videoUrl={videoUrl} fallback="/images/blogFallback.jpg" />}
         <MainHeading />
         {loading ? <ProductContainer /> :
           <div className={`${styles.blogsContainer}`}>

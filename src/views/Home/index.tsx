@@ -5,14 +5,14 @@ import ContactCta from "../../components/common/ContactCta";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import ProductsContainer from "../../components/common/ProductsContainer";
 import ImageCta from "../../components/common/ImageCta";
-import useHomeView from "./useHomeView";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 import HeroImagesShimmer from "../../components/common/Shimmer/HeroImagesShimmer";
 import useAutoScroll from "../../utils/helper/useAutoScroll";
 import PageSeo from "../../components/common/PageSeo";
+import useHomeView from "./useHomeView";
 const HomeView = () => {
-    const { heroImage, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading } = useHomeView();
+    const { vLoading, videoUrl, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading } = useHomeView();
     const imageGridRef = useAutoScroll();
     return (
         <>
@@ -24,7 +24,7 @@ const HomeView = () => {
                 keywords=""
             />
             <div className={`${styles.homeView}`}>
-                {loading ? <CoverImageShimmer /> : <CoverImage imgUrl={heroImage} />}
+                {vLoading ? <CoverImageShimmer /> : <CoverImage videoUrl={videoUrl} />}
                 {loading ? <HeroImagesShimmer /> :
                     <div ref={imageGridRef} className={`${styles.productImageContainer} `}>
                         {heroImages.map((image, index) =>

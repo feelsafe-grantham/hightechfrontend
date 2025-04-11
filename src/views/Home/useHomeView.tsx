@@ -17,7 +17,7 @@ const useHomeView = () => {
     const handleChipClick = (chip: string) => {
         setChip(chip);
     }
-    const [heroImage, setHeroImage] = useState("");
+    const [videoUrl, setVideoUrl] = useState("");
     const [heroImages, setHeroImages] = useState<HeroImagesType[]>(
         [
             {
@@ -35,11 +35,11 @@ const useHomeView = () => {
         ]
     );
     const [products, setProducts] = useState<ProductCardType[]>(ProductData);
-
     const [loading, setLoading] = useState(true);
+    const [vLoading, setVLoading] = useState(true);
     const [error, setError] = useState(false);
     const [ctaImage, setCtaImage] = useState<ImageCtaType>({
-        imageUrl: "//home1.png",
+        imageUrl: "/home1.png",
         text: "Our Hot",
         subText: "Products",
         aspectRatio: "31",
@@ -47,7 +47,6 @@ const useHomeView = () => {
 
     const fetchData = async () => {
         try {
-
             setLoading(true);
             const response = await fetch(BASE_URL + "home/");
             if (!response.ok) {
@@ -55,7 +54,6 @@ const useHomeView = () => {
                 return;
             }
             const data = await response.json().then((data) => data.data);
-            setHeroImage(data.heroImage.image);
             setHeroImages(data.heroImages);
             setProducts(data.products);
             setCtaImage(data.ctaImage[0]);
@@ -66,10 +64,30 @@ const useHomeView = () => {
             setLoading(false);
         }
     }
+
+    const fetchVideo = async () => {
+        try {
+            setVLoading(true);
+            const response = await fetch(BASE_URL + "get-hero-video/home");
+            if (!response.ok) {
+                setError(true);
+                return;
+            }
+            const data = await response.json().then((data) => data.data);
+            setVideoUrl(data);
+        } catch (error) {
+            setError(true);
+        }
+        finally {
+            setVLoading(false);
+        }
+    }
+
     useEffect(() => {
         fetchData();
+        fetchVideo();
     }, [])
 
-    return { heroImage, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading, error }
+    return { vLoading, videoUrl, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading, error }
 }
 export default useHomeView;

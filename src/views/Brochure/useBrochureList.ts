@@ -70,7 +70,8 @@ const useBrochureView = () => {
       connect_link: "",
     },
   ]);
-
+  const [videoUrl, setVideoUrl] = useState("");
+  const [vLoading, setVLoading] = useState(true);
   const fetchData = async () => {
     try {
       setLoading(true);
@@ -87,11 +88,30 @@ const useBrochureView = () => {
       setLoading(false);
     }
   };
+  const fetchVideo = async () => {
+    try {
+      setVLoading(true);
+      const response = await fetch(BASE_URL + "get-hero-video/broucher");
+      if (!response.ok) {
+        setError(true);
+        return;
+      }
+      const data = await response.json().then((data) => data.data);
+      setVideoUrl(data);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setVLoading(false);
+    }
+  };
   useEffect(() => {
     fetchData();
+    fetchVideo();
   }, []);
 
   return {
+    videoUrl,
+    vLoading,
     products,
     loading,
     error,
