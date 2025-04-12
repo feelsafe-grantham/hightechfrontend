@@ -34,7 +34,7 @@ const ProductView = () => {
                 <ProductDetail product={product} />
                 <ContactCta />
                 {loading ? <ProductContainer /> : <ProductsContainer products={relatedProducts} />}
-                <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
+                <SectionHeading heading="Top Selling Products" description="Explore our top selling products" />
                 <div className={`${styles.galleryContainer}`}>
                     <ImageCta imageUrl={oneHalfRatio[0]?.imageUrl} aspectRatio={oneHalfRatio[0]?.aspectRatio} />
                     <ImageCta imageUrl={oneRatio[0]?.imageUrl} aspectRatio={oneRatio[0]?.aspectRatio} />

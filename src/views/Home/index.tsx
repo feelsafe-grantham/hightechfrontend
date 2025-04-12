@@ -43,7 +43,7 @@ const HomeView = () => {
                 </div>
                 <MainHeading />
                 <ContactCta />
-                <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
+                <SectionHeading heading="Top Selling Products" description="See a large selection of our top selling products" />
                 {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
                 {loading ? <CoverImageShimmer /> : <div className={`${styles.ctaContainer}`}>
                     <ImageCta

@@ -26,7 +26,7 @@ const AboutView = () => {
                 <MainHeading />
                 <div className={`${styles.ownerSection}`}>
                     <h2 className={`${styles.sectionHeading}`}>About Us</h2>
-                    <p className={`${styles.sectionDescription}`}>Lorem ipsum Lorem ipsum dolor sit.</p>
+                    <p className={`${styles.sectionDescription}`}>Know more about our Owner</p>
 
                     <div className={`${styles.ownerContainer}`}>
                         <div className={`${styles.imageContainer}`}>
@@ -45,12 +45,12 @@ const AboutView = () => {
                     </div>
 
                     <p className={`${styles.ownerPara}`}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quos error voluptatibus nisi dicta, accusamus ipsa distinctio, consectetur vero ea similique delectus atque asperiores, incidunt animi! Voluptas delectus laborum pariatur!
+                        With a passion for excellence and years of experience, our founder leads with integrity, vision, and a dedication to quality that defines everything we do.
                     </p>
                 </div>
                 <div className={`${styles.teamSection}`}>
                     <h2 className={`${styles.sectionHeading}`}>Our Team</h2>
-                    <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consectetur ipsum dolor sit.</p>
+                    <p className={`${styles.sectionDescription}`}>Meet our expert team</p>
                     <div className={`${styles.teamMemberContainer}`}>
                         {loading ? <ProductContainer /> :
                             team.map((member, index) =>
@@ -67,9 +67,11 @@ const AboutView = () => {
                 </div>
                 <div className={`${styles.legacySection}`}>
                     <h2 className={`${styles.sectionHeading}`}>Our Legacy</h2>
-                    <p className={`${styles.sectionDescription}`}>Lorem ipsum dolor sit amet consectetur ipsum dolor sit.</p>
+                    <p className={`${styles.sectionDescription}`}>Built on trust. Powered by innovation.</p>
                     <p className={`${styles.legacyPara}`}>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, soluta neque accusamus quidem quas voluptatum facere iste temporibus, accusantium, molestias doloribus impedit ea iure placeat? Rerum, provident porro repellendus dolor, excepturi fugit molestiae consectetur esse officia quos vero, quod commodi similique. Laboriosam, nobis impedit esse fuga tempore veritatis aut est?
+                        For over 17 years, we’ve been shaping spaces and redefining comfort. As India’s leading window blind manufacturer, our legacy is one of craftsmanship, dedication, and an unwavering commitment to quality.
+
+                        Driven by a passion to enhance interiors, we continue to set benchmarks in design and functionality. Our journey is a reflection of the values we stand for—precision, performance, and people-first service.
                     </p>
                 </div>
                 <div className={`${styles.galleryContainer}`}>

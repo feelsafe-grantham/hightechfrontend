@@ -18,7 +18,8 @@ const Footer = () => {
                     <div className={`${styles.row1}`}>
                         <h3 className={`${styles.colHeading} ${styles.companyName}`}>Hightech Windows Blind</h3>
                         <p className={`${styles.companyDescription}`}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam exercitationem
+
+                            We are dealing in various types of window blinds and delivering all over in India.
                         </p>
                         <div className={`${styles.socialIconContainer}`}>
                             <a href={ContactData.instagramlink} target="_blank" aria-label="Follow us on Instagram">

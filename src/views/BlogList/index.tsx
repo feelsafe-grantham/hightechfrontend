@@ -32,7 +32,7 @@ const BlogList = () => {
             {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
           </div>}
         <ContactCta />
-        <SectionHeading heading="See More from Us" description="Lorem ipsum dolor sit amet consecte consecte  sit amet " />
+        <SectionHeading heading="See More from Us" description="Know more about us and what we do!" />
         {loading ? <ProductContainer /> :
           <div className={`${styles.galleryContainer}`}>
             <div className={`${styles.col2Grid}`} >

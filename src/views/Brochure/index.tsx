@@ -26,7 +26,7 @@ const BrochureView = () => {
                 <MainHeading />
                 {error && <div>Something went wrong</div>}
                 {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
-                <SectionHeading heading="Contact Us" description="Lorem ipsum dolor sit amet consecte consecte" />
+                <SectionHeading heading="Contact Us" description="Get in touch with us." />
                 <ContactCta />
             </div>
         </>

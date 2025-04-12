@@ -5,7 +5,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   place-items: center;
-  gap: 20px;
+  gap: 50px 20px;
 }
 @media (max-width: 1200px) {
   .productsContainer {
