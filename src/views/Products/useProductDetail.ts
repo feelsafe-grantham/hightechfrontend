@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ProductData, CtaImages } from "../../utils/Data";
+import { ProductData } from "../../utils/Data";
 import {
   ImageCtaType,
   ProductCardType,
@@ -23,11 +23,7 @@ const useProductDetail = (id: number) => {
   });
   const [relatedProducts, setRelatedProducts] =
     useState<ProductCardType[]>(ProductData);
-  const [ctaImages, setCtaImages] = useState<ImageCtaType[]>(CtaImages);
-  const maxImagesPerRatio: Record<"21" | "31", number> = {
-    "21": 2,
-    "31": 1,
-  };
+
   const [videoUrl, setVideoUrl] = useState("");
   const [vLoading, setVLoading] = useState(true);
 
@@ -71,7 +67,6 @@ const useProductDetail = (id: number) => {
       setOneRatio(getLimitedImages(data.ctaImage, "11"));
       setOneHalfRatio(getLimitedImages(data.ctaImage, "15"));
       setThreeRatio(getLimitedImages(data.ctaImage, "31"));
-      setCtaImages(data.ctaImage);
     } catch (error) {
       console.error("this is error: ", error);
       setError(true);
