@@ -6,6 +6,7 @@ import {
   ProductDetailType,
 } from "../../types/contentTypes";
 import { BASE_URL } from "../../utils/Constants/index";
+import { getLimitedImages } from "../../utils/helper";
 const useProductDetail = (id: number) => {
   const [product, setProduct] = useState<ProductDetailType>({
     id: 1,
@@ -29,14 +30,33 @@ const useProductDetail = (id: number) => {
   };
   const [videoUrl, setVideoUrl] = useState("");
   const [vLoading, setVLoading] = useState(true);
-  const getLimitedImages = (aspectRatio: "21" | "31") => {
-    return ctaImages
-      .filter((image) => image.aspectRatio === aspectRatio)
-      .slice(0, maxImagesPerRatio[aspectRatio]);
-  };
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<boolean | null>(null);
-
+  const [oneRatio, setOneRatio] = useState<ImageCtaType[]>([
+    {
+      aspectRatio: "11",
+      imageUrl: "/images/sq.png",
+      text: "",
+      subText: "",
+    },
+  ]);
+  const [oneHalfRatio, setOneHalfRatio] = useState<ImageCtaType[]>([
+    {
+      aspectRatio: "15",
+      imageUrl: "/images/onehalf.png",
+      text: "",
+      subText: "",
+    },
+  ]);
+  const [threeRatio, setThreeRatio] = useState<ImageCtaType[]>([
+    {
+      aspectRatio: "31",
+      imageUrl: "/images/three.png",
+      text: "",
+      subText: "",
+    },
+  ]);
   const fetchData = async () => {
     try {
       const response = await fetch(BASE_URL + "broucher/" + id);
@@ -48,6 +68,9 @@ const useProductDetail = (id: number) => {
       console.log(data);
       setProduct(data.selected_product);
       setRelatedProducts(data.products);
+      setOneRatio(getLimitedImages(data.ctaImage, "11"));
+      setOneHalfRatio(getLimitedImages(data.ctaImage, "15"));
+      setThreeRatio(getLimitedImages(data.ctaImage, "31"));
       setCtaImages(data.ctaImage);
     } catch (error) {
       console.error("this is error: ", error);
@@ -78,11 +101,13 @@ const useProductDetail = (id: number) => {
   }, [id]);
 
   return {
+    oneRatio,
+    oneHalfRatio,
+    threeRatio,
     videoUrl,
     vLoading,
     product,
     relatedProducts,
-    getLimitedImages,
     loading,
     error,
   };

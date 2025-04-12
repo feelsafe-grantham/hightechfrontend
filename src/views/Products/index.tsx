@@ -15,8 +15,9 @@ import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer
 const ProductView = () => {
     const { slug } = useParams<{ slug: string }>();
     const id = getIdFromSlug(slug as string)
-    const { videoUrl,
-        vLoading, product, relatedProducts, getLimitedImages, loading } = useProductDetail(id);
+    const { oneHalfRatio,
+        oneRatio, threeRatio, videoUrl,
+        vLoading, product, relatedProducts, loading } = useProductDetail(id);
     return (
         <>
             <PageSeo
@@ -35,26 +36,11 @@ const ProductView = () => {
                 {loading ? <ProductContainer /> : <ProductsContainer products={relatedProducts} />}
                 <SectionHeading heading="Top Selling Products" description="Lorem ipsum dolor sit amet consecte consecte" />
                 <div className={`${styles.galleryContainer}`}>
-                    {getLimitedImages("21").map((image, index) => (
-                        <ImageCta
-                            key={index}
-                            aspectRatio={image.aspectRatio}
-                            imageUrl={image.imageUrl}
-                            text={image.text}
-                            subText={image.subText}
-                        />
-                    ))}
+                    <ImageCta imageUrl={oneHalfRatio[0]?.imageUrl} aspectRatio={oneHalfRatio[0]?.aspectRatio} />
+                    <ImageCta imageUrl={oneRatio[0]?.imageUrl} aspectRatio={oneRatio[0]?.aspectRatio} />
                 </div>
                 <div className={`${styles.maxWidthLimit}`}>
-                    {getLimitedImages("31").map((image, index) => (
-                        <ImageCta
-                            key={index}
-                            aspectRatio={image.aspectRatio}
-                            imageUrl={image.imageUrl}
-                            text={image.text}
-                            subText={image.subText}
-                        />
-                    ))}
+                    <ImageCta aspectRatio={threeRatio[0]?.aspectRatio} imageUrl={threeRatio[0]?.imageUrl} />
                 </div>
             </div>
         </>

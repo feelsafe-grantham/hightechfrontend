@@ -33,6 +33,7 @@
 }
 .socialIcon {
   height: 40px;
+  border-radius: 5px;
 }
 .row2 {
   display: grid;

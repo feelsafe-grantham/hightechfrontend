@@ -24,6 +24,22 @@ const useAboutView = () => {
   const [videoUrl, setVideoUrl] = useState("");
   const [vLoading, setVLoading] = useState(true);
   const [twoRatio, setTwoRatio] = useState<ImageCtaType[]>([]);
+  const [oneRatio, setOneRatio] = useState<ImageCtaType[]>([
+    {
+      aspectRatio: "11",
+      imageUrl: "/images/sq.png",
+      text: "",
+      subText: "",
+    },
+  ]);
+  const [oneHalfRatio, setOneHalfRatio] = useState<ImageCtaType[]>([
+    {
+      aspectRatio: "15",
+      imageUrl: "/images/onehalf.png",
+      text: "",
+      subText: "",
+    },
+  ]);
   const [threeRatio, setThreeRatio] = useState<ImageCtaType[]>([]);
   const fetchData = async () => {
     try {
@@ -39,6 +55,8 @@ const useAboutView = () => {
 
       setTwoRatio(getLimitedImages(data.ctaImage, "21"));
       setThreeRatio(getLimitedImages(data.ctaImage, "31"));
+      setOneRatio(getLimitedImages(data.ctaImage, "11"));
+      setOneHalfRatio(getLimitedImages(data.ctaImage, "15"));
       setProductsImages(data.product_image);
     } catch (error) {
       setError(true);
@@ -68,6 +86,8 @@ const useAboutView = () => {
   }, []);
 
   return {
+    oneHalfRatio,
+    oneRatio,
     videoUrl,
     vLoading,
     team,

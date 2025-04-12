@@ -8,7 +8,7 @@ export const ContactData = {
     facebooklink: "https://www.facebook.com/hightechwindowblinds.in/",
     gmplink: "#",
     xlink: "#",
-    youtubelink: "",
+    youtubelink: "https://www.youtube.com/@hightechwindowblinds.in_/",
 }
 
 // temp Data here

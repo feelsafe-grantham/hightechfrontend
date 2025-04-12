@@ -15,7 +15,7 @@ export const getIdFromSlug = (slug: string): number => {
 
 export const getLimitedImages = (
   ctaImages: ImageCtaType[],
-  aspectRatio: "31" | "21" | "11",
+  aspectRatio: "31" | "21" | "15" | "11",
   numImages?: number
 ): ImageCtaType[] => {
   const filteredImages = ctaImages.filter(

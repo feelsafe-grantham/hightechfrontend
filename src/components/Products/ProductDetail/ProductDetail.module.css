@@ -121,6 +121,9 @@
   gap: 10px;
 }
 .ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 45px;
   cursor: pointer;
   padding: 5px 10px;
@@ -142,7 +145,7 @@
 }
 .contactBtn:hover {
   color: var(--primary-heading);
-  background-color: var(----primary-background);
+  background-color: var(--primary-background);
 }
 .downloadBtn {
   color: var(--primary-heading);

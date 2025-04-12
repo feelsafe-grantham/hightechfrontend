@@ -17,7 +17,7 @@ function useAutoScroll(scrollSpeed = 2, intervalTime = 30) {
           if (imageGridRef.current.scrollLeft + clientWidth >= scrollWidth) {
             setScrollingForward(false);
           } else {
-            imageGridRef.current.scrollLeft += scrollSpeed; // Scroll forward
+            imageGridRef.current.scrollLeft += scrollSpeed;
           }
         } else {
           if (imageGridRef.current.scrollLeft <= 0) {
@@ -29,7 +29,7 @@ function useAutoScroll(scrollSpeed = 2, intervalTime = 30) {
       }
     }, intervalTime);
 
-    return () => clearInterval(scrollInterval); // Clean up the interval on component unmount
+    return () => clearInterval(scrollInterval);
   }, [scrollingForward, scrollSpeed, intervalTime]);
 
   return imageGridRef;

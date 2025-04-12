@@ -75,6 +75,8 @@ const useBlogList = () => {
   const [productImages, setProductImages] = useState<string[]>([]);
   const [twoRation, setTwoRation] = useState<ImageCtaType[]>([]);
   const [threeRation, setThreeRation] = useState<ImageCtaType[]>([]);
+  const [oneHalfRatio, setOneHalfRatio] = useState<ImageCtaType[]>([]);
+  const [oneRatio, setOneRatio] = useState<ImageCtaType[]>([]);
   const [videoUrl, setVideoUrl] = useState("");
   const [vLoading, setVLoading] = useState(true);
   const fetchData = async () => {
@@ -89,6 +91,8 @@ const useBlogList = () => {
       setProductImages(data.product_image);
       setTwoRation(getLimitedImages(data.ctaImages, "21"));
       setThreeRation(getLimitedImages(data.ctaImages, "31"));
+      setOneRatio(getLimitedImages(data.ctaImages, "11"));
+      setOneHalfRatio(getLimitedImages(data.ctaImages, "15"));
     } catch (error) {
       console.error("this is error: ", error);
       setError(true);
@@ -122,6 +126,8 @@ const useBlogList = () => {
     videoUrl,
     blogs,
     twoRation,
+    oneRatio,
+    oneHalfRatio,
     threeRation,
     loading,
     error,

@@ -21,13 +21,13 @@ const Footer = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquam exercitationem
                         </p>
                         <div className={`${styles.socialIconContainer}`}>
-                            <a href={ContactData.instagramlink} aria-label="Follow us on Instagram">
+                            <a href={ContactData.instagramlink} target="_blank" aria-label="Follow us on Instagram">
                                 <img className={`${styles.socialIcon}`} src="/images/instagram.png" alt="instagram logo" />
                             </a>
-                            <a href={ContactData.xlink} aria-label="Follow us on X">
-                                <img className={`${styles.socialIcon}`} src="/images/x.png" alt="x logo" />
+                            <a href={ContactData.youtubelink} target="_blank" aria-label="Follow us on X">
+                                <img className={`${styles.socialIcon}`} src="/images/youtube.png" alt="x logo" />
                             </a>
-                            <a href={ContactData.facebooklink} aria-label="Like us on Facebook">
+                            <a href={ContactData.facebooklink} target="_blank" aria-label="Like us on Facebook">
                                 <img className={`${styles.socialIcon}`} src="/images/facebook.png" alt="facebook logo" />
                             </a>
                         </div>

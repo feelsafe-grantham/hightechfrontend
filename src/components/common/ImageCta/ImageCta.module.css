@@ -31,6 +31,10 @@
   aspect-ratio: 2 / 1;
   object-fit: cover;
 }
+.ratio15 {
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+}
 .ratio1 {
   aspect-ratio: 1 / 1;
 }

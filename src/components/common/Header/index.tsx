@@ -58,7 +58,7 @@ const Header = () => {
             </ul>
             <div className={`${styles.offerStripContainer}`}>
                 <img
-                    src="/images/offer.png"
+                    src="/images/offer2.gif"
                     alt="High Tech Window Blinds by Vishal Interior"
                     title="Offer by High tech window blinds by Vishal Interior"
                     className={`${styles.offerStrip} ${styles.logoheight}`}

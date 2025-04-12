@@ -9,7 +9,7 @@ import ProductImages from "../../components/common/ProductImages";
 import PageSeo from "../../components/common/PageSeo";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 const AboutView = () => {
-    const { vLoading, videoUrl, loading, team, productsImages, twoRatio,
+    const { vLoading, videoUrl, loading, oneHalfRatio, oneRatio, team, productsImages,
         threeRatio, } = useAboutView();
 
     return (
@@ -74,10 +74,10 @@ const AboutView = () => {
                 </div>
                 <div className={`${styles.galleryContainer}`}>
                     <div className={`${styles.col2Grid}`} >
-                        <ImageCta imageUrl={threeRatio[0]?.imageUrl} aspectRatio={threeRatio[0]?.aspectRatio} />
-                        <ImageCta imageUrl={twoRatio[0]?.imageUrl} aspectRatio={twoRatio[0]?.aspectRatio} />
+                        <ImageCta imageUrl={oneHalfRatio[0]?.imageUrl} aspectRatio={oneHalfRatio[0]?.aspectRatio} />
+                        <ImageCta imageUrl={oneRatio[0]?.imageUrl} aspectRatio={oneRatio[0]?.aspectRatio} />
                     </div>
-                    <ImageCta aspectRatio={threeRatio[1]?.aspectRatio} imageUrl={threeRatio[1]?.imageUrl} />
+                    <ImageCta aspectRatio={threeRatio[0]?.aspectRatio} imageUrl={threeRatio[0]?.imageUrl} />
                 </div>
                 {loading ? <ProductContainer /> : <ProductImages productsImages={productsImages} />}
             </div>
