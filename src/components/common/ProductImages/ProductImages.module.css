@@ -3,6 +3,7 @@
   justify-content: flex-start;
   overflow-x: scroll;
   flex-wrap: nowrap;
+  margin: 2rem auto;
 }
 .productImage {
   margin: 0px 20px;

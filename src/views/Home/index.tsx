@@ -1,16 +1,18 @@
 import styles from "./Home.module.css"
-import CoverImage from "../../components/common/CoverImage";
-import MainHeading from "../../components/common/MainHeading";
-import ContactCta from "../../components/common/ContactCta";
-import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
-import ProductsContainer from "../../components/common/ProductsContainer";
+import useHomeView from "./useHomeView";
+import PageSeo from "../../components/common/PageSeo";
 import ImageCta from "../../components/common/ImageCta";
+import ContactCta from "../../components/common/ContactCta";
+import CoverImage from "../../components/common/CoverImage";
+import useAutoScroll from "../../utils/helper/useAutoScroll";
+import MainHeading from "../../components/common/MainHeading";
+import ProductImages from "../../components/common/ProductImages";
+import ProductsContainer from "../../components/common/ProductsContainer";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 import HeroImagesShimmer from "../../components/common/Shimmer/HeroImagesShimmer";
-import useAutoScroll from "../../utils/helper/useAutoScroll";
-import PageSeo from "../../components/common/PageSeo";
-import useHomeView from "./useHomeView";
+import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
+
 const HomeView = () => {
     const { vLoading, videoUrl, heroImages, chips, activeChip, handleChipClick, products, ctaImage, loading } = useHomeView();
     const imageGridRef = useAutoScroll();
@@ -46,6 +48,7 @@ const HomeView = () => {
                 <ContactCta />
                 <SectionHeading heading="Top Selling Products" description="See a large selection of our top selling products" />
                 {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
+                <ProductImages />
                 {loading ? <CoverImageShimmer /> : <div className={`${styles.ctaContainer}`}>
                     <ImageCta
                         aspectRatio={ctaImage.aspectRatio}
@@ -54,8 +57,7 @@ const HomeView = () => {
                         subText={ctaImage.subText}
                     />
 
-                </div>
-                }
+                </div>}
             </div>
         </>
     );

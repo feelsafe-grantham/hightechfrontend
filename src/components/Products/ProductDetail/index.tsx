@@ -23,7 +23,8 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
                 <h3 className={`${styles.productName}`}>{product.product_name}</h3>
                 <div className={`${styles.reviewContainer}`}>
                     <img className={`${styles.icon}`} src="/images/google.png" alt="" />
-                    <img className={`${styles.icon}`} src="/images/star.png" alt="" />
+                    {/* <img className={`${styles.icon}`} src="/images/star.png" alt="" /> */}
+                    {Array(product.product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
                     <p className={`${styles.reviewCount}`}>{product.product_stars}/5</p>
 
                 </div>
@@ -38,12 +39,14 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
                 <div className={`${styles.dimenssionContainer}`}>
 
                     <div className={`${styles.dimension}`}>
-                        <span className={`${styles.lableSpan}`}>Height</span>
-                        <span className={`${styles.productDimension}`}>{product.product_height}</span>
+                        <span className={`${styles.lableSpan}`}>Available </span>
+                        <span className={`${styles.productDimension}`}>Custom Blinds </span>
+                        {/* <span className={`${styles.productDimension}`}>{product.product_height}</span> */}
                     </div>
                     <div className={`${styles.dimension}`}>
-                        <span className={`${styles.lableSpan}`}>Width</span>
-                        <span className={`${styles.productDimension}`}>{product.product_width}</span>
+                        <span className={`${styles.lableSpan}`}>Available </span>
+                        <span className={`${styles.productDimension}`}>All Size</span>
+                        {/* <span className={`${styles.productDimension}`}>{product.product_width}</span> */}
                     </div>
                 </div>
                 <p className={`${styles.productPrice}`}>{totalPrice}/-</p>

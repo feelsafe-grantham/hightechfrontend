@@ -2,6 +2,7 @@ import Breadcrum from "../../components/common/Breadcrum";
 import ContactCta from "../../components/common/ContactCta";
 import MainHeading from "../../components/common/MainHeading";
 import PageSeo from "../../components/common/PageSeo";
+import ProductImages from "../../components/common/ProductImages";
 import ProductsContainer from "../../components/common/ProductsContainer";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
@@ -28,6 +29,7 @@ const BrochureView = () => {
                 {loading ? <ProductContainer /> : <ProductsContainer products={products} />}
                 <SectionHeading heading="Contact Us" description="Get in touch with us." />
                 <ContactCta />
+                <ProductImages />
             </div>
         </>
     )

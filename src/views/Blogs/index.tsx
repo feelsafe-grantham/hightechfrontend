@@ -5,6 +5,7 @@ import useBlogView from "./useBlogView";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
 import useAutoScroll from "../../utils/helper/useAutoScroll";
 import PageSeo from "../../components/common/PageSeo";
+import ProductImages from "../../components/common/ProductImages";
 const BlogView = () => {
     const { slug } = useParams<{ slug: string }>();
     const { blog, error, loading } = useBlogView(slug as string);
@@ -29,21 +30,22 @@ const BlogView = () => {
             />
             <div className={`${styles.blogView}`}>
                 {
-                    loading ? <ProductContainer /> : <div className={`${styles.blogCardContainer}`}>
-                        <div className={`${styles.blogCard}`}>
-                            <div ref={imageGridRef} className={`${styles.blogImageContainer}`}>
-                                {blog.images.map((image, index) =>
-                                    <img
-                                        key={index}
-                                        src={image}
-                                        alt={image}
-                                        className={`${styles.blogImage}`}
-                                    />
-                                )}
-                            </div>
-                            <div className={`${styles.blogInfo}`}>
-                                <h2 className={`${styles.blogTitle}`}>{blog.title}</h2>
-                                {/* <div className={`${styles.authorInfoContainer}`}>
+                    loading ? <ProductContainer /> :
+                        <div className={`${styles.blogCardContainer}`}>
+                            <div className={`${styles.blogCard}`}>
+                                <div ref={imageGridRef} className={`${styles.blogImageContainer}`}>
+                                    {blog.images.map((image, index) =>
+                                        <img
+                                            key={index}
+                                            src={image}
+                                            alt={image}
+                                            className={`${styles.blogImage}`}
+                                        />
+                                    )}
+                                </div>
+                                <div className={`${styles.blogInfo}`}>
+                                    <h2 className={`${styles.blogTitle}`}>{blog.title}</h2>
+                                    {/* <div className={`${styles.authorInfoContainer}`}>
                             <img className={`${styles.authorImage}`} src={blog.author_image} alt={blog.author_name} />
                             <div className={`${styles.authorInfo}`}>
                                 <span className={`${styles.authorName}`}>
@@ -54,15 +56,17 @@ const BlogView = () => {
                                 </span>
                             </div>
                         </div> */}
-                                <div className={`${styles.blogContent}`}>
-                                    {parse(blog.content)}
+                                    <div className={`${styles.blogContent}`}>
+                                        {parse(blog.content)}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
                 }
+
             </div>
+            <ProductImages />
         </>
     )
 }

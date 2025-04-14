@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from "./Header.module.css"
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Header = () => {
     const links = [
         { label: "Home", url: "/", },
@@ -57,12 +58,14 @@ const Header = () => {
                 ))}
             </ul>
             <div className={`${styles.offerStripContainer}`}>
-                <img
-                    src="/images/offer2.gif"
-                    alt="High Tech Window Blinds by Vishal Interior"
-                    title="Offer by High tech window blinds by Vishal Interior"
-                    className={`${styles.offerStrip} ${styles.logoheight}`}
-                />
+                <Link target="_blank" to="https://api.whatsapp.com/send?phone=+919990587916&text=Hi, I am interested in your products. Can you please share some details ?">
+                    <img
+                        src="/images/offer2.gif"
+                        alt="High Tech Window Blinds by Vishal Interior"
+                        title="Offer by High tech window blinds by Vishal Interior"
+                        className={`${styles.offerStrip} ${styles.logoheight}`}
+                    />
+                </Link>
             </div>
         </header>
     )

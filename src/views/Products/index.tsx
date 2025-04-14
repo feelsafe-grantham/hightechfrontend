@@ -12,6 +12,7 @@ import useProductDetail from "./useProductDetail";
 import { getIdFromSlug } from "../../utils/helper";
 import PageSeo from "../../components/common/PageSeo";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
+import ProductImages from "../../components/common/ProductImages";
 const ProductView = () => {
     const { slug } = useParams<{ slug: string }>();
     const id = getIdFromSlug(slug as string)
@@ -42,6 +43,7 @@ const ProductView = () => {
                 <div className={`${styles.maxWidthLimit}`}>
                     <ImageCta aspectRatio={threeRatio[0]?.aspectRatio} imageUrl={threeRatio[0]?.imageUrl} />
                 </div>
+                <ProductImages />
             </div>
         </>
     )

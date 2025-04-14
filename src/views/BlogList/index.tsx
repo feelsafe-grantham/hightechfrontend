@@ -4,15 +4,15 @@ import ContactCta from "../../components/common/ContactCta";
 import ImageCta from "../../components/common/ImageCta";
 import MainHeading from "../../components/common/MainHeading";
 import PageSeo from "../../components/common/PageSeo";
+import ProductImages from "../../components/common/ProductImages";
 import SectionHeading from "../../components/common/SectionHeading/SectionHeading";
 import CoverImageShimmer from "../../components/common/Shimmer/CoverImageShimmer";
 import ProductContainer from "../../components/common/Shimmer/ProductContainer";
-import useAutoScroll from "../../utils/helper/useAutoScroll";
 import styles from "./BlogList.module.css"
 import useBlogList from "./useBlogList";
 const BlogList = () => {
-  const { vLoading, videoUrl, productImages, loading, threeRation, oneHalfRatio, oneRatio, blogs, } = useBlogList();
-  const imageGridRef = useAutoScroll();
+  const { vLoading, videoUrl, loading, threeRation, oneHalfRatio, oneRatio, blogs, } = useBlogList();
+
 
   return (
     <>
@@ -46,11 +46,7 @@ const BlogList = () => {
             </div>
 
           </div>}
-        {loading ? <ProductContainer /> : <div ref={imageGridRef} className={`${styles.imageGrid}`}>
-          {productImages.map((image, index) =>
-            <img key={index} className={`${styles.productImage}`} src={image} />
-          )}
-        </div>}
+        <ProductImages />
       </div>
     </>
   );
