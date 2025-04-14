@@ -4,13 +4,13 @@ import { ImageCtaType, ProductCardType, HeroImagesType } from "../../types/conte
 import { BASE_URL } from "../../utils/Constants";
 const useHomeView = () => {
     const productImages: any = {
-        "Zebra Blinds": [{ image: "/images/homeProduct1.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
-        "Bamboo Blinds": [{ image: "/images/homeProduct2.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
-        "Bamboo Chick": [{ image: "/images/homeProduct3.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
-        "Triple Shade": [{ image: "/images/homeProduct1.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
-        "Honeycomb": [{ image: "/images/homeProduct2.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
-        "Skylight": [{ image: "/images/homeProduct3.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
-        "Motorized": [{ image: "/images/homeProduct1.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Zebra Blinds": [{ image: "/images/zebrablinds1.jpg" }, { image: "/images/zebrablinds2.jpg" }, { image: "/images/zebrablinds3.jpg" }],
+        "Bamboo Blinds": [{ image: "/images/bambooblind1.jpg" }, { image: "/images/bambooblind2.jpg" }, { image: "/images/bambooblind3.jpg" }],
+        "Bamboo Chick": [{ image: "/images/bamboochickblind1.jpg" }, { image: "/images/bamboochickblind2.jpg" }, { image: "/images/bamboochickblind3.jpg" }],
+        "Triple Shade": [{ image: "/images/tripleshade1.jpg" }, { image: "/images/tripleshade2.jpg" }, { image: "/images/tripleshade3.jpg" }],
+        "Honeycomb": [{ image: "/images/honeycomb1.jpg" }, { image: "/images/honeycomb2.jpg" }, { image: "/images/honeycomb3.jpg" }],
+        "Skylight": [{ image: "/images/skylight1.jpg" }, { image: "/images/skylight2.jpg" }, { image: "/images/skylight3.jpg" }],
+        "Motorized": [{ image: "/images/motorized1.jpg" }, { image: "/images/motorized2.jpg" }, { image: "/images/motorized3.jpg" }],
     }
 
     const chips = [
@@ -31,27 +31,14 @@ const useHomeView = () => {
 
     const [videoUrl, setVideoUrl] = useState("");
     const [heroImages, setHeroImages] = useState<HeroImagesType[]>(
-        [
-            {
-                image: "/images/homeProduct1.png",
-                aspectRatio: "21"
-            },
-            {
-                image: "/images/homeProduct2.png",
-                aspectRatio: "21"
-            },
-            {
-                image: "/images/homeProduct3.png",
-                aspectRatio: "21"
-            },
-        ]
+        productImages[activeChip]
     );
     const [products, setProducts] = useState<ProductCardType[]>(ProductData);
     const [loading, setLoading] = useState(true);
     const [vLoading, setVLoading] = useState(true);
     const [error, setError] = useState(false);
     const [ctaImage, setCtaImage] = useState<ImageCtaType>({
-        imageUrl: "/home1.png",
+        imageUrl: "/home1.jpg",
         text: "Our Hot",
         subText: "Products",
         aspectRatio: "31",
@@ -66,7 +53,6 @@ const useHomeView = () => {
                 return;
             }
             const data = await response.json().then((data) => data.data);
-            setHeroImages(data.heroImages);
             setProducts(data.products);
             setCtaImage(data.ctaImage[0]);
         } catch (error) {
