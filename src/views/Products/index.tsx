@@ -32,7 +32,10 @@ const ProductView = () => {
             <div className={`${styles.productView}`}>
                 {vLoading ? <CoverImageShimmer /> : <Breadcrum videoUrl={videoUrl} fallback="/images/brochureDetailFallback.jpg" />}
                 <MainHeading />
-                <ProductDetail product={product} />
+                <div className="productDetail">
+
+                    <ProductDetail product={product} />
+                </div>
                 <ContactCta />
                 {loading ? <ProductContainer /> : <ProductsContainer products={relatedProducts} />}
                 <SectionHeading heading="Top Selling Products" description="Explore our top selling products" />
