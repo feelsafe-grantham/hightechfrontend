@@ -14,6 +14,8 @@ import WhatsappIcon from './components/common/Icons/WhatspappIcon';
 import Footer from './components/common/Footer';
 import ChatBot from './components/common/Icons/ChatBot';
 import useReview from './hooks/useReview';
+import MessageBot from './components/common/ChatBot';
+
 function App() {
   useReview();
 
@@ -33,6 +35,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogView />} />
       </Routes>
       <WhatsappIcon />
+      <MessageBot />
       <ChatBot />
       <Footer />
     </div>
