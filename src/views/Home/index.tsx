@@ -24,11 +24,12 @@ const HomeView = () => {
                 keywords=""
             />
             <div className={`${styles.homeView}`}>
+
                 {vLoading ? <CoverImageShimmer /> : <CoverImage videoUrl={videoUrl} />}
                 {loading ? <HeroImagesShimmer /> :
                     <div ref={imageGridRef} className={`${styles.productImageContainer} `}>
                         {heroImages.map((image, index) =>
-                            <img key={index} className={`${styles.productImage}`} src={image.image} alt="High Tech Window Blinds by Vishal Interior" />
+                            <img key={index} src={image.image} className={`${styles.productImage}`} alt="High Tech Window Blinds by Vishal Interior" />
                         )}
                     </div>
                 }

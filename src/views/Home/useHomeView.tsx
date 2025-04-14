@@ -3,6 +3,16 @@ import { ProductData } from "../../utils/Data";
 import { ImageCtaType, ProductCardType, HeroImagesType } from "../../types/contentTypes";
 import { BASE_URL } from "../../utils/Constants";
 const useHomeView = () => {
+    const productImages: any = {
+        "Zebra Blinds": [{ image: "/images/homeProduct1.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Bamboo Blinds": [{ image: "/images/homeProduct2.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Bamboo Chick": [{ image: "/images/homeProduct3.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Triple Shade": [{ image: "/images/homeProduct1.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Honeycomb": [{ image: "/images/homeProduct2.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Skylight": [{ image: "/images/homeProduct3.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+        "Motorized": [{ image: "/images/homeProduct1.png" }, { image: "/images/homeProduct2.png" }, { image: "/images/homeProduct3.png" }],
+    }
+
     const chips = [
         "Zebra Blinds",
         "Bamboo Blinds",
@@ -16,7 +26,9 @@ const useHomeView = () => {
     const [activeChip, setChip] = useState("Zebra Blinds");
     const handleChipClick = (chip: string) => {
         setChip(chip);
+        setHeroImages(productImages[chip]);
     }
+
     const [videoUrl, setVideoUrl] = useState("");
     const [heroImages, setHeroImages] = useState<HeroImagesType[]>(
         [

@@ -13,12 +13,14 @@ import ScrollToTop from './components/common/ScrollToTop';
 import WhatsappIcon from './components/common/Icons/WhatspappIcon';
 import ChatBot from './components/common/Icons/ChatBot';
 import useReview from './hooks/useReview';
+import CtaStrip from './components/common/CtaStrip';
 function App() {
   useReview();
 
   return (
     <div>
       <Topstrip />
+      <CtaStrip />
       <Header />
       <ScrollToTop />
       <Routes>

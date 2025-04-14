@@ -35,8 +35,8 @@ const OneProduct = ({ product = {
                 <img className={`${styles.googleLogo}`} src="/images/google.png" alt="" /> {Array(product_stars).fill("⭐").map((star, index) => <span key={index}>{star}</span>)}
             </div>
             <div className={`${styles.btnContainer}`}>
-                <Link to={connect_link} className={`${styles.ctaBtn} ${styles.connectBtn}`}>Connect Now!</Link>
-                <Link to={download_link} className={`${styles.ctaBtn} ${styles.downloadBtn}`}>Download Brochure</Link>
+                <Link target="_blank" to={connect_link} className={`${styles.ctaBtn} ${styles.connectBtn}`}>Connect Now!</Link>
+                <Link target="_blank" to={download_link} className={`${styles.ctaBtn} ${styles.downloadBtn}`}>Download Brochure</Link>
             </div>
         </div>
     );

@@ -1,13 +1,15 @@
 .sectionHeadingContainer {
   margin-top: 50px;
   margin: 30px auto;
+  display: grid;
+  gap: 10px;
 }
 .sectionHeading {
   color: var(--primary-heading);
   font-size: 40px;
   font-weight: 800;
   text-align: center;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 .sectionDescription {
   text-align: center;

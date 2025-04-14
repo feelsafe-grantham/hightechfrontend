@@ -31,7 +31,7 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
                     {/* {product.product_review.map((text) =>
                         <li className={`${styles.checkList}`}>{text}</li>
                     )} */}
-                    {["Dealer Verified", "Factory Product", "Quality Approved"].map((text) =>
+                    {["2000+ Trusted Dealers", "Factory Product", "Quality Approved"].map((text) =>
                         <li className={`${styles.checkList}`}>{text}</li>
                     )}
                 </ul>
@@ -57,7 +57,7 @@ const ProductDetail = ({ product }: { product: ProductDetailType }) => {
                         <img className={`${styles.btnIcon}`} src="/images/whatsapp.png" alt="" />
                         Contact Now!
                     </Link>
-                    <Link to={product.download_link} className={`${styles.ctaButton} ${styles.downloadBtn}`}>Download Brochure</Link>
+                    <Link to={product.download_link} target="_blank" className={`${styles.ctaButton} ${styles.downloadBtn}`}>Download Brochure</Link>
                 </div>
             </div>
         </div>
