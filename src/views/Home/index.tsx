@@ -35,7 +35,7 @@ const HomeView = () => {
                         )}
                     </div>
                 }
-                <div className={`${styles.chipsContainer}`}>
+                <div className={`${styles.chipsContainer} scrollbar-hidden`}>
                     {chips.map((chip, index) =>
                         <span
                             key={index}

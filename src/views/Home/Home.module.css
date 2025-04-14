@@ -22,19 +22,25 @@
 .chipsContainer {
   margin: 30px auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  overflow: scroll;
   gap: 10px;
 }
 .chip {
-  padding: 5px 20px;
   border: 2px solid var(--primary-theme1);
   border-radius: var(--standard-border-radius1);
   background-color: var(--primary-theme1);
   color: var(--white-text);
+  padding: 5px 20px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+  display: inline-block;
+  white-space: nowrap;
+  width: auto;
 }
 .chip:hover {
   background-color: var(--white-text);
@@ -48,22 +54,4 @@
 /* chips end */
 .ctaContainer {
   margin-top: 50px;
-}
-@media (max-width: 768px) {
-  /* .productImageContainer {
-    grid-template-columns: 1fr 1fr;
-  }
-  .productImageContainer img:nth-child(3) {
-    display: none;
-  } */
-}
-
-@media (max-width: 500px) {
-  /* .productImageContainer {
-    padding: 0px 10px;
-    grid-template-columns: 1fr;
-  }
-  .productImageContainer img:nth-child(2) {
-    display: none;
-  } */
 }
