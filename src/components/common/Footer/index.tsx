@@ -13,12 +13,12 @@ const Footer = () => {
     ]
     return (
         <footer className={`${styles.footerWrapper}`}>
+            <img src="/images/truck.gif" alt="footer-bg" className={`${styles.footerTruck}`} />
             <div className={`${styles.footerContainer}`}>
                 <section className={`${styles.topBar}`}>
                     <div className={`${styles.row1}`}>
                         <h3 className={`${styles.colHeading} ${styles.companyName}`}>Hightech Windows Blind</h3>
                         <p className={`${styles.companyDescription}`}>
-
                             We are dealing in various types of window blinds and delivering all over in India.
                         </p>
                         <div className={`${styles.socialIconContainer}`}>
