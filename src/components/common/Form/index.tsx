@@ -48,7 +48,8 @@ const Form = () => {
         <form
             action="https://formspree.io/f/movepwqv"
             method="POST"
-            className={`${styles.form}`} onSubmit={() => setShowThankYou(true)}
+            className={`${styles.form}`}
+            onSubmit={() => setShowThankYou(true)}
         >
             <input
                 name="name"

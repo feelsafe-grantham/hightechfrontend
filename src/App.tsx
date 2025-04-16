@@ -20,7 +20,7 @@ function App() {
   useReview();
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Topstrip />
       <CtaStrip />
       <Header />

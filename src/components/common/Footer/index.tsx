@@ -13,6 +13,9 @@ const Footer = () => {
     ]
     return (
         <footer className={`${styles.footerWrapper}`}>
+            {/* <div className={styles.truckWrapper}>
+                <img src="/images/truck.gif" alt="footer-bg" className={styles.footerTruck} />
+            </div> */}
             <img src="/images/truck.gif" alt="footer-bg" className={`${styles.footerTruck}`} />
             <div className={`${styles.footerContainer}`}>
                 <section className={`${styles.topBar}`}>
