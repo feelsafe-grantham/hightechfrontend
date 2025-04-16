@@ -51,6 +51,7 @@ const Form = () => {
             className={`${styles.form}`} onSubmit={() => setShowThankYou(true)}
         >
             <input
+                name="name"
                 placeholder="Name"
                 className={`${styles.inputBox}`}
                 type="text"
@@ -58,6 +59,7 @@ const Form = () => {
                 onChange={(e) => setName(e.target.value)}
             />
             <input
+                name="email"
                 placeholder="Email"
                 className={`${styles.inputBox}`}
                 type="email"
@@ -66,6 +68,7 @@ const Form = () => {
                 required
             />
             <input
+                name="phone"
                 placeholder="Phone Number"
                 className={`${styles.inputBox}`}
                 type="tel"
@@ -84,19 +87,9 @@ const Form = () => {
                 {indStateAndUt.map((state, index) => (
                     <option key={index} value={state.value}>{state.name}</option>
                 ))}
-                {/* <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option> */}
             </select>
             <textarea
+                name="message"
                 className={`${styles.inputBox} ${styles.textArea}`}
                 placeholder="Message"
                 value={message}
