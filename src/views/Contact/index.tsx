@@ -32,7 +32,7 @@ const ContactView = () => {
             <div className={`${styles.writtenAddress}`}>
               <h5 className={`${styles.addressHead}`}>Our Office</h5>
               <p className={`${styles.contactInfo}`}>
-                A-869,Basement, Ramphal Chowk Road , Chandar Vihat Block B ,
+                A-869,Basement, Ramphal Chowk Road , Chandar Vihar Block B ,
                 Sector-7 Dwarka New Delhi 110075
               </p>
             </div>
