@@ -20,10 +20,10 @@ const ContactView = () => {
                 India's No.1
               </p>
               <p className={`${styles.ctaText} ${styles.ctaText2}`}>
-                Manufacture
+                Window Blinds
               </p>
               <p className={`${styles.ctaText} ${styles.ctaText3}`}>
-                Window Blinds
+                Manufacture
               </p>
               <p className={`${styles.ctaText} ${styles.ctaText4}`}>
                 Get in touch with us
@@ -40,7 +40,7 @@ const ContactView = () => {
               <h5 className={`${styles.addressHead}`}>Contact us at</h5>
               <p className={`${styles.contactInfo}`}>
                 <a href={`tel:${ContactData.phone1}`}>{ContactData.phone1}</a>,
-                <a href={`tel:${ContactData.phone1}`}>{ContactData.phone1}</a>
+                <a href={`tel:${ContactData.phone1}`}>{ContactData.phone2}</a>
               </p>
               <p className={`${styles.contactInfo}`}>
                 <a href={`mailto:${ContactData.email}`}>{ContactData.email}</a>

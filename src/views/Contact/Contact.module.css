@@ -25,8 +25,8 @@
 }
 .ctaText1 {
   line-height: 40px;
-  color: var(--primary-theme1);
   font-weight: 800;
+  color: var(--primary-theme1);
 }
 .ctaTex2 {
   line-height: 40px;
