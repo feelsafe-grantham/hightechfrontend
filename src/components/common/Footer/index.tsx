@@ -117,18 +117,17 @@ const Footer = () => {
             &copy; hightechwindowblinds.in
           </span>
           <div className={`${styles.termsContainer} ${styles.bottomLink}`}>
-            <Link to={"#"} title="Read our Terms of Service">
+            <Link to={"/terms-of-service"} title="Read our Terms of Service">
               Terms of service
             </Link>
-            <Link to={"#"} title="Read our Privacy Policy">
+            <Link to={"/privacy-policy"} title="Read our Privacy Policy">
               Privacy Policy
             </Link>
           </div>
         </section>
         <section className={`${styles.bottomcontainer}`}>
           <div
-            className={`${styles.companyUsername} ${styles.bottomLink}
-                    `}
+            className={`${styles.companyUsername} ${styles.bottomLink}`}
           >
             <span>Build with class</span>{" "}
             <Link

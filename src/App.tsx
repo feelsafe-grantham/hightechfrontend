@@ -15,6 +15,8 @@ import Footer from './components/common/Footer';
 import ChatBot from './components/common/Icons/ChatBot';
 import useReview from './hooks/useReview';
 import MessageBot from './components/common/ChatBot';
+import Privacy from './views/Privacy';
+import Terms from './views/Terms';
 
 function App() {
   useReview();
@@ -31,6 +33,8 @@ function App() {
         <Route path='/brochure' element={<BrochureView />} />
         <Route path='/blog' element={<BlogList />} />
         <Route path='/contact' element={<ContactView />} />
+        <Route path='/privacy-policy' element={<Privacy />} />
+        <Route path='/terms-of-service' element={<Terms />} />
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path="/blog/:slug" element={<BlogView />} />
       </Routes>

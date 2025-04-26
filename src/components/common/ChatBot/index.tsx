@@ -21,19 +21,19 @@ const MessageBot = () => {
 
     const questions = [
         {
-            text: "Find Lowest Price Here",
+            text: "Find Lowest Price Here.",
             whatsappLink: `https://wa.me/+91${ContactData.phone2}?text=I%20would%20like%20to%20know%20the%20lowest%20price.`
         },
         {
-            text: "PAN India Delivery?",
+            text: "PAN India Delivery.",
             whatsappLink: `https://wa.me/+91${ContactData.phone2}?text=Do%20you%20offer%20PAN%20India%20delivery%3F`
         },
         {
-            text: "We Have Customized Options",
+            text: "We Have Customized Options.",
             whatsappLink: `https://wa.me/+91${ContactData.phone2}?text=Do%20you%20offer%20customized%20blinds%20options%3F`
         },
         {
-            text: "All Types of Blinds Available",
+            text: "All Types of Blinds Available.",
             whatsappLink: `https://wa.me/+91${ContactData.phone2}?text=What%20types%20of%20blinds%20are%20available%3F`
         },
         {
@@ -41,7 +41,7 @@ const MessageBot = () => {
             whatsappLink: `https://wa.me/+91${ContactData.phone2}?text=Can%20you%20explain%20your%20return%20policy%3F`
         },
         {
-            text: "Talk to Sales Team",
+            text: "Talk to Sales Team.",
             whatsappLink: `https://wa.me/+91${ContactData.phone2}?text=I%20would%20like%20to%20talk%20to%20the%20sales%20team.`
         }
     ];

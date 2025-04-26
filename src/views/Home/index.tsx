@@ -26,7 +26,6 @@ const HomeView = () => {
                 keywords=""
             />
             <div className={`${styles.homeView}`}>
-
                 {vLoading ? <CoverImageShimmer /> : <CoverImage videoUrl={videoUrl} />}
                 {loading ? <HeroImagesShimmer /> :
                     <div ref={imageGridRef} className={`${styles.productImageContainer} `}>
