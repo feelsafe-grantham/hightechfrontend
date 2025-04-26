@@ -3,19 +3,19 @@ import styles from "./Footer.module.css";
 import { ContactData } from "../../../utils/Data";
 const Footer = () => {
   const chips = [
-    "Affordable Window Blinds",
-    "Premium Blinds",
-    "Eco friendly Blinds",
-    "Wooden Window Blinds",
-    "Office Window Blinds",
-    "Smart Window Blinds",
-    "Zebra Window Blinds",
+    "Roller Blinds",
+    "Vertical Blinds",
+    "Venetian Blinds",
+    "Roman Blinds",
+    "Zebra Blinds (Dual or Day-Night Blinds)",
+    "Honeycomb Blinds (Cellular Shades)",
+    "Panel Blinds",
+    "Wooden Blinds",
+    "Bamboo Blinds",
+    "Motorized Blinds"
   ];
   return (
     <footer className={`${styles.footerWrapper}`}>
-      {/* <div className={styles.truckWrapper}>
-                <img src="/images/truck.gif" alt="footer-bg" className={styles.footerTruck} />
-            </div> */}
       <img
         src="/images/truck.gif"
         alt="footer-bg"
@@ -28,8 +28,7 @@ const Footer = () => {
               Hightech Windows Blind
             </h3>
             <p className={`${styles.companyDescription}`}>
-              We are dealing in various types of window blinds and delivering
-              all over in India.
+              Serving 2000+ dealers across India for over 17 years | We offer modern blinds and customizable options.
             </p>
             <div className={`${styles.socialIconContainer}`}>
               <a
@@ -115,7 +114,7 @@ const Footer = () => {
         </section>
         <section className={`${styles.bottomBar}`}>
           <span className={`${styles.companyUsername} ${styles.bottomLink}`}>
-            @hightech
+            &copy; hightechwindowblinds.in
           </span>
           <div className={`${styles.termsContainer} ${styles.bottomLink}`}>
             <Link to={"#"} title="Read our Terms of Service">

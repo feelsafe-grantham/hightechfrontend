@@ -26,7 +26,7 @@ const AboutView = () => {
                 <MainHeading />
                 <div className={`${styles.ownerSection}`}>
                     <h2 className={`${styles.sectionHeading}`}>About Us</h2>
-                    <p className={`${styles.sectionDescription}`}>Know more about our Owner</p>
+                    {/* <p className={`${styles.sectionDescription}`}>Know more about our Owner</p> */}
 
                     <div className={`${styles.ownerContainer}`}>
                         <div className={`${styles.imageContainer}`}>
@@ -45,7 +45,8 @@ const AboutView = () => {
                     </div>
 
                     <p className={`${styles.ownerPara}`}>
-                        With a passion for excellence and years of experience, our founder leads with integrity, vision, and a dedication to quality that defines everything we do.
+                        At Vishal Interior, we make modern and custom window blinds that fit your space perfectly. With years of experience and a love for good design, we help you make your home or office look better and feel more comfortable.
+
                     </p>
                 </div>
                 <div className={`${styles.teamSection}`}>
@@ -69,9 +70,10 @@ const AboutView = () => {
                     <h2 className={`${styles.sectionHeading}`}>Our Legacy</h2>
                     <p className={`${styles.sectionDescription}`}>Built on trust. Powered by innovation.</p>
                     <p className={`${styles.legacyPara}`}>
-                        For over 17 years, we’ve been shaping spaces and redefining comfort. As India’s leading window blind manufacturer, our legacy is one of craftsmanship, dedication, and an unwavering commitment to quality.
+                        For over 17 years, Vishal Interior has been helping people style their spaces with comfort and care. As one of India’s trusted names in window blinds, we’re proud of the quality, design, and service we bring to every project.
 
-                        Driven by a passion to enhance interiors, we continue to set benchmarks in design and functionality. Our journey is a reflection of the values we stand for—precision, performance, and people-first service.
+                        Our journey is built on honest work, great craftsmanship, and making sure our customers always come first.
+
                     </p>
                 </div>
                 <div className={`${styles.galleryContainer}`}>
