@@ -38,7 +38,7 @@ const AboutView = () => {
                                 <span >Hightech</span><br />
                                 <span className={`${styles.designation}`}>OWNER</span>
                             </p>
-                            <p className={`${styles.ourWork}`}>We are whoreseller</p>
+                            <p className={`${styles.ourWork}`}>We are wholesaler</p>
                             <img className={`${styles.qrImage}`} src="/images/qr.png" alt="hightech qr" />
                             <img className={`${styles.signImage}`} src="/images/sign.png" alt="hightech sign" />
                         </div>

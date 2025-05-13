@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-background2);
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.messageBox {
+  background-color: var(--primary-background);
+  border: 1px solid #ddd;
+  border-left: 6px solid var(--primary-theme2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.title {
+  color: var(--primary-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.message {
+  color: var(--primary-text);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.secondary {
+  color: var(--primary-theme1);
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .messageBox {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .secondary {
+    font-size: 0.9rem;
+  }
+}
