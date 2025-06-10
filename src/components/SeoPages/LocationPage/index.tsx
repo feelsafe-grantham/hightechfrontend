@@ -24,18 +24,18 @@ export default function WindowsBlindsHome() {
             </section>
 
             {/* --- Intro paragraphs ---------------------------------------------- */}
-            {/* <section className={styles.intro}>
-                <p>
+            <section className={styles.intro}>
+                <p className={styles.introPara}>
                     Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
                     been the industry's standard dummy text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type specimen book. It has survived not
                     only five centuries …
                 </p>
-                <p>
+                <p className={styles.introPara}>
                     Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
                     been the industry's standard dummy text ever since the 1500s …
                 </p>
-            </section> */}
+            </section>
 
             {/* --- About section -------------------------------------------------- */}
             {/* <section className={styles.about}>

@@ -92,7 +92,7 @@
 }
 /* Hero ends */
 /* ---------- Intro paragraphs ---------- */
-/* .intro {
+.intro {
   max-width: 880px;
   margin: 2.5rem auto;
   padding: 0 1rem;
@@ -100,7 +100,7 @@
   font-size: 1rem;
   display: grid;
   gap: 1.25rem;
-} */
+}
 
 /* ---------- About ---------- */
 /* .about {
