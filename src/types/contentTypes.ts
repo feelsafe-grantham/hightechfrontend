@@ -91,3 +91,8 @@ export interface CitiesType {
   label: string;
   url: string;
 }
+export interface HeaderLinkType {
+  label: string;
+  url: string;
+  subLink?: CitiesType[];
+}

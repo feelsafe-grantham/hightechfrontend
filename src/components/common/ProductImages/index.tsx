@@ -4,7 +4,7 @@ import useProductImages from "./useProductImages";
 import CoverImageShimmer from "../Shimmer/CoverImageShimmer";
 
 const ProductImages = ({ productsImages }: { productsImages?: string[] }) => {
-    console.log(productsImages)
+
     const imageGridRef = useAutoScroll();
     const { productsImages: images, loading, error } = useProductImages();
     if (loading) return (<CoverImageShimmer />)

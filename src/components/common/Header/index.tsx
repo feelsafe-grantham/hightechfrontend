@@ -2,15 +2,16 @@ import { useState, useEffect, useRef } from "react"
 import styles from "./Header.module.css"
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { CitiesType } from "../../../types/contentTypes";
+import { CitiesType, HeaderLinkType } from "../../../types/contentTypes";
 import { BASE_URL } from "../../../utils/Constants";
+import { FaChevronDown, FaChevronUp, } from "react-icons/fa";
 const Header = () => {
     const [cities, setCities] = useState<CitiesType[]>([])
     const links = [
         { label: "Home", url: "/", },
         { label: "About", url: "/about", },
         { label: "Brochure", url: "/brochure", },
-        { label: "Cities", url: "/cities", subLinks: cities },
+        { label: "Cities", url: "/cities", subLink: cities },
         { label: "Blogs", url: "/blog", },
         { label: "Contact", url: "/contact", },
     ]
@@ -37,7 +38,11 @@ const Header = () => {
     const hoverTimeout = useRef<any>(null);
 
     const handleMouseEnter = (label: string) => {
-        if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+
+        if (hoverTimeout.current) {
+            clearTimeout(hoverTimeout.current)
+        }
+
         setHoverLink(label);
     };
 
@@ -64,12 +69,16 @@ const Header = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 1100);
+            setIsMobile(window.innerWidth <= 768);
         };
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+    const shouldShowSubmenu = (link: HeaderLinkType) => {
+        if (link?.subLink?.length === 0) return false
+        return isMobile ? activeSubMenu === link.label : hoverLink === link.label;
+    };
     return (
         <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
@@ -102,19 +111,71 @@ const Header = () => {
             <ul className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
 
+                    // <li key={link.label} className={`${styles.headerLink}`}>
+                    //     <NavLink
+                    //         to={link.url}
+                    //         onClick={closeMenu}
+                    //         aria-label={`Navigate to ${link.label}`}
+                    //         className={({ isActive }) =>
+                    //             isActive ? ` ${styles.linkActive}` : ""}
+                    //     >
+                    //         {link.label}
+                    //     </NavLink>
+                    // </li>
+
                     <li key={link.label} className={`${styles.headerLink}`}>
-                        <NavLink
-                            to={link.url}
-                            onClick={closeMenu}
-                            aria-label={`Navigate to ${link.label}`}
-                            className={({ isActive }) =>
-                                isActive ? ` ${styles.linkActive}` : ""}
-                        >
-                            {link.label}
-                        </NavLink>
+
+                        <div className={styles.mainLinkWrapper}>
+                            <div className={styles.linkTextWrapper}>
+                                <NavLink
+                                    to={link.url}
+                                    onClick={closeMenu}
+                                    aria-label={`Navigate to ${link.label}`}
+                                    className={({ isActive }) =>
+                                        isActive ? ` ${styles.linkActive}` : ""}
+                                    title={`Navigate to ${link.label}`}
+                                    onMouseEnter={() => handleMouseEnter(link.label)}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    {link.label}
+                                </NavLink>
+                            </div>
+
+                            {isMobile && link?.subLink && link?.subLink?.length > 0 && (
+                                <button
+                                    className={styles.subMenuToggle}
+                                    onClick={() => toggleSubMenu(link.label)}
+                                >
+                                    {activeSubMenu === link.label ? <FaChevronUp /> : <FaChevronDown />}
+                                </button>
+                            )}
+                        </div>
+
+
+                        {shouldShowSubmenu(link) && link.label &&
+                            <ul
+                                onMouseLeave={handleMouseLeave}
+                                className={`${styles.headerSubLinksContainer} scrollbar-hidden `}
+                                onMouseEnter={() => handleMouseEnter(link.label)}
+                            >
+
+                                {link?.subLink && link.subLink.map((subLink, index) => (
+                                    <li className={`${styles.headerSubLink}`} key={index}>
+                                        <NavLink
+                                            to={subLink.url}
+                                            onClick={closeSubLink}
+                                            aria-label={`Navigate to ${subLink.label}`}
+                                            className={({ isActive }) =>
+                                                isActive ? ` ${styles.linkActive}` : ""}
+                                            title={`Navigate to ${subLink.label}`}
+                                        >
+                                            {subLink.label}
+                                        </NavLink>
+                                    </li>
+                                ))
+                                }
+                            </ul>}
                     </li>
-
-
 
                 ))}
             </ul>
