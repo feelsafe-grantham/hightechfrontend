@@ -17,6 +17,7 @@ import useReview from './hooks/useReview';
 import MessageBot from './components/common/ChatBot';
 import Privacy from './views/Privacy';
 import Terms from './views/Terms';
+import WindowsBlindsHome from './components/SeoPages/LocationPage';
 
 function App() {
   useReview();
@@ -37,6 +38,8 @@ function App() {
         <Route path='/terms-of-service' element={<Terms />} />
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path="/blog/:slug" element={<BlogView />} />
+
+        <Route path="/temp" element={<WindowsBlindsHome />} />
       </Routes>
       <WhatsappIcon />
       <MessageBot />

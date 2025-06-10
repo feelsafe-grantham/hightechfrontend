@@ -1,0 +1,181 @@
+/* ---------- Top bar ---------- */
+/* .topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logoArea :global(img) {
+  height: auto;
+}
+
+.email {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+} */
+
+/* ---------- Hero ---------- */
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.heroWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.heroImage {
+  aspect-ratio: 3/1;
+  width: 100%;
+  height: auto;
+  display: block;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1)); */
+}
+
+/* Overlay container */
+.overlayContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.mainHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subHeading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+}
+
+.contactStrip {
+  display: inline-flex;
+  gap: 0.75rem;
+  background-color: #00c25b;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.contactStrip a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactStrip span {
+  color: #fff;
+}
+/* Hero ends */
+/* ---------- Intro paragraphs ---------- */
+/* .intro {
+  max-width: 880px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  line-height: 1.65;
+  font-size: 1rem;
+  display: grid;
+  gap: 1.25rem;
+} */
+
+/* ---------- About ---------- */
+/* .about {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.aboutMedia {
+  flex: 1;
+}
+
+.aboutImg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aboutText {
+  flex: 1;
+}
+
+.aboutText h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.smallHeading {
+  margin: 0.25rem 0 1.25rem;
+  font-size: 1.125rem;
+  color: #777777;
+}
+
+.brand {
+  color: #0070f3;
+} */
+
+/* ---------- Gallery ---------- */
+/* .gallery {
+  max-width: 1100px;
+  margin: 2.5rem auto 3.5rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.galleryImg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+} */
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 1.5rem;
+  }
+  .subHeading {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .mainHeading {
+    font-size: 1rem;
+  }
+  .subHeading {
+    font-size: 0.875rem;
+  }
+  .contactStrip {
+    padding: 5px 10px;
+    font-size: 0.675rem;
+  }
+}
