@@ -17,8 +17,8 @@ import useReview from './hooks/useReview';
 import MessageBot from './components/common/ChatBot';
 import Privacy from './views/Privacy';
 import Terms from './views/Terms';
-import WindowsBlindsHome from './components/SeoPages/LocationPage';
 import LocationPage from './views/Location';
+import NotFound from './components/common/ErrorPage/NotFount';
 
 function App() {
   useReview();
@@ -40,7 +40,7 @@ function App() {
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path="/blog/:slug" element={<BlogView />} />
         <Route path="/:location" element={<LocationPage />} />
-        <Route path="/temp" element={<WindowsBlindsHome />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <WhatsappIcon />
       <MessageBot />
