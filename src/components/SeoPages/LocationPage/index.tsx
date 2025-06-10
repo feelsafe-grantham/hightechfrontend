@@ -33,7 +33,7 @@ export default function WindowsBlindsHome() {
                 </div>
             </section>
 
-            {/* --- Intro paragraphs ---------------------------------------------- */}
+            {/* --- Intro paragraphs ---*/}
             <section className={styles.intro}>
                 <p className={styles.introPara}>
                     Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
@@ -47,35 +47,33 @@ export default function WindowsBlindsHome() {
                 </p>
             </section>
 
-            {/* --- About section -------------------------------------------------- */}
+            {/* --- About section --- */}
             <section className={styles.about}>
                 <div className={styles.aboutMedia}>
                     <img
                         src="/images/product1.png"
                         alt="Hightech Windows Blinds storefront"
-                        width={420}
-                        height={320}
                         className={styles.aboutImg}
                     />
                 </div>
 
                 <div className={styles.aboutText}>
-                    <h2>
-                        About <span className={styles.brand}>Hightech</span>
+                    <h2>About <span className={styles.brand}>Hightech</span>
                     </h2>
                     <h3 className={styles.smallHeading}>Windows Blinds Manufacturer</h3>
                     <p className={`${styles.aboutPara}`}>
                         Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
                         has been the industry's standard dummy text ever since the 1500s
-                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
-                        has been the industry's standard dummy text ever since the 1500s
-                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
-                        has been the industry's standard dummy text ever since the 1500s
-                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
-                        has been the industry's standard dummy text ever since the 1500s
+                        Lorem ipsum is simply dummy text of the printing
+                        ext ever since the 1500s
+                        has been the industry's standard dummy text ever since the 1500sand typesetting industry. Lorem ipsum
                     </p>
                     <p className={`${styles.aboutPara}`}>
+                        has been the industry's standard dummy text ever since the 1500s
                         Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
+                        has been the industry's standard dummy text ever since the 1500s
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
+                        has been the industry's standard dummy text ever since the 1500s
                         has been the industry's standard dummy text ever since the 1500s
                     </p>
                 </div>
@@ -83,7 +81,7 @@ export default function WindowsBlindsHome() {
 
             </section>
 
-
+            {/* --- Gallery --- */}
             <section className={`${styles.imageContainer}`}>
                 {images.map((img) => (<img className={`${styles.image}`} src={img} alt="image" />))}
             </section>

@@ -24,10 +24,10 @@
 
 /* ---------- Hero ---------- */
 .heroWrapper {
-  position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
+  position: relative;
 }
 .heroWrapper::before {
   content: "";
@@ -40,11 +40,10 @@
   z-index: 1;
 }
 .heroImage {
-  aspect-ratio: 3/1;
   width: 100%;
   height: auto;
   display: block;
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1)); */
+  aspect-ratio: 3/1;
 }
 
 /* Overlay container */
@@ -60,14 +59,16 @@
 }
 
 .mainHeading {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 2rem;
+  letter-spacing: -1px;
   font-weight: bold;
-  margin: 0;
 }
 
 .subHeading {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  letter-spacing: 2px;
   margin: 0.5rem 0 1rem;
 }
 
@@ -107,9 +108,8 @@
   max-width: var(--max-width-container);
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 2rem;
-  align-items: center;
   padding: 0 1rem;
 }
 
@@ -119,10 +119,10 @@
 
 .aboutImg {
   width: 100%;
-  max-height: 500px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  aspect-ratio: 4/3;
   object-position: center;
 }
 
@@ -132,19 +132,28 @@
 
 .aboutText h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.1rem;
+  font-weight: 600;
 }
-
+.aboutText h3 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.aboutPara {
+  margin: 20px auto;
+}
 .smallHeading {
   display: inline-block;
   margin: 0.25rem 0 1.25rem;
   font-size: 1.125rem;
-  color: #777777;
+  color: var(--primary-text);
   border-bottom: 2px solid var(--primary-theme2);
 }
 
 .brand {
-  color: #0070f3;
+  color: var(--primary-theme1);
 }
 .imageContainer {
   max-width: var(--max-width-container);
@@ -163,14 +172,25 @@
 @media (max-width: 768px) {
   .mainHeading {
     font-size: 1.5rem;
+    line-height: 1rem;
   }
   .subHeading {
     font-size: 1rem;
+    line-height: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  .about {
+    max-width: var(--max-width-container);
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 576px) {
   .mainHeading {
     font-size: 1rem;
+    line-height: 0.5rem;
   }
   .subHeading {
     font-size: 0.875rem;
