@@ -22,7 +22,6 @@ import NotFound from './components/common/ErrorPage/NotFount';
 
 function App() {
   useReview();
-
   return (
     <div className='overflow-x-hidden'>
       <Topstrip />
