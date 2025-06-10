@@ -7,7 +7,6 @@ const LocationPage = () => {
     const { location } = useParams<{ location: string }>();
     const { data, error, loading
     } = useLocation(location as string);
-
     if (error) return <ErrorPage />;
     if (loading) return <div>Loading...</div>;
 

@@ -21,6 +21,7 @@ const useLocation = (location: string) => {
 
             const data = await response.json().then((data) => data);
             if (data.code === 200) {
+                setError(false);
                 setData(data.data);
             }
             else {
@@ -35,7 +36,7 @@ const useLocation = (location: string) => {
     };
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [location]);
     return { data, loading, error };
 }
 
