@@ -1,57 +1,40 @@
+import { AboutPageData, AboutSection } from '../../../types/contentTypes';
 import styles from './WindowsBlindsHome.module.css';
 
-export default function WindowsBlindsHome() {
-    const images = [
-        "/images/product1.png",
-        "/images/product2.png",
-        "/images/product3.png",
-        "/images/product4.png",
-        "/images/product1.png",
-        "/images/product2.png",
-        "/images/product3.png",
-        "/images/product4.png",
-    ]
+export default function LocationComponent({ data }: { data: AboutPageData }) {
+
     return (
         <div className={styles.page}>
             {/* --- Hero --- */}
             <section className={styles.heroWrapper}>
                 <img
-                    src="/images/banner3.jpg"
+                    src={data.banner_img}
                     alt="Living room with blinds"
                     className={styles.heroImage}
                 />
 
                 <div className={styles.overlayContent}>
-                    <h1 className={styles.mainHeading}>Delhi NCR No. 1</h1>
-                    <h2 className={styles.subHeading}>Windows Blinds Manufacturer</h2>
+                    <h1 className={styles.mainHeading}>{data.banner_heading}</h1>
+                    <h2 className={styles.subHeading}>{data.banner_text}</h2>
 
                     <div className={styles.contactStrip}>
-                        <a href="tel:+919220377272">+91-9220377272</a>
+                        <a href={`tel:+91${data.banner_contact_1}`}>+91-{data.banner_contact_1}</a>
                         <span>|</span>
-                        <a href="tel:+919990587916">+91-9990587916</a>
+                        <a href={`tel:+91${data.banner_contact_2}`}>+91-{data.banner_contact_2}</a>
                     </div>
                 </div>
             </section>
 
             {/* --- Intro paragraphs ---*/}
             <section className={styles.intro}>
-                <p className={styles.introPara}>
-                    Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
-                    been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                    took a galley of type and scrambled it to make a type specimen book. It has survived not
-                    only five centuries …
-                </p>
-                <p className={styles.introPara}>
-                    Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
-                    been the industry's standard dummy text ever since the 1500s …
-                </p>
+                <p className={styles.introPara}>{data.description_1}</p>
+                <p className={styles.introPara}>{data.description_2}</p>
             </section>
-
-            {/* --- About section --- */}
-            <section className={styles.about}>
+            {data.about_sec && data.about_sec.map((data: AboutSection, idx: number) =>
+            (<section key={idx} className={styles.about}>
                 <div className={styles.aboutMedia}>
                     <img
-                        src="/images/product1.png"
+                        src={data.about_image}
                         alt="Hightech Windows Blinds storefront"
                         className={styles.aboutImg}
                     />
@@ -62,28 +45,22 @@ export default function WindowsBlindsHome() {
                     </h2>
                     <h3 className={styles.smallHeading}>Windows Blinds Manufacturer</h3>
                     <p className={`${styles.aboutPara}`}>
-                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
-                        has been the industry's standard dummy text ever since the 1500s
-                        Lorem ipsum is simply dummy text of the printing
-                        ext ever since the 1500s
-                        has been the industry's standard dummy text ever since the 1500sand typesetting industry. Lorem ipsum
+                        {data.about_para_1}
                     </p>
                     <p className={`${styles.aboutPara}`}>
-                        has been the industry's standard dummy text ever since the 1500s
-                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
-                        has been the industry's standard dummy text ever since the 1500s
-                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum
-                        has been the industry's standard dummy text ever since the 1500s
-                        has been the industry's standard dummy text ever since the 1500s
+                        {data.about_para_2}
                     </p>
                 </div>
 
 
-            </section>
+            </section>))}
+
+            {/* --- About section --- */}
+
 
             {/* --- Gallery --- */}
             <section className={`${styles.imageContainer}`}>
-                {images.map((img) => (<img className={`${styles.image}`} src={img} alt="image" />))}
+                {data.page_images.map((img) => (<img className={`${styles.image}`} src={img} alt="image" />))}
             </section>
 
         </div>

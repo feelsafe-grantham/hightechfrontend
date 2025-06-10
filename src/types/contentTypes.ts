@@ -60,3 +60,28 @@ export interface ImageCtaType {
   aspectRatio: "31" | "21" | "15" | "11";
   link?: string;
 }
+
+export interface AboutSection {
+  about_image: string;
+  about_para_1: string;
+  about_para_2: string;
+  heading: string;
+  sub_heading: string;
+}
+
+export interface AboutPageData {
+  banner_img: string;
+  banner_heading: string;
+  banner_text: string;
+  banner_contact_1: string;
+  banner_contact_2: string;
+  description_1: string;
+  description_2: string;
+  about_sec: AboutSection[];
+  page_images: string[];
+  meta_title: string;
+  meta_description: string;
+  meta_keywords: string;
+  meta_url: string;
+  meta_canonical_url: string;
+}
