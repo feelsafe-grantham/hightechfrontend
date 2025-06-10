@@ -147,10 +147,13 @@
   color: #0070f3;
 }
 .imageContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
   justify-content: flex-start;
+  margin-bottom: 100px;
 }
 .imageContainer img {
   width: 300px;

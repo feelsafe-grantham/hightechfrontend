@@ -12,7 +12,7 @@ export default function WindowsBlindsHome() {
         "/images/product4.png",
     ]
     return (
-        <main className={styles.page}>
+        <div className={styles.page}>
             {/* --- Hero --- */}
             <section className={styles.heroWrapper}>
                 <img
@@ -88,6 +88,6 @@ export default function WindowsBlindsHome() {
                 {images.map((img) => (<img className={`${styles.image}`} src={img} alt="image" />))}
             </section>
 
-        </main>
+        </div>
     );
 }
