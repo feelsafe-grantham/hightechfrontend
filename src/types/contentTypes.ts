@@ -85,3 +85,9 @@ export interface AboutPageData {
   meta_url: string;
   meta_canonical_url: string;
 }
+
+export interface CitiesType {
+  id: number;
+  label: string;
+  url: string;
+}
