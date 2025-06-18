@@ -7,8 +7,9 @@
   max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   cursor: pointer;
+  border: 1px solid var(--primary-theme1);
 }
 
 .card:hover {
@@ -16,14 +17,25 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card img {
+.imageWrapper {
   width: 100%;
-  height: auto;
+  padding-top: 100%;
+  position: relative;
+  margin-bottom: 15px;
   border-radius: var(--standard-border-radius2);
-  margin-bottom: 10px;
+  overflow: hidden;
 }
 
-.card a {
+.imageWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.label {
   display: inline-block;
   text-decoration: none;
   color: var(--primary-theme1);
@@ -32,6 +44,6 @@
   transition: color 0.3s ease;
 }
 
-.card a:hover {
+.label:hover {
   color: var(--primary-theme11);
 }

@@ -1,37 +1,19 @@
-.card {
-  background: var(--primary-background2);
-  border-radius: var(--standard-border-radius1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%;
-  max-width: 350px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  padding: 15px;
-  cursor: pointer;
+.citiesContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px 50px;
+  padding-bottom: 100px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+@media (max-width: 1200px) {
+  .citiesContainer {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--standard-border-radius2);
-  margin-bottom: 10px;
-}
-
-.card a {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--primary-theme1);
-  font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.card a:hover {
-  color: var(--primary-theme11);
+@media (max-width: 800px) {
+  .citiesContainer {
+    grid-template-columns: 1fr;
+  }
 }

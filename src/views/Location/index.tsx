@@ -8,7 +8,13 @@ const LocationPage = () => {
     const { data, error, loading
     } = useLocation(location as string);
     if (error) return <ErrorPage />;
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div className="w-64 w-full bg-white rounded-lg shadow-md p-4">
+        {/* Image Placeholder */}
+        <div className="w-full h-96 bg-gray-300 rounded shimmer animate-pulse"></div>
+
+        {/* City Name Placeholder */}
+
+    </div>;
 
     return (
         <> {
