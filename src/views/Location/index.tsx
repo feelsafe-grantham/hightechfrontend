@@ -1,12 +1,15 @@
 import ErrorPage from "../../components/common/ErrorPage";
 import PageSeo from "../../components/common/PageSeo";
 import LocationComponent from "../../components/SeoPages/LocationPage";
-import useLocation from "./useLocation"
+import useLocationCustom from "./useLocation"
 import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const LocationPage = () => {
-    const { location } = useParams<{ location: string }>();
+    const location = useLocation();
+    const path = location.pathname.slice(1);
+
     const { data, error, loading
-    } = useLocation(location as string);
+    } = useLocationCustom(path as string);
     if (error) return <ErrorPage />;
     if (loading) return <div className="w-64 w-full bg-white rounded-lg shadow-md p-4">
         {/* Image Placeholder */}

@@ -5,7 +5,7 @@ const useLocation = (location: string) => {
     const [data, setData] = useState<AboutPageData | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<boolean | null>(null);
-
+    console.log("this is location: ", location);
     if (!location) {
         setError(true);
         return { data, loading, error };
@@ -13,7 +13,13 @@ const useLocation = (location: string) => {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await fetch(BASE_URL + "location/" + location);
+            const response = await fetch(BASE_URL + "get-location-data/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ location }),
+            });
 
             if (!response.ok) {
                 throw new Error(`Error fetching blog: ${response.statusText}`);

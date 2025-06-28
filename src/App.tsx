@@ -40,7 +40,7 @@ function App() {
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path="/blog/:slug" element={<BlogView />} />
         <Route path="/cities" element={<Cities />} />
-        <Route path="/:location" element={<LocationPage />} />
+        <Route path="/:location/*" element={<LocationPage />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <WhatsappIcon />
