@@ -89,6 +89,7 @@ export interface AboutPageData {
 export interface CitiesType {
   id: number;
   label: string;
+  identifier?: string;
   url: string;
 }
 export interface HeaderLinkType {

@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { BASE_URL } from "../../utils/Constants/index";
 import { AboutPageData } from "../../types/contentTypes";
 const useLocation = (location: string) => {
-    const [data, setData] = useState<AboutPageData | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<boolean | null>(null);
-    console.log("this is location: ", location);
+    const [data, setData] = useState<AboutPageData | null>(null);
+
     if (!location) {
         setError(true);
         return { data, loading, error };

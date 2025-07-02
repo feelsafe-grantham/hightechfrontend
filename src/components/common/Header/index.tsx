@@ -21,7 +21,7 @@ const Header = () => {
     useEffect(() => {
         const fetchCities = async () => {
             try {
-                const response = await fetch(BASE_URL + "location");
+                const response = await fetch(BASE_URL + "get-states/");
                 if (!response.ok) {
                     throw new Error(`Error fetching blog: ${response.statusText}`);
                 }
@@ -162,11 +162,11 @@ const Header = () => {
                                 {link?.subLink && link.subLink.map((subLink, index) => (
                                     <li className={`${styles.headerSubLink}`} key={index}>
                                         <NavLink
-                                            to={subLink.url}
+                                            to={`/cities#${subLink.identifier}`}
                                             onClick={closeSubLink}
                                             aria-label={`Navigate to ${subLink.label}`}
-                                            className={({ isActive }) =>
-                                                isActive ? ` ${styles.linkActive}` : ""}
+                                            // className={({ isActive }) =>
+                                            //     isActive ? ` ${styles.linkActive}` : ""}
                                             title={`Navigate to ${subLink.label}`}
                                         >
                                             {subLink.label}
