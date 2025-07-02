@@ -1,10 +1,15 @@
 import ErrorPage from "../../components/common/ErrorPage";
 import PageSeo from "../../components/common/PageSeo";
 import LocationComponent from "../../components/SeoPages/LocationPage";
-import useLocationCustom from "./useLocation"
-import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import useLocationCustom from "./useLocation";
+import {
+    useLocation,
+    // useParams
+} from "react-router-dom";
+
 const LocationPage = () => {
+    // const { state, city } = useParams()
+
     const location = useLocation();
     const path = location.pathname.slice(1);
     console.log(path);
@@ -20,19 +25,19 @@ const LocationPage = () => {
     </div>;
 
     return (
-        <> {
-            data &&
-            <>
-                <PageSeo
-                    title={data.meta_title || "High Tech Window Blinds by Vishal Interior - Window Blinds in Delhi"}
-                    description={data.meta_description || "Explore High Tech Window Blinds by Vishal Interior. Top manufacturer in Delhi offering stylish and durable window blinds for homes and offices."}
-                    keywords={data.meta_keywords || ""}
-                    url={data.meta_url || "https://www.hightechwindowblinds.in/"}
-                    canonicalUrl={data.meta_canonical_url || "https://www.hightechwindowblinds.in/"}
-                />
-                <LocationComponent data={data} />
-            </>
-        }
+        <>
+            {data &&
+                <>
+                    <PageSeo
+                        title={data.meta_title || "High Tech Window Blinds by Vishal Interior - Window Blinds in Delhi"}
+                        description={data.meta_description || "Explore High Tech Window Blinds by Vishal Interior. Top manufacturer in Delhi offering stylish and durable window blinds for homes and offices."}
+                        keywords={data.meta_keywords || ""}
+                        url={data.meta_url || "https://www.hightechwindowblinds.in/"}
+                        canonicalUrl={data.meta_canonical_url || "https://www.hightechwindowblinds.in/"}
+                    />
+                    <LocationComponent data={data} />
+                </>
+            }
         </>
     )
 }

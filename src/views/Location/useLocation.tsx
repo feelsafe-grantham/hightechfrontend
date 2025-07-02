@@ -40,6 +40,7 @@ const useLocation = (location: string) => {
             setLoading(false);
         }
     };
+
     useEffect(() => {
         fetchData();
     }, [location]);
