@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const LocationPage = () => {
     const location = useLocation();
     const path = location.pathname.slice(1);
-
+    console.log(path);
     const { data, error, loading
     } = useLocationCustom(path as string);
     if (error) return <ErrorPage />;

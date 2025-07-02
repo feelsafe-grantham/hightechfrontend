@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../utils/Constants/index";
+interface LocationItem {
+  label: string;
+  url: string;
+  id: number;
+}
+
+type LocationGroup = {
+  [state: string]: LocationItem[];
+};
 
 const useCities = () => {
   const [cities, setCities] = useState([]);
+  const [states, setStates] = useState<LocationGroup[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<boolean | null>(null);
   const fetchData = async () => {
@@ -12,8 +22,9 @@ const useCities = () => {
         throw new Error(`Error fetching blog: ${response.statusText}`);
       }
       const data = await response.json().then((data) => data.data);
-
-      setCities(data);
+      console.log(data);
+      setStates(data);
+      // setCities(data);
     } catch (error) {
       console.error("this is error: ", error);
       setError(true);
@@ -26,7 +37,7 @@ const useCities = () => {
     fetchData();
   }, []);
 
-  return { cities, loading, error };
+  return { states, cities, loading, error };
 };
 
 export default useCities;
