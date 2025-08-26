@@ -3,7 +3,7 @@ import NotFound from "../../components/common/ErrorPage/NotFount";
 import styles from "./Cities.module.css"
 import useCities from "./useCities";
 const Cities = () => {
-    const { states, cities, loading, error } = useCities();
+    const { states, loading, error } = useCities();
     if (error) return <NotFound />
     if (loading) return (
         <div className={`${styles.citiesContainer}`}>{Array.from({ length: 6 }, (_, _index) => <div className="w-64 bg-white rounded-lg shadow-md p-4">
@@ -25,8 +25,8 @@ const Cities = () => {
                     <div id={state} key={index} className={styles.cityGroup}>
                         <h2>{state}</h2>
                         <ul className={styles.citiesContainer}>
-                            {locations.length > 0 ? (
-                                locations.map((loc) => (
+                            {locations?.length > 0 ? (
+                                locations?.map((loc) => (
                                     <li key={loc.id}>
                                         <CityCard state={state} cityCard={loc} />
                                     </li>
