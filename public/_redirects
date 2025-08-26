@@ -1,0 +1,9 @@
+# Serve assets and images directly
+
+/assets/* /assets/:splat 200
+/images/* /images/:splat 200
+/favicon.ico   /favicon.ico   200
+/robots.txt    /robots.txt    200
+
+# Fallback for SPA routing
+/* /index.html 200
