@@ -79,6 +79,7 @@ const Header = () => {
         if (link?.subLink?.length === 0) return false
         return isMobile ? activeSubMenu === link.label : hoverLink === link.label;
     };
+
     return (
         <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
@@ -151,7 +152,6 @@ const Header = () => {
                             )}
                         </div>
 
-
                         {shouldShowSubmenu(link) && link.label &&
                             <ul
                                 onMouseLeave={handleMouseLeave}
@@ -165,8 +165,7 @@ const Header = () => {
                                             to={`/cities#${subLink.identifier}`}
                                             onClick={closeSubLink}
                                             aria-label={`Navigate to ${subLink.label}`}
-                                            // className={({ isActive }) =>
-                                            //     isActive ? ` ${styles.linkActive}` : ""}
+                                            className={`${styles.sublinkItem}`}
                                             title={`Navigate to ${subLink.label}`}
                                         >
                                             {subLink.label}

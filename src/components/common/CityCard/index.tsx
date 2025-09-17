@@ -3,7 +3,7 @@ import styles from "./CityCard.module.css"
 const CityCard = ({ state, cityCard }: any) => {
 
     return (
-        <Link key={cityCard?.id} to={`/${state}/${cityCard?.label}`} className={styles.card}>
+        <Link key={cityCard?.id} to={`/${state}/${cityCard?.url}`} className={styles.card}>
             <div className={styles.imageWrapper}>
                 <img src={cityCard?.image} alt={cityCard?.label} />
             </div>
