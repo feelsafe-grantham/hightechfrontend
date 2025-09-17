@@ -4,6 +4,7 @@ interface LocationItem {
   id: number;
   url: string;
   label: string;
+  image: string;
 }
 
 type LocationGroup = {
