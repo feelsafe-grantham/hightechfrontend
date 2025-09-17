@@ -60,7 +60,7 @@ export default function LocationComponent({ data }: { data: AboutPageData }) {
 
             {/* --- Gallery --- */}
             <section className={`${styles.imageContainer}`}>
-                {data.page_images.map((img) => (<img className={`${styles.image}`} src={img} alt="image" />))}
+                {data.page_images.map((img) => (<img className={`${styles.image}`} src={img.image} alt="image" />))}
             </section>
 
         </div>

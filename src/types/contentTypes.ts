@@ -78,7 +78,7 @@ export interface AboutPageData {
   description_1: string;
   description_2: string;
   about_sec: AboutSection[];
-  page_images: string[];
+  page_images: HeroImagesType[];
   meta_title: string;
   meta_description: string;
   meta_keywords: string;
