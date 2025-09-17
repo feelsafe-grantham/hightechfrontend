@@ -17,10 +17,12 @@ import useReview from './hooks/useReview';
 import MessageBot from './components/common/ChatBot';
 import Privacy from './views/Privacy';
 import Terms from './views/Terms';
+import LocationPage from './views/Location';
+import NotFound from './components/common/ErrorPage/NotFount';
+import Cities from './views/Cities';
 
 function App() {
   useReview();
-
   return (
     <div className='overflow-x-hidden'>
       <Topstrip />
@@ -37,6 +39,9 @@ function App() {
         <Route path='/terms-of-service' element={<Terms />} />
         <Route path='/brochure/:slug' element={<ProductView />} />
         <Route path="/blog/:slug" element={<BlogView />} />
+        <Route path="/cities" element={<Cities />} />
+        <Route path="/:state/:city" element={<LocationPage />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <WhatsappIcon />
       <MessageBot />
