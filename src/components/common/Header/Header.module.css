@@ -134,33 +134,34 @@
     height: 45px;
   }
   .headerLinksContainer {
-    z-index: 1;
-    order: 1;
     gap: 0px;
+    order: 1;
+    top: 100%;
+    z-index: 1;
+    width: 100%;
     display: none;
     position: absolute;
-    top: 100%;
-    width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
   }
   .headerSubLinksContainer {
     margin: auto;
+    max-height: 200px;
     position: relative;
     place-items: center;
   }
   .open {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .headerLink {
-    font-size: 16px;
-    transition: color 0.3s ease;
-    padding: 10px 20px;
     width: 100%;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
     border-bottom: 1px solid var(--primary-text);
   }
 

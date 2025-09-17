@@ -152,11 +152,11 @@ const Header = () => {
                             )}
                         </div>
 
-                        {shouldShowSubmenu(link) && link.label &&
+                        {shouldShowSubmenu(link) && link.label && link?.subLink &&
                             <ul
                                 onMouseLeave={handleMouseLeave}
-                                className={`${styles.headerSubLinksContainer} scrollbar-hidden `}
                                 onMouseEnter={() => handleMouseEnter(link.label)}
+                                className={`${styles.headerSubLinksContainer} scrollbar-hidden `}
                             >
 
                                 {link?.subLink && link.subLink.map((subLink, index) => (
